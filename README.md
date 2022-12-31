@@ -1,5 +1,4 @@
 # How to use
 
-- Download the latest CSVs 
-- ensure the constants at the top of the file are pointing at the right CSVs
+- Download the latest CSVs (to the downloads folder)
 - run `python subtext.py`

@@ -1,14 +1,29 @@
 import csv
 import patreon
-youtubeSubsFile = 'C:\\Users\\dusosl\\Downloads\\Your members 31 Dec 2022, 16_01 Laurence Dusoswa.csv'
-twitchSubsFile = 'C:\\Users\\dusosl\\Downloads\\subscriber-list (35).csv'
-patroenSubsFile = 'C:\\Users\\dusosl\\Downloads\\Members_3825076 (2).csv'
+import os
+import glob
 
 pitPass = []
 pitCrew = []
 crewChief = []
 teamBoss = []
 twitchSubs = []
+
+subListsDir = 'C:\\Users\\dusosl\\Downloads\\'
+
+def find_recent_file(dir, prefix):
+  # Get the list of all files in the directory
+  file_list = glob.glob(dir + "/" + prefix + "*")
+
+  # Sort the list of files by modification time
+  file_list.sort(key=os.path.getmtime)
+
+  # Return the most recent file
+  return file_list[-1]
+
+youtubeSubsFile = find_recent_file(subListsDir, 'Your members ')
+twitchSubsFile = find_recent_file(subListsDir, 'subscriber-list')
+patroenSubsFile = find_recent_file(subListsDir, 'Members_')
 
 # quick and dirty replace of poor imports or name change requests
 def prettyPrint(original):
@@ -33,7 +48,6 @@ with open(patroenSubsFile, 'r') as csv_file:
     reader = csv.reader(csv_file)
     sortedlist = sorted(reader, key=lambda row:float(row[6]), reverse=True)
 
-    print(f'\n#### PATREON & YOUTUBE SUBS ({len(sortedlist)}) ####')
     for row in sortedlist:
             if row[9] == "Pit Pass":
                 pitPass.append(row[0])
@@ -83,3 +97,5 @@ for member in pitPass:
     prettyPrint(member)
 
 print(f'\nTotal paid contributors: {len(pitPass) + len(pitCrew) + len(crewChief) + len(teamBoss) + len(twitchSubs) }')
+
+# TODO print out youtube description blurb
