@@ -44,6 +44,7 @@ with open(patroenSubsFile, 'r') as csv_file:
             elif row[9] == "Team Boss":
                 teamBoss.append(row[0])
 
+# YouTube
 with open(youtubeSubsFile, 'r') as csv_file:
     next(csv_file)
     reader = csv.reader(csv_file)
@@ -60,25 +61,25 @@ with open(youtubeSubsFile, 'r') as csv_file:
             teamBoss.append(row[0])
             
 
-    # output the results
-    print(f'\n#### Patreon & YouTube - Team Boss ({len(teamBoss)}) ####')
-    for member in teamBoss:
-        prettyPrint(member)
-        
-    print(f'\n#### Patreon & YouTube - Crew Chief ({len(crewChief)}) ####')
-    for member in crewChief:
-        prettyPrint(member)
-        
-    print(f'\n#### Patreon & YouTube - Pit Crew ({len(pitCrew)}) ####')
-    for member in pitCrew:
-        prettyPrint(member)
+# output the results
+print(f'\n#### Patreon & YouTube - Team Boss ({len(teamBoss)}) ####')
+for member in teamBoss:
+    prettyPrint(member)
 
-    print(f'\n#### TWITCH SUBS - Pit Crew ({len(twitchSubs)}) ####')
-    for row in twitchSubs:
-        prettyPrint(row[0])
-        
-    print(f'\n#### Patreon & YouTube - Pit Pass ({len(pitPass)}) ####')
-    for member in pitPass:
-        prettyPrint(member)
+print(f'\n#### Patreon & YouTube - Crew Chief ({len(crewChief)}) ####')
+for member in crewChief:
+    prettyPrint(member)
 
-    print(f'\nTotal paid contributors: {len(pitPass) + len(pitCrew) + len(crewChief) + len(teamBoss) + len(twitchSubs) }')
+print(f'\n#### Patreon & YouTube - Pit Crew ({len(pitCrew)}) ####')
+for member in pitCrew:
+    prettyPrint(member)
+
+print(f'\n#### TWITCH SUBS - Pit Crew ({len(twitchSubs)}) ####')
+for row in twitchSubs:
+    prettyPrint(row[0])
+
+print(f'\n#### Patreon & YouTube - Pit Pass ({len(pitPass)}) ####')
+for member in pitPass:
+    prettyPrint(member)
+
+print(f'\nTotal paid contributors: {len(pitPass) + len(pitCrew) + len(crewChief) + len(teamBoss) + len(twitchSubs) }')
