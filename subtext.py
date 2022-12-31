@@ -1,37 +1,39 @@
 import csv
 import patreon
-youtubeSubs = 'C:\\Users\\dusosl\\Downloads\\Your members 30 Dec 2022, 16_00 Laurence Dusoswa.csv'
-twitchSubs = 'C:\\Users\\dusosl\\Downloads\\subscriber-list (32).csv'
-patroenSubs = 'C:\\Users\\dusosl\\Downloads\\Members_3825076.csv'
+youtubeSubsFile = 'C:\\Users\\dusosl\\Downloads\\Your members 31 Dec 2022, 16_01 Laurence Dusoswa.csv'
+twitchSubsFile = 'C:\\Users\\dusosl\\Downloads\\subscriber-list (35).csv'
+patroenSubsFile = 'C:\\Users\\dusosl\\Downloads\\Members_3825076 (2).csv'
 
 pitPass = []
 pitCrew = []
 crewChief = []
 teamBoss = []
+twitchSubs = []
+
+# quick and dirty replace of poor imports or name change requests
+def prettyPrint(original):
+    new = original
+    new = new.replace('ï¼‡', '\'')
+    new = new.replace('Ã¼', 'ü')
+    new = new.replace('Dan Persons', 'Dogoncouch')
+    new = new.replace('coooyahh', 'FeckCancer')
+    print(new)
 
 # TWITCH
-# Open the CSV file and text file
-print("\n#### TWITCH SUBS ####")
-with open(twitchSubs, 'r') as csv_file:
+with open(twitchSubsFile, 'r') as csv_file:
     next(csv_file)
     reader = csv.reader(csv_file)
-    sortedlist = sorted(reader, key=lambda row: row[4], reverse=True)
-
-    for row in sortedlist:
-        value = row[0]
-        if value == "coooyahh":
-            value = "FeckCancer"
-        print(value)
+    twitchSubs = sorted(reader, key=lambda row: row[4], reverse=True)
+    if twitchSubs[0][0] == 'ldusoswa':
+        twitchSubs.pop(0) # remove ldusoswa
 
 # Patreon
-# Open the CSV file and text file
-print("\n#### PATREON & YOUTUBE SUBS ####")
-with open(patroenSubs, 'r') as csv_file:
+with open(patroenSubsFile, 'r') as csv_file:
     next(csv_file)
     reader = csv.reader(csv_file)
     sortedlist = sorted(reader, key=lambda row:float(row[6]), reverse=True)
-    # TODO Dan Persons should be Dogoncouch
 
+    print(f'\n#### PATREON & YOUTUBE SUBS ({len(sortedlist)}) ####')
     for row in sortedlist:
             if row[9] == "Pit Pass":
                 pitPass.append(row[0])
@@ -42,12 +44,12 @@ with open(patroenSubs, 'r') as csv_file:
             elif row[9] == "Team Boss":
                 teamBoss.append(row[0])
 
-with open(youtubeSubs, 'r') as csv_file:
+with open(youtubeSubsFile, 'r') as csv_file:
     next(csv_file)
     reader = csv.reader(csv_file)
     sortedlist = sorted(reader, key=lambda row:float(row[4]), reverse=True)
 
-    for row in sortedlist:    
+    for row in sortedlist:
         if row[2] == "Pit Pass":
             pitPass.append(row[0])
         elif row[2] == "Pit Crew":
@@ -59,19 +61,24 @@ with open(youtubeSubs, 'r') as csv_file:
             
 
     # output the results
-    print("\n#### Patreon & YouTube - Team Boss ####")
+    print(f'\n#### Patreon & YouTube - Team Boss ({len(teamBoss)}) ####')
     for member in teamBoss:
-        print(member)
+        prettyPrint(member)
         
-    print("\n#### Patreon & YouTube - Crew Chief ####")
+    print(f'\n#### Patreon & YouTube - Crew Chief ({len(crewChief)}) ####')
     for member in crewChief:
-        print(member)
+        prettyPrint(member)
         
-    print("\n#### Patreon & YouTube - Pit Crew ####")
+    print(f'\n#### Patreon & YouTube - Pit Crew ({len(pitCrew)}) ####')
     for member in pitCrew:
-        print(member)
-        
-    print("\n#### Patreon & YouTube - Pit Pass ####")
-    for member in pitPass:
-        print(member)
+        prettyPrint(member)
 
+    print(f'\n#### TWITCH SUBS - Pit Crew ({len(twitchSubs)}) ####')
+    for row in twitchSubs:
+        prettyPrint(row[0])
+        
+    print(f'\n#### Patreon & YouTube - Pit Pass ({len(pitPass)}) ####')
+    for member in pitPass:
+        prettyPrint(member)
+
+    print(f'\nTotal paid contributors: {len(pitPass) + len(pitCrew) + len(crewChief) + len(teamBoss) + len(twitchSubs) }')
