@@ -30,6 +30,7 @@ with open(patroenSubs, 'r') as csv_file:
     next(csv_file)
     reader = csv.reader(csv_file)
     sortedlist = sorted(reader, key=lambda row:float(row[6]), reverse=True)
+    # TODO Dan Persons should be Dogoncouch
 
     for row in sortedlist:
             if row[9] == "Pit Pass":
