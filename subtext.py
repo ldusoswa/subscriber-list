@@ -76,7 +76,6 @@ with open(youtubeSubsFile, 'r') as csv_file:
             crewChief.append(prettify(row[0]))
         elif row[2] == "Team Boss":
             teamBoss.append(prettify(row[0]))
-            
 
 # output the results
 print(f'\n#### Patreon & YouTube - Team Boss ({len(teamBoss)}) ####')
@@ -108,3 +107,23 @@ print(f'Pit Crew (€5/mo)        {", ".join(pitCrew)}')
 print(f'TWITCH Tier 1           {", ".join(twitchSubs)}')
 print(f'Pit Pass (€3/mo)        {", ".join(pitPass)}')
 
+# Create the csv for photoshop to import
+def formatForPhotoshopText(membersArray, padding):
+    photoshopText = ''
+    for index, member in enumerate(membersArray):
+            photoshopText = f'{photoshopText} {member.ljust(padding)}'
+
+    return photoshopText
+
+data = [
+    ['teamBoss', 'crewChief', 'pitCrew', 'twitchSubs', 'pitPass'],
+    [formatForPhotoshopText(teamBoss, 40),formatForPhotoshopText(crewChief, 35),formatForPhotoshopText(pitCrew, 35),formatForPhotoshopText(twitchSubs, 35),formatForPhotoshopText(pitPass, 35)]
+]
+psdName = 'levels.csv'
+
+with open(psdName, 'w', newline='') as csv_file:
+    writer = csv.writer(csv_file)
+    for row in data:
+        writer.writerow(row)
+
+    print(f'\nCSV file created successfully for Photoshop import: {psdName}')
