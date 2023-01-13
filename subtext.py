@@ -51,7 +51,7 @@ def prettify(original):
 with open(twitchSubsFile, 'r') as csv_file:
     next(csv_file)
     reader = csv.reader(csv_file)
-    sortedlist = sorted(reader, key=lambda row: row[4], reverse=True)
+    sortedlist = sorted(reader, key=lambda row: row[1], reverse=False)
     if sortedlist[0][0] == 'ldusoswa':
         sortedlist.pop(0) # remove ldusoswa
 
@@ -134,7 +134,13 @@ def formatForPhotoshopText(membersArray, padding):
 
 data = [
     ['teamBoss', 'crewChief', 'pitCrew', 'twitchSubs', 'pitPass'],
-    [formatForPhotoshopText(teamBossCombined, 40),formatForPhotoshopText(crewChiefCombined, 35),formatForPhotoshopText(pitCrewCombined, 35),formatForPhotoshopText(twitchSubs, 30),formatForPhotoshopText(pitPassCombined, 37)]
+    [
+        formatForPhotoshopText(teamBossCombined, 38),
+        formatForPhotoshopText(crewChiefCombined, 35),
+        formatForPhotoshopText(pitCrewCombined, 35),
+        formatForPhotoshopText(twitchSubs, 30),
+        formatForPhotoshopText(pitPassCombined, 37)
+    ]
 ]
 psdName = 'levels.csv'
 
