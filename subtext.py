@@ -121,7 +121,7 @@ totalMemberCount = len(pitPassCombined) + len(pitCrewCombined) + len(crewChiefCo
 print(f'\nTeam Boss (€19.99/mo)\t\t{", ".join(teamBossCombined)}')
 print(f'Crew Chief (€9.99/mo)\t\t{", ".join(crewChiefCombined)}')
 print(f'Pit Crew (€4.99/mo)\t\t{", ".join(pitCrewCombined)}')
-print(f'TWITCH (€4.99)\t\t\t{", ".join(twitchSubs)}')
+print(f'TWITCH (€4.99/mo)\t\t{", ".join(twitchSubs)}')
 print(f'Pit Pass (€2.99/mo)\t\t{", ".join(pitPassCombined)}')
 
 # Create the csv for photoshop to import
@@ -134,7 +134,7 @@ def formatForPhotoshopText(membersArray, padding):
 
 data = [
     ['teamBoss', 'crewChief', 'pitCrew', 'twitchSubs', 'pitPass'],
-    [formatForPhotoshopText(teamBossCombined, 40),formatForPhotoshopText(crewChiefCombined, 35),formatForPhotoshopText(pitCrewCombined, 35),formatForPhotoshopText(twitchSubs, 35),formatForPhotoshopText(pitPassCombined, 35)]
+    [formatForPhotoshopText(teamBossCombined, 40),formatForPhotoshopText(crewChiefCombined, 35),formatForPhotoshopText(pitCrewCombined, 35),formatForPhotoshopText(twitchSubs, 30),formatForPhotoshopText(pitPassCombined, 37)]
 ]
 psdName = 'levels.csv'
 
@@ -191,4 +191,3 @@ calculateAndOutputTotals('Patreon', 'Pit Pass', pitPassPatreon, 2.99)
 print('===========================================================================================')
 print(f'TOTAL\t\t\t{totalMemberCount}\t\t€{"{:.2f}".format(totalGross)}\t\t€{"{:.2f}".format(totalPlatformCosts)}\t\t€{"{:.2f}".format(totalNet)}')
 print(f'###########################################################################################')
-
