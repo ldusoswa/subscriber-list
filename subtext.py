@@ -39,13 +39,19 @@ twitchSubsFile = find_recent_file(subListsDir, 'subscriber-list')
 patroenSubsFile = find_recent_file(subListsDir, 'Members_')
 
 # quick and dirty replace of poor imports or name change requests
-def prettify(original):
-    new = original
-    new = new.replace('ï¼‡', '\'')
-    new = new.replace('Ã¼', 'ü')
-    new = new.replace('Dan Persons', 'Dogoncouch')
-    new = new.replace('coooyahh', 'FeckCancer')
-    return new
+def performTextReplacements(original):
+    # Create a mapping of characters to replace
+    mapping = {
+        'ï¼‡': '\'',
+        'Ã¼': 'ü',
+        'Dan Persons': 'Dogoncouch',
+        'coooyahh': 'FeckCancer'
+    }
+
+    for key, value in mapping.items():
+        original = original.replace(key, value)
+
+    return original
 
 # TWITCH
 with open(twitchSubsFile, 'r') as csv_file:
@@ -56,7 +62,7 @@ with open(twitchSubsFile, 'r') as csv_file:
         sortedlist.pop(0) # remove ldusoswa
 
     for row in sortedlist:
-        twitchSubs.append(prettify(row[0]))
+        twitchSubs.append(performTextReplacements(row[0]))
 
 # Patreon
 with open(patroenSubsFile, 'r') as csv_file:
@@ -66,17 +72,17 @@ with open(patroenSubsFile, 'r') as csv_file:
 
     for row in sortedlist:
             if row[9] == "Pit Pass":
-                pitPassCombined.append(prettify(row[0]))
-                pitPassPatreon.append(prettify(row[0]))
+                pitPassCombined.append(performTextReplacements(row[0]))
+                pitPassPatreon.append(performTextReplacements(row[0]))
             elif row[9] == "Pit Crew":
-                pitCrewCombined.append(prettify(row[0]))
-                pitCrewPatreon.append(prettify(row[0]))
+                pitCrewCombined.append(performTextReplacements(row[0]))
+                pitCrewPatreon.append(performTextReplacements(row[0]))
             elif row[9] == "Crew Chief":
-                crewChiefCombined.append(prettify(row[0]))
-                crewChiefPatreon.append(prettify(row[0]))
+                crewChiefCombined.append(performTextReplacements(row[0]))
+                crewChiefPatreon.append(performTextReplacements(row[0]))
             elif row[9] == "Team Boss":
-                teamBossCombined.append(prettify(row[0]))
-                teamBossPatreon.append(prettify(row[0]))
+                teamBossCombined.append(performTextReplacements(row[0]))
+                teamBossPatreon.append(performTextReplacements(row[0]))
 
 # YouTube
 with open(youtubeSubsFile, 'r') as csv_file:
@@ -86,17 +92,17 @@ with open(youtubeSubsFile, 'r') as csv_file:
 
     for row in sortedlist:
         if row[2] == "Pit Pass":
-            pitPassCombined.append(prettify(row[0]))
-            pitPassYouTube.append(prettify(row[0]))
+            pitPassCombined.append(performTextReplacements(row[0]))
+            pitPassYouTube.append(performTextReplacements(row[0]))
         elif row[2] == "Pit Crew":
-            pitCrewCombined.append(prettify(row[0]))
-            pitCrewYouTube.append(prettify(row[0]))
+            pitCrewCombined.append(performTextReplacements(row[0]))
+            pitCrewYouTube.append(performTextReplacements(row[0]))
         elif row[2] == "Crew Chief":
-            crewChiefCombined.append(prettify(row[0]))
-            crewChiefYouTube.append(prettify(row[0]))
+            crewChiefCombined.append(performTextReplacements(row[0]))
+            crewChiefYouTube.append(performTextReplacements(row[0]))
         elif row[2] == "Team Boss":
-            teamBossCombined.append(prettify(row[0]))
-            teamBossYouTube.append(prettify(row[0]))
+            teamBossCombined.append(performTextReplacements(row[0]))
+            teamBossYouTube.append(performTextReplacements(row[0]))
 
 # output the complete list of names
 print(f'\n#### All Members ####')
