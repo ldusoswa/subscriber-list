@@ -1,5 +1,6 @@
 import csv
 import patreon
+import datetime
 import os
 import glob
 
@@ -16,6 +17,7 @@ pitCrewPatreon = []
 crewChiefPatreon = []
 teamBossPatreon = []
 twitchSubs = []
+twitchExpiries = []
 totalMemberCount = 0
 
 totalGross = float(0)
@@ -53,6 +55,11 @@ def performTextReplacements(original):
 
     return original
 
+# determin how many days ago a date was
+def days_ago(date):
+    date = datetime.datetime.strptime(date, '%Y-%m-%dT%H:%M:%SZ')
+    return (datetime.datetime.now() - date).days
+
 # TWITCH
 with open(twitchSubsFile, 'r') as csv_file:
     next(csv_file)
@@ -62,6 +69,10 @@ with open(twitchSubsFile, 'r') as csv_file:
         sortedlist.pop(0) # remove ldusoswa
 
     for row in sortedlist:
+        if(row[5] == 'prime' or row[5] == 'gift'):
+            if (days_ago(row[1])) > 20:
+                twitchExpiries.append(f'{row[0]}\'s twitch {row[5]} sub expires in {30 - days_ago(row[1])} days')
+
         twitchSubs.append(performTextReplacements(row[0]))
 
 # Patreon
@@ -122,13 +133,6 @@ for member in pitPassCombined:
     print(member)
 
 totalMemberCount = len(pitPassCombined) + len(pitCrewCombined) + len(crewChiefCombined) + len(teamBossCombined) + len(twitchSubs)
-
-# TODO print out youtube description blurb
-print(f'\nTeam Boss (€19.99/mo)\t\t{", ".join(teamBossCombined)}')
-print(f'Crew Chief (€9.99/mo)\t\t{", ".join(crewChiefCombined)}')
-print(f'Pit Crew (€4.99/mo)\t\t{", ".join(pitCrewCombined)}')
-print(f'TWITCH (€4.99/mo)\t\t{", ".join(twitchSubs)}')
-print(f'Pit Pass (€2.99/mo)\t\t{", ".join(pitPassCombined)}')
 
 # Create the csv for photoshop to import
 def formatForPhotoshopText(membersArray, padding):
@@ -203,3 +207,12 @@ calculateAndOutputTotals('Patreon', 'Pit Pass', pitPassPatreon, 2.99)
 print('===========================================================================================')
 print(f'TOTAL\t\t\t{totalMemberCount}\t\t€{"{:.2f}".format(totalGross)}\t\t€{"{:.2f}".format(totalPlatformCosts)}\t\t€{"{:.2f}".format(totalNet)}')
 print(f'###########################################################################################')
+
+print(f'\nTeam Boss (€19.99/mo)\t\t{", ".join(teamBossCombined)}')
+print(f'Crew Chief (€9.99/mo)\t\t{", ".join(crewChiefCombined)}')
+print(f'Pit Crew (€4.99/mo)\t\t{", ".join(pitCrewCombined)}')
+print(f'Twitch subs (€4.99/mo)\t\t{", ".join(twitchSubs)}')
+print(f'Pit Pass (€2.99/mo)\t\t{", ".join(pitPassCombined)}')
+
+print('\nExpiring twitch subs:')
+print('\n'.join(twitchExpiries))
