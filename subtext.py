@@ -1,17 +1,13 @@
 import csv
-import patreon
 import os
 import glob
 
-pitPassCombined = []
 pitCrewCombined = []
 crewChiefCombined = []
 teamBossCombined = []
-pitPassYouTube = []
 pitCrewYouTube = []
 crewChiefYouTube = []
 teamBossYouTube = []
-pitPassPatreon = []
 pitCrewPatreon = []
 crewChiefPatreon = []
 teamBossPatreon = []
@@ -71,10 +67,7 @@ with open(patroenSubsFile, 'r') as csv_file:
     sortedlist = sorted(reader, key=lambda row:float(row[6]), reverse=True)
 
     for row in sortedlist:
-            if row[9] == "Pit Pass":
-                pitPassCombined.append(performTextReplacements(row[0]))
-                pitPassPatreon.append(performTextReplacements(row[0]))
-            elif row[9] == "Pit Crew":
+            if row[9] == "Pit Crew":
                 pitCrewCombined.append(performTextReplacements(row[0]))
                 pitCrewPatreon.append(performTextReplacements(row[0]))
             elif row[9] == "Crew Chief":
@@ -91,10 +84,7 @@ with open(youtubeSubsFile, 'r') as csv_file:
     sortedlist = sorted(reader, key=lambda row:float(row[4]), reverse=True)
 
     for row in sortedlist:
-        if row[2] == "Pit Pass":
-            pitPassCombined.append(performTextReplacements(row[0]))
-            pitPassYouTube.append(performTextReplacements(row[0]))
-        elif row[2] == "Pit Crew":
+        if row[2] == "Pit Crew":
             pitCrewCombined.append(performTextReplacements(row[0]))
             pitCrewYouTube.append(performTextReplacements(row[0]))
         elif row[2] == "Crew Chief":
@@ -118,17 +108,13 @@ for member in pitCrewCombined:
 for member in twitchSubs:
     print(member)
 
-for member in pitPassCombined:
-    print(member)
-
-totalMemberCount = len(pitPassCombined) + len(pitCrewCombined) + len(crewChiefCombined) + len(teamBossCombined) + len(twitchSubs)
+totalMemberCount = len(pitCrewCombined) + len(crewChiefCombined) + len(teamBossCombined) + len(twitchSubs)
 
 # TODO print out youtube description blurb
 print(f'\nTeam Boss (€19.99/mo)\t\t{", ".join(teamBossCombined)}')
 print(f'Crew Chief (€9.99/mo)\t\t{", ".join(crewChiefCombined)}')
 print(f'Pit Crew (€4.99/mo)\t\t{", ".join(pitCrewCombined)}')
 print(f'TWITCH (€4.99/mo)\t\t{", ".join(twitchSubs)}')
-print(f'Pit Pass (€2.99/mo)\t\t{", ".join(pitPassCombined)}')
 
 # Create the csv for photoshop to import
 def formatForPhotoshopText(membersArray, padding):
@@ -139,13 +125,12 @@ def formatForPhotoshopText(membersArray, padding):
     return photoshopText
 
 data = [
-    ['teamBoss', 'crewChief', 'pitCrew', 'twitchSubs', 'pitPass'],
+    ['teamBoss', 'crewChief', 'pitCrew', 'twitchSubs'],
     [
         formatForPhotoshopText(teamBossCombined, 38),
         formatForPhotoshopText(crewChiefCombined, 35),
         formatForPhotoshopText(pitCrewCombined, 35),
-        formatForPhotoshopText(twitchSubs, 30),
-        formatForPhotoshopText(pitPassCombined, 37)
+        formatForPhotoshopText(twitchSubs, 30)
     ]
 ]
 psdName = 'levels.csv'
@@ -193,12 +178,10 @@ print(f'_____________________\t______\t______\t______________\t______________\t_
 calculateAndOutputTotals('YouTube', 'Team Boss', teamBossYouTube, 19.99)
 calculateAndOutputTotals('YouTube', 'Crew Chief', crewChiefYouTube, 9.99)
 calculateAndOutputTotals('YouTube', 'Pit Crew', pitCrewYouTube, 4.99)
-calculateAndOutputTotals('YouTube', 'Pit Pass', pitPassYouTube, 3.99)
 calculateAndOutputTotals('Twitch', 'Subscriptions', twitchSubs, 4.99)
 calculateAndOutputTotals('Patreon', 'Team Boss', teamBossPatreon, 19.99)
 calculateAndOutputTotals('Patreon', 'Crew Chief', crewChiefPatreon, 9.99)
 calculateAndOutputTotals('Patreon', 'Pit Crew', pitCrewPatreon, 4.99)
-calculateAndOutputTotals('Patreon', 'Pit Pass', pitPassPatreon, 2.99)
 
 print('===========================================================================================')
 print(f'TOTAL\t\t\t{totalMemberCount}\t\t€{"{:.2f}".format(totalGross)}\t\t€{"{:.2f}".format(totalPlatformCosts)}\t\t€{"{:.2f}".format(totalNet)}')
