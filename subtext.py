@@ -2,7 +2,7 @@ import csv
 import os
 import glob
 
-from datetime import datetime
+from datetime import datetime, timedelta
 
 pitCrewCombined = []
 crewChiefCombined = []
@@ -63,19 +63,18 @@ with open(twitchSubsFile, 'r') as csv_file:
 
     for row in sortedlist:
         twitchSubs.append(performTextReplacements(row[0]))
-        # expiryDate is something like 2023-08-03T21:03:40Z
-        # determine how many days left until expiry
-        # get the current date
-        if row[5] == 'prime':
+
+        if row[5] == 'prime' or row[5] == 'gift':
             date_format = "%Y-%m-%dT%H:%M:%SZ"
             currentDate = datetime.utcnow().strftime(date_format)
-            expiryDate = row[1]
+            subDate = row[1]
 
-            daysLeft = (datetime.strptime(currentDate, '%Y-%m-%dT%H:%M:%SZ') - datetime.strptime(expiryDate, '%Y-%m-%dT%H:%M:%SZ')).days
-            parsed_date = datetime.strptime(expiryDate, date_format)
-            formatted_date = parsed_date.strftime("%B %d, %Y at %I:%M %p")
+            daysLeft = 28 + (datetime.strptime(subDate, '%Y-%m-%dT%H:%M:%SZ') - datetime.strptime(currentDate, '%Y-%m-%dT%H:%M:%SZ')).days
+            parsed_date = datetime.strptime(subDate, date_format)
+            new_date = parsed_date + timedelta(days=28)
+            formatted_date = new_date.strftime("%B %d, %Y at %I:%M %p")
 
-            blurb = f'{performTextReplacements(row[0])}\'s Twitch Prime expires in {daysLeft} days on {formatted_date}.'
+            blurb = f'{performTextReplacements(row[0]).ljust(20)}\t{row[5]}\t\t{daysLeft}\t\t{formatted_date}'
             twitchPrimeExpiryBlurb.append(blurb)
 
 # Patreon
@@ -206,7 +205,9 @@ print(f'TOTAL\t\t\t{totalMemberCount}\t\t€{"{:.2f}".format(totalGross)}\t\t€
 print(f'###########################################################################################')
 
 print(f'\n\n############################# TWITCH PRIME EXPIRING SOON #####################################')
+print(f'member\t\t\tsub type\tdays left\t\texpiry date')
+print(f'_____________________\t__________\t__________\t___________________________')
 for blurb in twitchPrimeExpiryBlurb:
     print(blurb)
-print(f'\nTwitch prime subs do not auto-renew. If you\'d like to renew your prime sub, the easiest way to remember to renew it is by setting a monthly reminder for the expiry date beside your name.')
-print('###########################################################################################')
+print(f'\nTwitch prime subs do not auto-renew. If you\'d like to renew your prime sub, the easiest way \nto remember to renew it is by setting a monthly reminder for the expiry date beside your name')
+print('##############################################################################################')
