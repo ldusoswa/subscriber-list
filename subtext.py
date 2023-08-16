@@ -119,6 +119,8 @@ for member in teamBossCombined:
 for member in crewChiefCombined:
     print(member)
 
+print('\n')
+
 for member in pitCrewCombined:
     print(member)
 
