@@ -45,7 +45,8 @@ def performTextReplacements(original):
         'Ã¼': 'ü',
         'Dan Persons': 'Dogoncouch',
         'coooyahh': 'FeckCancer',
-        'kuyar21': 'FeckCancer'
+        'kuyar21': 'FeckCancer',
+        'adam_coolmunky': 'acreekracing_photography',
     }
 
     for key, value in mapping.items():
@@ -69,7 +70,7 @@ with open(twitchSubsFile, 'r') as csv_file:
             currentDate = datetime.utcnow().strftime(date_format)
             subDate = row[1]
 
-            daysLeft = 28 + (datetime.strptime(subDate, '%Y-%m-%dT%H:%M:%SZ') - datetime.strptime(currentDate, '%Y-%m-%dT%H:%M:%SZ')).days
+            daysLeft = 30 + (datetime.strptime(subDate, '%Y-%m-%dT%H:%M:%SZ') - datetime.strptime(currentDate, '%Y-%m-%dT%H:%M:%SZ')).days
             parsed_date = datetime.strptime(subDate, date_format)
             new_date = parsed_date + timedelta(days=28)
             formatted_date = new_date.strftime("%B %d, %Y at %I:%M %p")
