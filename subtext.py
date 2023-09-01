@@ -47,6 +47,9 @@ def performTextReplacements(original):
         'coooyahh': 'FeckCancer',
         'kuyar21': 'FeckCancer',
         'adam_coolmunky': 'acreekracing_photography',
+        'Phelan Pritchard Gaming': 'Phelan Pritchard',
+        'astrophotography': 'Geezer3d.com',
+        'damien mcmullen': 'Damo McMullen'
     }
 
     for key, value in mapping.items():
@@ -72,7 +75,7 @@ with open(twitchSubsFile, 'r') as csv_file:
 
             daysLeft = 30 + (datetime.strptime(subDate, '%Y-%m-%dT%H:%M:%SZ') - datetime.strptime(currentDate, '%Y-%m-%dT%H:%M:%SZ')).days
             parsed_date = datetime.strptime(subDate, date_format)
-            new_date = parsed_date + timedelta(days=28)
+            new_date = parsed_date + timedelta(days=30)
             formatted_date = new_date.strftime("%B %d, %Y at %I:%M %p")
 
             blurb = f'{performTextReplacements(row[0]).ljust(20)}\t{row[5]}\t\t{daysLeft}\t\t{formatted_date}'
@@ -82,7 +85,7 @@ with open(twitchSubsFile, 'r') as csv_file:
 with open(patroenSubsFile, 'r') as csv_file:
     next(csv_file)
     reader = csv.reader(csv_file)
-    sortedlist = sorted(reader, key=lambda row:float(row[6]), reverse=True)
+    sortedlist = sorted(reader, key=lambda row:float(row[7]), reverse=True)
 
     for row in sortedlist:
             if row[9] == "Pit Crew":
@@ -149,7 +152,7 @@ data = [
     [
         formatForPhotoshopText(teamBossCombined, 38),
         formatForPhotoshopText(crewChiefCombined, 35),
-        formatForPhotoshopText(pitCrewCombined, 35),
+        formatForPhotoshopText(pitCrewCombined, 37),
         formatForPhotoshopText(twitchSubs, 30)
     ]
 ]
