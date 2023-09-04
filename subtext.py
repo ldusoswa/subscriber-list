@@ -88,15 +88,16 @@ with open(patroenSubsFile, 'r') as csv_file:
     sortedlist = sorted(reader, key=lambda row:float(row[7]), reverse=True)
 
     for row in sortedlist:
-            if row[9] == "Pit Crew":
-                pitCrewCombined.append(performTextReplacements(row[0]))
-                pitCrewPatreon.append(performTextReplacements(row[0]))
-            elif row[9] == "Crew Chief":
+            print(row[10] + ' - ' + row[0])
+            if row[10] == "Crew Chief":
                 crewChiefCombined.append(performTextReplacements(row[0]))
                 crewChiefPatreon.append(performTextReplacements(row[0]))
-            elif row[9] == "Team Boss":
+            elif row[10] == "Team Boss":
                 teamBossCombined.append(performTextReplacements(row[0]))
                 teamBossPatreon.append(performTextReplacements(row[0]))
+            elif row[10] == "Pit Crew" or row[10] == "":
+                pitCrewCombined.append(performTextReplacements(row[0]))
+                pitCrewPatreon.append(performTextReplacements(row[0]))
 
 # YouTube
 with open(youtubeSubsFile, 'r') as csv_file:
