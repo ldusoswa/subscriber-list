@@ -74,12 +74,12 @@ with open(twitchSubsFile, 'r') as csv_file:
             currentDate = datetime.utcnow().strftime(date_format)
             subDate = row[1]
 
-            daysLeft = 30 + (datetime.strptime(subDate, '%Y-%m-%dT%H:%M:%SZ') - datetime.strptime(currentDate, '%Y-%m-%dT%H:%M:%SZ')).days
-            parsed_date = datetime.strptime(subDate, date_format)
-            new_date = parsed_date + timedelta(days=30)
-            formatted_date = new_date.strftime("%B %d, %Y at %I:%M %p")
+            daysLeft = 31 + (datetime.strptime(subDate, '%Y-%m-%dT%H:%M:%SZ') - datetime.strptime(currentDate, '%Y-%m-%dT%H:%M:%SZ')).days
+            parsed_subscription_date = datetime.strptime(subDate, date_format)
+            expiry_date = parsed_subscription_date + timedelta(days=31)
+            formatted_expiry_date = expiry_date.strftime("%B %d, %Y at %I:%M %p")
 
-            blurb = f'{performTextReplacements(row[0]).ljust(20)}\t{row[5]}\t\t{daysLeft}\t\t{formatted_date}'
+            blurb = f'{performTextReplacements(row[0]).ljust(20)}\t{row[5]}\t\t{daysLeft}\t\t{formatted_expiry_date}'
             twitchPrimeExpiryBlurb.append(blurb)
 
 # Patreon
