@@ -49,7 +49,8 @@ def performTextReplacements(original):
         'adam_coolmunky': 'acreekracing_photography',
         'Phelan Pritchard Gaming': 'Phelan Pritchard',
         'astrophotography': 'Geezer3d.com',
-        'damien mcmullen': 'Damo McMullen'
+        'damien mcmullen': 'Damo McMullen',
+        'Stephen Oâ€™Keeffe': 'Stephen O\'Keeffe',
     }
 
     for key, value in mapping.items():
