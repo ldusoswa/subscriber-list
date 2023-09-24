@@ -6,7 +6,7 @@ client_id = '2w0ydqjej94j5vhqck65wdtjjceu1o'
 client_secret = 'swa2i0bw1lgxbnmjtqgzrfk9pnqgbn'
 channel_id = '473785165'
 scopes = ['channel:read:subscriptions']
-redirect_uri = 'https://www.laurencedusoswa.com'  # Replace with your registered redirect URI
+redirect_uri = 'https://www.laurencedusoswa.com'
 
 # Step 1: Get OAuth token
 
