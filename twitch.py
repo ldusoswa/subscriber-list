@@ -62,7 +62,7 @@ else:
     exit()
 
 # Step 4: Get subscribers
-url = f'https://api.twitch.tv/helix/subscriptions?broadcaster_id={channel_id}'
+url = f'https://api.twitch.tv/helix/subscriptions?broadcaster_id={channel_id}&first=100'
 headers = {
     'Client-ID': client_id,
     'Authorization': f'Bearer {token}'
