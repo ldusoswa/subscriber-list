@@ -51,6 +51,7 @@ def performTextReplacements(original):
         'astrophotography': 'Geezer3d.com',
         'damien mcmullen': 'Damo McMullen',
         'Stephen Oâ€™Keeffe': 'Stephen O\'Keeffe',
+        ' ðŸ‡µðŸ‡¸': ''
     }
 
     for key, value in mapping.items():
