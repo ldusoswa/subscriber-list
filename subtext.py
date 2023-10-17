@@ -155,7 +155,7 @@ data = [
     [
         formatForPhotoshopText(teamBossCombined, 38),
         formatForPhotoshopText(crewChiefCombined, 35),
-        formatForPhotoshopText(pitCrewCombined, 37),
+        formatForPhotoshopText(pitCrewCombined, 39),
         formatForPhotoshopText(twitchSubs, 30)
     ]
 ]
