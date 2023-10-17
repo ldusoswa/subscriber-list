@@ -87,7 +87,7 @@ with open(twitchSubsFile, 'r') as csv_file:
 with open(patroenSubsFile, 'r') as csv_file:
     next(csv_file)
     reader = csv.reader(csv_file)
-    sortedlist = sorted(reader, key=lambda row:float(row[7]), reverse=True)
+    sortedlist = sorted(reader, key=lambda row:float(row[8]), reverse=True)
 
     for row in sortedlist:
             print(row[10] + ' - ' + row[0])
