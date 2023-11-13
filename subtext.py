@@ -51,7 +51,8 @@ def performTextReplacements(original):
         'astrophotography': 'Geezer3d.com',
         'damien mcmullen': 'Damo McMullen',
         'Stephen Oâ€™Keeffe': 'Stephen O\'Keeffe',
-        ' ðŸ‡µðŸ‡¸': ''
+        ' ðŸ‡µðŸ‡¸': '',
+        'PaweÅ‚ Surdyk': 'Pawel Surdyk'
     }
 
     for key, value in mapping.items():
@@ -90,14 +91,14 @@ with open(patroenSubsFile, 'r') as csv_file:
     sortedlist = sorted(reader, key=lambda row:float(row[8]), reverse=True)
 
     for row in sortedlist:
-            print(row[10] + ' - ' + row[0])
-            if row[10] == "Crew Chief":
+#             print(row[11] + ' - ' + row[0])
+            if row[11] == "Crew Chief":
                 crewChiefCombined.append(performTextReplacements(row[0]))
                 crewChiefPatreon.append(performTextReplacements(row[0]))
-            elif row[10] == "Team Boss":
+            elif row[11] == "Team Boss":
                 teamBossCombined.append(performTextReplacements(row[0]))
                 teamBossPatreon.append(performTextReplacements(row[0]))
-            elif row[10] == "Pit Crew" or row[10] == "":
+            elif row[11] == "Pit Crew" or row[11] == "":
                 pitCrewCombined.append(performTextReplacements(row[0]))
                 pitCrewPatreon.append(performTextReplacements(row[0]))
 
