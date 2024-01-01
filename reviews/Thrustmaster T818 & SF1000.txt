@@ -1,0 +1,87 @@
+Thrustmaster is one of the most famous names in Sim Racing. They have a large ecosystem of steering wheels, pedals, shifters and handbrakes. They just love a good collaboration with a big brand and brands in motor racing don't come much bigger than Ferrari. This is the T818 Direct Drive wheelbase, the SF1000 Officially licensed steering wheel and their Sparco R383 Rally steering wheel... I'm Laurence, welcome to the channel
+
+<intro>
+
+1. Introduction
+On the left you’ll see all the sections in this video. I’ve put timestamped links to each section in the description below. While you’re down there please hit the thumbs up button to help YouTube to suggest this video to others like you. 70% of the people who watch my videos are not subscribed. Please consider subscribing and hit the notification bell if you want to be notified about upcoming reviews.
+
+In recent years, it has been tough for Thrustmaster to maintain their status in sim racing. Where once upon a time, Thrustmaster would have been seen as a middle ground between Logitech and Fanatec, we now live in a far more competitive world with several Asian brands offering direct drive wheelbases for less than the price of a Thrustmaster T300. Thrustmaster have been slow to react. It feels like the T818 was promised and teased for so long.
+
+The base features a 10Nm motor which is in or around the sweet spot where people feel they may never need more power. This version wears the Ferrari badge proudly although it is identical to the base model from a technical point of view. Part of the reason that this review has taken quite some time is because they have been teasing console compatibility as well as other functionality/support. However, I'm sad to report that this is not the case. The T818 is PC only.
+
+For this review I had the pleasure of using the existing Sparco R383 Rally steering wheel as well as the SF1000 Formula wheel. My time with the product was pleasant, although not without its challenges. I'll go into more detail in later sections.
+
+All of the products in this review were sent to me free of charge for the purposes of this review and nobody other than me has had any say in the content of this video.
+
+2. First Impressions
+There's something special about Ferrari. Knowing that this product is officially backed by them sets the expectations quite high. It is well packaged and unboxing it was a nice experience. However, the hardware feels middle of the road for me. That's not necessarily a bad thing though.
+
+The finish on these products is good. Not amazing. But good. there's serious weight in the wheelbase which is to be expected, but may not be ideal for desk mounting or rigs with flex. The steering wheels are lovely and light. Just like many of the Fanatec offerings, there's a real effort being made to keep costs down but also to use lighter and less material. Although this can feel like a disadvantage, it's actually a huge advantage when it comes to the quality of force feedback. Again, I'll cover that in more detail later.
+
+3. Price
+The Ferrari bundle of the T818 and the SF1000 comes in at €1,099, which while a lot of money, is actually pretty good value. You get a wheel with a screen, rev lights, clutch paddles, flag lights and a bazillion inputs. You get a 10Nm wheelbase which is more than enough to blow your mind if you've never used direct drive before. The wheel on its own is €399. I can't think of a single other wheel with a screen which even comes close to that price. The price also includes the quick release. It's worth noting that if you don't care about the Ferrari branding, you might be better off buying the base and wheel separately as you can save €50.
+
+The Sparco R383 steering wheel normally costs €229. This wheel is a lot more basic but also represents decent value in my opinion, despite lacking some functionality like rotary encoders. Again, there is a quick release included in the price.
+
+You may need to buy a wheelbase mount depending on your rig. Just make sure to research compatibility of your rig before buying, so that you know if you need to buy this extra cockpit mounting kit for €40 or a desk mount for €50.
+
+4. Installation - Hardware
+Installation was relatively straight forward. Although I kind of got lucky. You see, this wheelbase is hard to mount. There's no front or side mounting option and to base mount, you need an extra adapter unless you drill holes in your mounting plate. I didn't feel like drilling additional holes and ended up using the top part of the desk mount to mount this wheelbase firmly to my rig. This came with some drawbacks. Firstly, the angle of the desk mount might make perfect sense for a desk mounted solution, but for my rig, it was pretty horrible. I can tilt the angle of my wheel deck and that got me out of trouble but it still felt quite awkward, to be honest.
+
+4 bolts hold it in place nice and securely, and these winged nuts worked quite well all things considered. I'd love to see a proper base mount included with the wheelbase. Most people will need something in order to mount this wheelbase cleanly. It just feels like a needless barrier to entry.
+
+The quick release is redesigned, but also, not really. In order to maintain backward compatibility with older wheels, they're really just left it largely the same but improved the materials somewhat. You still have that atrocious screw which you need to force into your brand new equipment's plastic. It's not a nice experience.
+
+5. Installation - Software
+The software installation was not the greatest experience for me. It's worth noting that many Thrustmaster users don't have any issues so my issues may be isolated. However, I found the software to be very difficult to locate on my PC. I couldn't search for it in the search menu and even when you eventually locate it in your windows game controllers.
+
+The e-swap controller software is a lot nicer than this, apparently. It kind of seems like sim racing isn't a priority for Thrustmaster anymore.
+
+In an ideal world, software installation is seamless, and you don't need any additional software in order to get the most out of a device. But I found that even simple things like getting the LEDs to work, just didn't really happen for me. I upgraded the firmware on the steering wheel which involved needing to take off the shifters just so I could access the usb port. It just all felt clunky and unpleasant. It felt a bit DIY. I switch between sims all the time and while some were supported, others weren't and with many other brands, stuff like this is either supported out of the box, or else it easily interfaces with other software like SimHub.
+
+6. SF1000 Steering Wheel
+The SF1000 is a replica of the steering wheel used in the 2020 Ferrari Formula 1 car. It has 21 LEDs, a 4.3 inch screen, 11 buttons, a 4 way directional hat, two thumb encoders, 6 rotary dials with clickdown and a toggle switch. It comes with shifters and clutch paddles as standard, although the shifters can be upgraded. Honestly I don't see the need to upgrade the shifters, but that being said, I did not review the T-Chrono Paddles in this review.
+
+This steering wheel itself is really good and at 280mm in diameter, even a weak wheelbase can transmit loads of details through it. If you get all the screens and LEDs working with your sim of choice, it's a lovely experience. However, support for screen telemetry and flag LEDs is limited. Forgive me for not having footage of this as one of my SD cards got corrupted. The grips are decent. Nothing incredible but also nothing negative to report. They have a good ergonomic shape and were fine for longer stints. The button stickers are a bit cartoony but at the same time, they're clear and almost identical to what you'd find in a real SF1000. The shifters feel nice, they sit on a solid piece of metal allowing for a one handed push/pull gear shifting experience. The clutch paddles are good and give an incredible competitive advantage for standing starts. However, I never actually got them to work properly in any sim. I got them to register input, but even their incredibly massive user manual doesn't make any reference to setting a bite point. Maybe I'm a little but slow, but I just couldn't get it to work.
+
+The buttons are far better than the previous version of the wheel which I also owned. This wheel even features REAL carbon fiber and is far superior. However, I didn't like this wheel for anything other than F1 driving as the point at which the quick release sits affects the amount of rotation that's comfortable with this wheel. It's hard to explain, but once you go over 90 degrees in either direction, the wheel starts to feel a bit awkward. It's not a huge deal, but it's worth noting. If you let go of the SF1000 wheel when it's not perfectly centred, it will droop down and flop upside down. I know this isn't important in the grand scheme of things, but for some reason, it matters to me.
+
+All in all, if you're interested in this wheel, research the sims you use and what (if anything) is supported. It's the only real pitfall with this wheel. If this was a basic simhub supported screen and LEDs, or even if Thrustmaster just had some decent standalone software, this would be a no-brainer. But as it stands, it's a bit of a gamble. On Console, it should be much more plug and play, but on PC, it's a bit of a mess.
+
+7. R383 Sparco Rally Wheel
+This review also features the 330mm Sparco Rally Wheel Add-On, also known as the R383 MOD. While Thrustmaster still calls their wheels addons or mods, I find this terminology to be somewhat confusing and a bit redundant. I did lots of rally and really enjoyed the experience for the most part. However, the buttons on this wheel are pretty bad. I guess at the price point you can't expect the world, but at times I wasn't even sure if the buttons had been pressed. At times it even felt like the buttons were getting stuck after pressing them, and while using gloves, the inputs all felt very toy like. The 5-way hat and shifters are decent though but this wheel lacks rotary encoders. The thickness of the wheel rim is great. It's probably my favourite thing about it.
+
+8. Quick release
+I have alluded to it in previous sections, but this quick release just doesn't stack up against its modern rivals. Sure, it's light and it does keep the wheel attached. But it still has some inherent flex which can never be taken out of it with the current design unless all parts are made of metal. The clumsy screw is archaic and confusing. If a new sim racer uses this quick release next to that of a Moza, Simagic or even Fanatec's new QR2, they will instantly assume that the Thrustmaster is a far cheaper product, which it isn't. It's a shame because the wheelbase is actually really good. It's let down by this quick release and other little issues though. I even had to return my first wheelbase because there was so much flex. I sent them a video and they were shocked at the amount of play in the steering wheel shaft. They said it was a problem with the batch that my wheel came from. They sent me a replacement and it was much better. But still not as good as the competition. The flex is difficult to notice while driving, but it's there. And it's not good enough.
+
+9. T818 Force Feedback
+This is the part that really confuses me. I found the force feedback to be really good. There were lots of details and more than enough to have an extremely accurate driving experience. There are several modes in the software for setting the force feedback level, but the Sport or Performance modes are the only viable options really. The extreme mode was horrible. Avoid it at all costs.
+
+In general, this was a surprisingly good force feedback experience. It worked fine in Assetto Corsa, ACC, iRacing, Dirt Rally 2.0 and even wreckfest. Once you get used to the force feedback settings menu, you'll quickly warm to the fact that there are very few sliders to worry about and it generally just works out of the box.
+
+The quality and strength of the force feedback are the most positive things in this review. The force feedback goes toe to toe with its rivals and Thrustmaster did a good job with it. It's just a shame that the rest of the product doesn't live up to the same standard.
+
+10. Final Thought
+Even though this was an extended review, it still felt somewhat limited. The SF1000 wheel has great potential but is clunky and high effort. I never got the screen or LEDs working properly with any titles, and that's a shame because I really tried. The R383 wheel is a decent wheel, but it's not amazing. It's a really good force feedback experience. The T818 is a good wheelbase but it's let down by the quick release, lack of mounting options, quality of wheel rims and that dreadful software.
+
+I feel that maybe Thrustmaster has been concentrating on Logitech's PRO a bit too much, maybe losing sight of the fact that Logitech is also drowning in the modern world of sim racing. Thrustmaster does have lots more wheels and stuff, but due to the fact that the T818 STILL isn't compatible with consoles, it's hard to recommend it over Fanatec offerings which have more mounting options, a better quick release, better software, better compatibility and a better ecosystem. The only thing that the T818 has over the CSL DD is some extra power and the Ferrari branding. And that's not enough for me. I haven't reviewed the new Fanatec Clubsport DD, but I would be surprised if it isn't better than the T818.
+
+While the base is not console compatible, the steering wheels are, provided that they are used with an older Thrustmaster wheelbase which is console compatible.
+
+And that's tough for me to say. You see, a few years ago long before I had this channel, I chose the Thrustmaster TS-PC Racer over the Fanatec Clubsport v2.5 wheelbase. I loved the Thrustmaster open wheel rim and the pricing of the whole package made it a no brainer. I did consider myself a bit of a Thrustmaster fanboy in the past, so this review is a bit of a sad one for me.
+
+Nowadays, I feel that Thrustmaster is no longer the pioneer that it once was. I feel that it's an old business model, stuck in its ways and unwilling to evolve or grow to maintain its market position. Their software looks like windows XP. Their website looks dated. This product is a day late and a dollar short. Somewhat similar to Logitech, I fear that our once loved behemoths of sim racing are being left behind by the likes of Fanatec, Simagic, Moza, Asetek, Simucube and others. Even VNM, Sim-Lab and Trak Racer are getting in on the Direct Drive action these days.
+
+If you're already in the Thrustmaster ecosystem and have a bunch of wheels and stuff, then this is a great upgrade. But if you're new to the brand or looking to use this wheelbase with a console, I'd recommend looking elsewhere.
+
+For someone who has never experienced the competition, this is still a very good purchase and will give endless amounts of fun. These are not bad products and I hope that this review doesn't imply that they are. They're just not as good as the competition. And that's a shame.
+
+I stream every Tuesday and Thursday at 9pm UK/Irish time. Thanks again to Thrustmaster for making this review possible and to you for taking the time to watch, hit the thumbs up or comment with your experiences or opinions. I'm Laurence, and I'll chat to ye later
+
+
+Potential titles
+I'm WORRIED about Thrustmaster | T818 Long Term Review | SF1000 Ferrari and R383 Sparco
+Is Thrustmaster still relevant?
+Thrustmaster's final attempt?
+Is Thrustmaster done?
+Thrustmaster's last chance?

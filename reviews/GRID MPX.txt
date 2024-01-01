@@ -1,0 +1,96 @@
+It seems like every second reviewer video claims "The next big thing" or "Competitor Killer" these days and it probably gets annoying. The reality is though that it's a very very competitive industry and as companies innovate, it's surprising that we (reviewers) still genuinely get surprised by what you would assume to be "more of the same". This is the Grid MPX steering wheel and Gird DDU5 dash and they’re almost perfect... I'm Laurence, welcome to the channel.
+
+<intro>
+
+1. Introduction
+On the left you’ll see all the sections in this video. I’ve put timestamped links to each section in the description below. While you’re down there please hit the thumbs up button to help YouTube to suggest this video to others like you. 70% of the people who watch my videos are not subscribed. Please consider subscribing and hit the notification bell if you want to be notified about upcoming reviews.
+
+When Brandon from Grid by Sim-Lab contacted me first day, he had a simple vision. He believed that he could make hardware to a higher quality standard and with better customer service than anyone else out there. Obviously I listened to him and supported his goals, but I've heard that story many many times before. Few companies make it out the other side. Formerly known as Grid Engineering, Grid by Sim-lab came about following a merger between the companies towards the end of 2022.
+
+Sim-lab, founded in 2015 is a dominant high end rig manufacturer based in the Netherlands, while Grid was founded in Canada in 2020. The merger was a match made in heaven. Sim-lab had the manufacturing and distribution capabilities, while Grid had the vision and the product design capabilities. The merger was announced in September 2021.
+
+I make no secret of the fact that given the choice, I'd have a wheel without a screen as my main steering wheel. As impressive as it is to have a screen in your wheel, it's not that practical unless you're in a formula style position. And most of us aren't. We tend to drive in a GT position. Having a separate wheel and dash is not only more practical and cheaper, but it also gives FAR more immersion. You see, having a dash unit like this between your wheel and your monitor gives far greater depth of field than your standard on screen overlays can give.
+
+All of the products in this review were sent to me free of charge for the purposes of this review and nobody other than me has had any say in the content of this video. The links to this product and its competitors in the description are affiliate links and if used will earn this channel some money at no extra cost to you.
+
+2. First Impressions
+Before receiving my MPX, I had only seen pictures of the wheel on social media and it definitely looked nice. I wasn’t expecting it to make such a visual impact in person though. The stealthy look of this wheel is almost impossible to capture through a lens. The deep carbon faceplate catches the light really nicely, but little did I know how awesome this wheel would look with its backlighting on.
+
+From the moment I held it, I knew it was special. It’s not as impressive visually as a steering wheel with a screen in it, but there are several reasons why I would choose a separate screen and wheel setup like this, if I was only allowed to use one steering wheel for the rest of my life. I’ll cover that in more detail in a later section.
+
+It has 11 rotary encoders... That's amazing and that's the type of overkill and dedication that sim racers drool about.
+
+The MPX doesn't have rev lights. This suggests that it is made to be married to a dash like the DDU5. It's a 295mm steering wheel which is pretty much bang on perfect for a wheel of this type. It allows you to do almost all types of racing except for rally and drifting or anything that requires large amounts of rotation.
+
+3. Price
+
+4. Installation - Hardware
+Installing a quick release on the MPX was quite easy thanks to the pre installed flange on the back. 3 bolts hold it in place just fine. The USB cable is high quality and features a rugged connector to ensure that it doesn’t wear poorly over time. This connects to a tiny control box which splits off the USB and power connections for this wheel. The control box has an on/off switch on it, which is quite handy. Unfortunately this wheel requires a dedicated power supply which is very unusual for a steering wheel without a screen. Even most wheels with a screen don’t need a dedicated power supply anymore. I’d really love to see them improve this, however, those LEDs do go nice and bright and there are lots and lots of them. It’s an incredible looking wheel.
+
+The standard plug for the power supply is tall, and I replaced it with a smaller infinity cable. The power supply itself is small though and has plenty of length for most people's needs.
+
+Due to the immense amount of LEDs on this device, it needs its own power supply. This is a bit unfortunate but also understandable. It does mean that you end up with an additional control box which transmits the USB signals and the power. This little box is a bit annoying. It's only small and if this is your main wheel, you wont notice it. But if you need to switch to a wheel which is natively
+
+The DDU5 comes with your wheelbase mount of choice. It’s a breeze to install. The cable does stick out at the rear meaning that you can’t get it fully flush with your monitors, should you wish to do so. This design approach does ensure though that there are no ugly cables on show. However, if you have a fixed rig, it can be difficult to access the bolts at the back which allow you to raise or lower the screen. This was an issue for me as the height requirements of a standalone dash are different whether yours using a steering wheel like the MPX, or a round steering wheel rim.
+
+I would love for the dash to be easily adjustable and even removable without the need for undoing bolts. I don’t ALWAYS want a dash in front of me and I want to be able to change the height easily, but that’s yet another first world problem that is unique to high end sim racers. I kind of solved it but leaving the bolts just loose enough to allow adjustments, but tight enough to stay put even during spirited driving. Thumb screws might help this situation and are an easy upgrade to make yourself.
+
+Finally about the mount, I found that it did't go low enough for my liking. I know it's always going to be tough to make a dash of this size work with a round steering wheel, but if the dash is partly hidden by the rim of my round steering wheel, it makes it far less usefull and it becomes more of a hinderance than a help.
+
+The shifters and clutch paddles can be extended. I didn't like them in their default form so I extended them about 60% of their maximum range. I also changed the angles of the shifters to suit my preferences. This is a very nice feature and it's very easy to do with just one bolt. I'd love to see this feature on more wheels.
+
+5. Installation - Software
+If you're already using Simhub, I'd recommend sticking with it. However, if you want a nice easy setup option, Grid's own RaceDirector software has you covered. It's a very simple and intuitive software that allows you to configure the dash and wheel with ease. It's not as powerful as Simhub, but it's a great option for those who don't want to spend hours configuring their hardware. It's a very nice piece of software and it's very easy to use.
+
+I choose to use simhub, but the interface isn't beautiful. It's fine, if you're used to simhub, but little things like having a separate area for the rotary encoder LED colours vs the button colours is pretty annoying. You can't see how they would all look together until you are actually in game. It's not a huge deal, but it's a bit annoying. I'd love to see a more intuitive interface in the future. I also had some issues importing Grid's profiles for both the MPX and the DDU5. This could be due to the fact that I hook up a lot of steering wheels and screens to my PC, but I'm curious if others also experienced this issue.
+
+The manual is clear and intuitive and shows how to do things like calibration and clutch bite point manipulation. It's pretty straight forward although I'd love to just be able to assign one of the 11 Rotary encoders as a dedicated clutch bite point adjuster.
+
+6. Buttons, rotaries and 7-way hats
+The buttons on the MPX were a major surprise to me. They looked a bit large and childish without stickers, but once stickers are added, they’re incredible and the way the light shines to illuminate the sticker is very satisfying. The stickers are made of a hard plastic and calling them a sticker doesn’t do them justice. They have a nice feel and they fit the buttons well. I’d love if there was a clever way to center and align the stickers but I like that there are no ridges or awkward textures on the buttons. I haven’t even mentioned their click. They’re incredibly satisfying. You’ll never be in any doubt as to whether you have pressed a button and you’ll also never accidentally push one either.
+
+The rounded buttons on the back are fully customisable. I use them the same way I use additional flappy paddles on other high end steering wheels. The left one is for the pit limiter and the right one is for flashing my lights at drivers with inferior steering wheels.
+
+There are 2 types of rotary encoders on this wheel. Firstly, the most visible ones on the front. A whopping FIVE rotary encoders with push down functionality. These are the best feeling rotaries I’ve ever used. They’re not too stiff and they’re not too loose. They’re just right. The push down functionality is also very satisfying. I use these for things like brake bias, traction control, ABS, fuel mix and so on. The illumination on this wheel is next level. It's so beautifully diffused and the colour is so rich. It's a joy to look at.
+
+The second type of rotary encoder is the large thumb style encoders in at the sides of the main button plate. These also pack a punch and are very easy to use and access even when wearing gloves.I generally use these for quick access to certain menus and pit strategy options. There are so many on this rim that I can even assign some to control the volume of my music or the brightness of my dash.
+
+This wheel is also equipped with two large 7 way joysticks. It's also called a 7 way hat and it has 7 functions. It rotates left and right just like a rotary encoder, and it also allows for up, down, left and right movements. It also has a push down function. If I was to find one criticism here, it would be that during very tight corners where you rotate the wheel 180 degrees or more, your opposing wrist might accidentally trigger the joystick. This is just something to be aware of, but other than that, I have no issues with the placement of these 7 way hats. The rotary movement is not as crisp as the other rotaries on this wheel, but it's still very good. These hats are a nice size and easy to feel and use even when wearing gloves.
+
+7. Grips & LEDs
+The LEDs on this wheel are incredible. They’re bright, they’re vibrant and they’re very easy to see. I love the diffused look and they have plenty of brightness. As mentioned in the software section, setup of the colours can be a bit of a pain but it's great once set. It has 87 RGB LEDs. I don't think there's another sim racing product with enough LEDs to warrant a dedicated power supply. I'd love to see a more intuitive interface for customising the LEDs. Little things like colour changes during button presses would be really nice.
+
+The grips are very nice. They have a great rubber texture to them although that does attract dust and lints. I'd love if they were just a touch chunkier but that's just personal preference. The grips are very comfortable and they're very grippy. I have no issues with them and there's space for my fingers even when I'm wearing gloves or using different grip styles. With gloves, the grips feel like they're stuck to your hand which is very comfy for those longer stints. The shape of the grips is great for GT, LMP and formula style driving, as well as most road car variants. I'd love to see Grid doing a 320mm round version of this wheel in the future.
+
+8. DDU5 dash
+This dash is almost exactly like what you would find in a real GT3 race car. In fact, if you look in your GT3 sim of choice, you're likely to see an identical unit sitting on the dash. They actually even use very similar components. It has a motorsports grade enclosure and the screen is a 5” TFT display with a resolution of 854x480. This for me is the perfect dash screen size and resolution. This doens't sound like a huge resolution but for a 5" screen, it's plenty. It’s a very nice display and it’s very easy to read even the smallest of fonts. The screen is very bright and the colours are very vibrant. Surrounding the screen, it has 20 fully adjustable LEDs. These allow for everything from rev lights to low fuel indicators to flags and even on track spotting, where one side will flash when there's a car to the left of right of you.
+
+Software compatibility is huge. It works with SimHub, JRT, Z1 and probably some others that I'm not familiar with. Getting it set up is easy, but customising it does require some more in depth knowledge of the software you're running. I'm using SimHub and it's very easy to set up. GRID also provides comprehensive instructions on how to set it up with SimHub.
+
+The mounts are effective, made from carbon fiber sheet. If you don't plan on removing the dash, its a great mount. However, I found raising and lowering the dash a little difficult. In the end I just left the bolts slightly loose so that there's just enough play to be able to change the height. I'd love to see a more adjustable mount in the future. I need to change the height when I change steering wheel rims. For a round rim, you want to see the dash through the wheel. and for a wheel like the MPX, you want to see the dash above the wheel. This is a first world problem though but I hope GRID will come up with a solution in the future.
+
+9. Build quality
+The build quality of this hardware is absolutely unquestionable. It's among the best I've ever seen. The carbon fiber is beautiful and the buttons are incredible. The wheel has some weight to it but nothing crazy. The reason I highlight the weight is because you really need to have a wheelbase with at least 12Nm of torque to do a wheel like this justice.
+
+The stickers are high quality but once you remove them, you'll damage them. I did that with my ABS sticker and the kit doesn't come with duplicates. I'd recommend practicing sticker application with a sticker that you're definitely not going to use. It might be possible to safely remove a sticker with a hair dryer and some tweezers, but I only thought of that after I made a mess of it.
+
+The cable for the DDU5 sits a little bit loosely into the housing. I'd love to see a neater and more elegant USB cable solution in the future.
+
+
+
+10. Final Thought
+Overall I found this product to be very impressive.
+
+
+
+Should you decide to buy this product, I have included links in the description which when used earn some money for this channel. There's no obligation to do so but your support is appreciated immensely. Details about other companies with similar benefits are also listed. I'm Laurence, I stream every Tuesday and Thursday at 9pm UK/Irish time. Thanks again to <> for making this review possible and to you for taking the time to watch, hit the thumbs up or comment with your experiences or opinions. I'm Laurence, and I'll chat to ye later
+
+
+
+------------
+
+It seems like every second reviewer video claims "The next big thing" or "Competitor Killer" these days and it probably gets annoying. The reality is though that it's a very very competitive industry and as companies innovate, it's surprising that we (reviewers) still genuinely get surprised by what you would assume to be "more of the same".
+
+Perfect for formula and GT
+
+Has no rev gauge which is great
