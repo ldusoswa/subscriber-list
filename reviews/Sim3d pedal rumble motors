@@ -1,0 +1,81 @@
+They say that simple ideas are often the best. I remember a few years ago when I upgraded my fanatec pedals, I really missed the rumble effect that they allowed and had become quite dependent on being able to feel subtle queues for what the simulator was trying to tell me. As time went on, I unlearned this sensation and what I gained in using higher end pedals, made me forget about pedal rumble motors, and even made me consider them somewhat silly and unrealistic.
+
+Fast forward a few years, and it now appears that one of the last missing pieces of my sim racing hardware puzzle, was in fact, rumble effects on my pedals. It sounds a little silly to say that this little bolt-on mod makes such a big difference. Please let me take the next 10 minutes of your time to tell you all about it. I'm Laurence, Welcome to the channel!
+
+(Intro)
+
+1. Introduction
+On the left you’ll see all the sections in this video. I’ve put timestamped links to each section in the description below. While you’re down there please hit the thumbs up button to help YouTube to suggest this video to others like you. 85% of the people who watch my videos are not subscribed. Please consider subscribing and hit the notification bell if you want to be notified about upcoming reviews.
+
+If you have ever been in a real race car, there are some sensations that take place which we struggle to replicate in our sim rigs. The best we can do, is to trick our mind into recognising or even just imagining that things are really happening. A great example of this is force feedback in your steering wheel. Your car isn't really understeering in a simulator. It's because you're not even in a car. But your brain is being tricked into thinking that you are, so much so, that the terminology that we use while sim racing is largely interchangeable with the terminology used in real racing.
+
+Explaining what these rumble motors do is a little like trying to explain to someone what skydiving is like. It's a little difficult to explain, even more difficult to show, but becomes much more clear when you actually feel it. That's kind of how I feel about these SIM-3D rumble motors. I think it's easy to imagine why they're good, but I don't know if my words can do the actual feeling justice.
+
+2. First impressions
+The box arrived at my house and it was pretty plain. It was very beige, with bubble wrapped wires and motors in it, along with a control box. I wasn't expecting more, but I feel that products like this possibly deserve more. However, I'm aware that branding and packaging can eat into productions costs for smaller companies and ultimately drive prices up. So maybe it's a good thing that they're not wasting money on things that don't matter to some people. The feeling of unboxing and installing these motors, pales in comparison to using them.
+
+The 3D printed product effect instantly makes people feel that the product is cheap. Personally, I don't mind what it's made of and I don't see them as they're mounted to the rear of my pedals. As long as it functions correctly, I'm happy for a product like this.
+
+Once set up, you instantly get a lot of feedback. Please make sure that you do not just activate everything that you can activate as it will just become a sea of vibration which doesn't actually give you much benefit when it comes to driving. Less is definitely more when it comes to haptic feedback and motion.
+
+I already own a buttkicker gamer 2, and that requires a standalone amplifier, a dedicated sound card in my PC and more wiring than this rumble motor kit. The rumble motor kit does require a mains plug but the wiring is relatively straight forward and easy to hide on your rig.
+
+3. Price
+The price of a two motor kit as reviewed here, is very affordable in my opinion. However, something being affordable is a very subjective thing and many will be watching this video thinking: "I can make that for far cheaper". For someone like me who doesn't have a 3D printer or the time, skills or energy to create such a polished end product, the £100 GBP  price tag is very easy to justify, especially now that I know what to expect for that price tag. Please note that if you are an international non UK buyer, you will have to source your own power plug if you choose the 'international' option. However, to save the hassle, and even save money, I would recommend just buying the UK plug and using a basic travel adapter for your country. Alternatively, I've included links in the description below for power adapters which are compatible with this device.
+
+The control unit can control up to 4 rumble motors. You can get an additional motor on your clutch pedal for only £10 extra. However, You spend very little time on the clutch and I don't know if it's worth the extra spend. I see the benefit of getting feedback through my throttle and brake, but as far as the clutch feedback is concerned, I'd take or leave it. I'd spend the money elsewhere and although I haven't reviewed them, I'd probably just buy a seat rumble motor upgrade kit which is £20 extra and comes with a 1.5m cable. In fact, I'd probably get two of them.
+
+4. Installation - Hardware
+I wasn't fully clear on how to install the devices. Although they supplied brackets which slot nicely onto my Meca Cup-1 pedals, I still managed to install them incorrectly. Now, they did the trick and performance didn't suffer as a result, but I did a 'first impressions' video in which I accused SIM-3D or skimping on mounting hardware. Turns out, I'm just not as clever as they are and should have just reused the bolts that are already on the pedals I was using. It would be good for this installation process to be a bit clearer. All that said, installing them using the existing hardware was made difficult by the lack of access to the little threaded bar shown, due to the design of the mount. Eventually I got sick of dropping it so used some blu-tac to stick it in place while I offered up the motor mounts.
+
+Each motor plugs into the control box, and the control box then plugs in to USB for communications with your PC. You also need to plug them into the mains power supply using a power plug. For non UK buyers, I've included links to suitable power supplies in the description below. Why do they need mains power? Well, these things are CRAZY powerful for their size. More about that in a later section.
+
+The control box is neat and well finished. I can't see many people displaying this control box proudly as I feel that most will just hide it away under the pedal tray or Velcro it to the rig. I'd like to see little piece of Velcro included with the package so that people can mount it wherever they like. Honestly, Velcro works great for things like this and building a dedicated mount into a unit like this, would be overkill and a bit redundant.
+
+The braided wires which go from the control box to the motors are a lovely touch. They're easy to hide or tuck away, and look like they could withstand some friction. I couldn't ask for more. They come in at around 55cm (just under 2 foot) in length and some may wish for them to be longer, especially if they are tucking their control box away.
+
+5. Installation - Software
+One of the feathers in the cap of products like this is compatibility with a much loved third party piece of software called SimHub. The software is very gentle on resources and can cleverly relay data from your sim of choice to multiple compatible external devices at once including bass shakers and digital dashboards. You may not be aware of this app and it can be daunting at first, but here is a quick glance at my settings for those of you who want to get started quickly. This shows the effects that I have enabled, and which pedal I have enabled them on. Important to note here the volumes or levels that I have these at. you can adjust these to your liking as you see fit, but this should be enough to get you going in every sim you own. I tried other configurations where I sent effect from the right and side of the car to the throttle pedal and the left hand side ones to the brake, but that didn't do anything for me at all. It didn't feel intuitive.
+
+Do note that although I use Simhub, there are other apps out there which can interface with this device. I do recommend making life easy and just using Simhub, and I would encourage to make a small donation towards the incredible work that they do with this constantly evolving software.
+
+Simhub also autodetects the game/sim you're using and these rumble motors work in everything from iRacing to Forza Horizon 5. They even work in flight sims!
+
+6. How it feels
+This product feels exceptional. Yes, they're 'just' rumble motors and the concept is not dissimilar to what you'd find in a console game controller or a set of fanatec pedals. However, the hardware is a lot more serious. These units pack a serious punch and I actually only run them at 25%.
+
+To properly explain how these motors feel, I think that some context is needed. Many of you will be thinking that "hey, my pedals in my car don't vibrate". And you're be right. Generally, pedals themselves don't vibrate. However, when you feel 'seat of the pants' sensations in your road or track car, they don't just come through your seat. For example, when you're driving over gravel and you feel stones hitting the underside of your car, you feel a lot of that through your feet too.
+
+These motors have the surprising ability, when mounted to your pedals, to trick you into thinking that things are really happening. Here are some good examples:
+When driving a front wheel drive car you need to constantly compromise between steering and throttle in order to get the most out of your front wheels. With this setup, you can feel when you begin to understeer, and even better than that, you can feel the exact moment at which your throttle inputs become just a little bit too much for your car to handle. That moment where your front wheels begin to slide or hop. You intuitively back off and then immediately press as close to that edge of grip as possible, because you can feel where it is.
+
+Another example is ABS. Although ABS helps you to slow a car down down, it also isn't as quick as braking well without ABS. Feeling the point at which your ABS begins to kick in is very useful to find those valuable hundredths of a second on track.
+
+Another example is feeling lockups in your braking. Feeling the beginning of a lockup is so close to the real life feeling, that it's a bit questionable that I ever even drove without these motors. Some cars are very difficult to drive due to their brakes.
+
+There are many many more examples that I can give. I think you get the point. One thing that I would recommend to isolate mainly the things that your front wheels experience, so that you feel only those through your feet. To feel rear wheel traction loss and lockups, consider run a seat rumble motor, or a buttkicker on or near your seat so that you can intuitively feel where the data from the sim is coming from. Good placement and setup of these devices allows data to be turned into information with minimal thought required.
+
+Do remember though, that not all sims report all of this data in exactly the same way. For example, in iRacing in the Porsche 911 Cup car, I had plenty of scenarios where my in game dash was showing purple lights for lockups, but iRacing wasn't sending the data to Simhub and it wasn't having the desired effect. In other sims, I didn't notice this as much. This is a limitation of the software rather than the sim-3d hardware, but still worth being aware of.
+
+7. rumble vs bass
+Some of you may be familiar with the concept of bass shakers. This product being reviewed, performs a similar function, but does not require an audio amplifier. It relies on a little motor with an off balance weight on it which causes a rumbling sensation when activated. It may be beneficial to know the differences between the two. For context, I use both, on my rig. I run these rumble motors but I also use a Buttkicker Gamer 2 system. The buttkicker uses an amplifier and is very capable of transmitting smaller, more subtle output. It's basically just like a bass speaker element, or a subwoofer.
+
+Rumble motors, however, don't really have much depth to them. They're pretty much either on or off. Lower frequencies are achieved by spinning slower, higher frequencies are achieve by spinning quickly. Their main weakness, albeit almost negligible from my testing, is that the rumble motors have an inherent latency before they begin to spin. Traditional bass shakers don't have this latency to the same extent. I tried my best to find the differences between the two and I've come to the conclusion that for me, as a low end haptic feedback user, there's not a significant difference between the two.
+
+8. Final thought
+It's safe to say that I love this product, but let's get some perspective here. The main issue that I see is that items like this sit relatively close to the DIY market. Many of you will be able to afford them but still feel the urge to create them yourself. After all, the motors, circuit boards and cables are readily available online. However, if like me, you value the skills and research of others and potentially lack the time to undertake such a project yourself, you simply wouldn't regret buying this set. I have tried so so hard to find fault with this extremely affordable product. It is exceptional value but if I were to find room for improvement: I'd love to see a 1 click install capability which sets a default profile that allows you to get going right away. I'd like to see some Velcro added to the box so that I can mount the control box neatly. I'd like to see nicer packaging. The mounts differ depending on which pedal set you have so when you change pedals, you'll need new mounts. But realistically, none of this is going to be enough to put off prospective buyers.
+
+This product has the ability to fool me into thinking that the floor of my rig is giving me information about the behaviour of the car, as well as the external environment. It feels like I have removed the sound deadening in a car that I'm preparing for the track. Again, I realise how silly that sounds, but you'll have to take my word for it. Many of you saw my first impressions video and were already convinced and the feedback I've gotten from people who have received their rumble motors has been out of this world. I hate to say it because the phrase is over used, but this product is a game changer. I run them at 25% and get everything that I need from them. I want rumble motors all over my rig!
+
+Good pedals are the single best investment you can make when buying sim hardware. I noticed improvements in my consistency and ability to drive difficult cars when I added these rumble motors to what is already an extremely good set of pedals.
+
+In fact, this product has such an impact on my driving experience that I cannot review new pedals while these sim-3d motors are attached because I believe that they make any pedal set better than they would be without them.  This is the closest thing to pedal force feedback that we are likely to be able to afford in the next 10 years. These motors are a better investment than a motion simulator. Trust me, that's first hand experience.
+
+I want to hear your thoughts in the comments below and make sure to subscribe and get notified about new reviews. I stream every Tuesday and Thursday and love to answer your questions live on stream. I hope you enjoyed this review as much as I have enjoyed making it. I'm Laurence, and I'll chat to ye later.
+
+- [ ] footage of each motor
+- [ ] control box
+- [ ] spinner platform
+- [ ] attaching to the pedals
+- [ ] pedals on spinner
+- [ ] outside shots

@@ -1,0 +1,110 @@
+Simagic has arguably the most complete high end product line of all sim racing hardware manufacturers. This is the Simagic Alpha U, often referred to as the Simagic Ultimate. It's a 23Nm wheelbase which fancies itself as a strong competitor for the Simucube SC2 Pro, the Asetek Invicta and the VRS Direct Force Pro. Today, we're going to find out if that's a fair claim. I'm Laurence, welcome to the channel
+
+<intro>
+
+1. Introduction
+On the left you’ll see all the sections in this video. I’ve put timestamped links to each section in the description below. While you’re down there please hit the thumbs up button to help YouTube to suggest this video to others like you. 70% of the people who watch my videos are not subscribed. Please consider subscribing and hit the notification bell if you want to be notified about upcoming reviews.
+
+I spent a lot of time with the Simagic alpha mini which is 10Nm and the Simagic Alpha which is a 15Nm wheelbase. The alpha mini has seen amazing success but the alpha always lived ever so slightly in the shadow of the Simucube Sport and Pro as it doesn't have as much power and the software is not as granular. Now we've got this, the 23Nm Alpha U. Simagic is a Chinese manufacturer with a sophisticated global distribution network of reputable sellers. They enjoy a massive following and are extremely quick to get new products to market. Some might argue that in some cases, they're too quick.
+
+All of the products in this review were sent to me free of charge by Simagic and Simwear.eu for the purposes of this review and nobody other than me has had any say in the content of this video. The links to this product and its competitors in the description are affiliate links and if used will earn this channel some money at no extra cost to you.
+
+2. First Impressions
+Unboxing this product was somewhat familiar to me at this stage although the inclusion of an emergency stop is really nice. All of the Simagic Alpha family feature almost identical architecture. The only real difference is the size of the motor. This motor is a beast. At 23Nm, you would expect it to be large. It does have a smaller footprint than the Simucube SC2 Pro.
+
+Simagic offers a wire free experience for their beautifully backlit wireless steering wheels which carries a lot of appeal for someone like me. Driving with it for the first time also felt strangely familiar. I did have to get used to needing a new software package. Where older wheelbases used the Alpha Manager software, SimPro is a new piece of software that's supposed to address some of the issues of the previous iteration. I'll explain how that went in a later section.
+
+3. Price
+This is a top end wheelbase so you expect a top end price. Although Simagic admits that they will never be the cheapest brand, this wheelbase comes in at a very competitive €1149. That's almost €100 cheaper than the Simucube SC2 Sport and €300 cheaper than the Simucube 2 Pro. Of course, that's just for the wheelbase alone. Part of the magic here though is that Simagic also has an excellent range of steering wheels. Expect to pay in or around the €1600 mark with a steering wheel. Again for comparison, taking the cheapest wheel on the Simucube site for example, a comparable simucube bundle would cost you €2300. that's a whopping difference of €700. That's a lot of spare change. I'll go into detail about the steering wheels in a later section.
+
+4. Installation - Hardware
+One of the reasons I like the alpha form factor is the multiple mounting options. While front mounting is my personal favourite, you can also base mount and even side mount this wheelbase. For side mounting you will need some extra hardware. All resellers should have these brackets in stock. The base mounting pattern is the same as the fanatec 4 bolt mounting pattern.
+
+The power and usb cable plug in to one side of the base while the other side sees a canbus port and a socket for the emergency stop cable. The emergency stop is smaller than I expected and did look quite nice on my rig. It has bright green LEDs which may not be to everyone's liking. While at first I was quite excited about having an emergency stop, I was disappointed to learn that is simply disconnects the USB connectivity and cannot function as a power on/off switch. As there's no power switch on the base itself, I found myself not turning the wheelbase off which is a bit of an issue with Simagic products. You see, depending on your settings, Simagic's motors suffer from something called 'coil whine' where the motor effectively vibrates at all times while power is connected. This vibration can be felt but not seen, but the big issue is that it's REALLY noisy. Again, this depends on your settings but I have to plug out the power cable out of the side of the wheelbase every time I finish racing. I really wish they'd solve this issue somehow. Even when your PC is off, this noise exists and it must use a lot of needless energy. I don’t see why it needs to be like that even when the PC is off, but at least give us an on/off switch please Simagic.
+
+5. Installation - Software
+At some point, this section will be outdated. You see, right now this software is still in beta, which is not ideal for a piece of software that your wheelbase and steering wheels will not work without. In fact, I started writing this script many months ago and was really holding out for the software to finally be out of beta, but here we are. For some, that's a deal breaker. However, the software does serve its purpose and has a lot of functionality. Changing car settings is quite easy. The sliders are not overly complex and can be adjusted while you drive. If you have the FX Pro wheel, you can even adjust these settings using the screen while you're driving. In order for the newer steering wheels to show the LED rev lights, SimPro needs to be running, which is understandable. However, I found that I needed to adjust the redline for almost every car and track combo I tried which was tedious and not something I needed to do with some of Simagic's competitors. You can also only adjust the redline flashing in increments of 10% which is nowhere near accurate enough so it never properly syncs fully with your game and it's a very manual process. This really needs to be adjustable at a far more granular level and preferably even on the fly while driving.
+
+If you want to adjust the light sequence, you'd think it would just be a simple percentage slider but it's not. You need to manually adjust every single LED at every 10% increment. It's tedious. There are some presets which work ok but they're limited as you would expect.
+
+You can save profiles but SimPro does this annoying thing by default where it detects the sim that you're playing and automatically changes to a default canned profile for that software. You can set a default profile by going to the games tab and that works ok but isn't reliable from my experience. It works for some people but it has caused me endless frustration. I really wish that this functionality was an intuitive 'opt-in' thing rather than being on by default. Most people with DD wheelbases just have one profile for all sims. I know you'll disagree with this in the comments, but from my experience, it's true. I'd love to just be able to disable the auto-switching altogether. I can't tell you how often I load up a sim, do a few laps and think to myself that something feels odd, only to discover that it is on the wrong profile despite me choosing the profile I wanted to before joining the game. This has even happened to me in race sessions.
+
+The software hints at the ability to save profiles to the cloud. I can only imagine this is going to be somewhat similar to Simucube's software but it's not available in the SimPro beta so I haven't been able to try it. This would be a welcome addition as long as people can rate these setups.
+
+Simagic has never had the best software. In fact, it has probably been one of the weakest parts of the product throughout the years. From Race manager to Alpha manager and now SimPro manager. The fact that SimPro is in still in beta has left a lot of people dubious, and rightly so in some ways. Don't get me wrong, the Simagic software has always been functional but it comes with various quirks that are just not very pleasant. People have been screaming out for me to complete this review and I've been holding out because a part of me hopes that SimPro will come out of beta, but it just hasn't.
+
+Updating your wheelbase firmware all happens through SimPro now but if you want to update the firmware on your wheel rims, you need to connect them directly to the PC and run a separate piece of software called wheelupdater in order to do so. There are various procedures that are still just not very user friendly like when you want to change the wireless signal for your steering wheel. If you're lucky, you'll never need to change the wireless channel for your wireless rim, but after 3 years of using mostly simagic, I started hitting my first wireless connectivity issues the second I switched to the SimPro software. This was very very frustrating and tainted my experience with this wheelbase somewhat. My problem mainly lay with the GT1 and GT4 steering wheels which are older, but they would lose wireless connection intermittently and sometimes very frequently. This took months to diagnose and fix and is another big reason this review was delayed considerably.
+
+6. Shipping, Support & RMA
+While software is the weakest part of the Simagic offering, it's important to stress that their distribution network or reputable resellers is really working well for them. I was one of the first in the world to review the Simagic m10 and it was my main concern and would either make or break their worldwide success. Resellers seem happy and more importantly, customers are delighted. Sure, people do have issues as you'd expect with such large volume products. Simagic must be one of the more popular sim racing brands now. From what I see and hear, resellers have great autonomy and make life nice and easy for customers who are suffering issues. I must commend everyone involved and I cannot speak for absolutely every reseller, but the big ones seem to be knocking it out of the park, which is building a lot of brand loyalty.
+
+Obviously, I have a direct line to Simagic so when I have questions, they get answered super quickly. With discord and several Facebook owner groups, you're never too far away from getting an answer. Luckily most issues are not hardware related. I do have confidence in Simagic that they prioritise the most important issues first and work accordingly. They're not afraid to improve a product's hardware design either. They move fast.
+
+7. Quick release
+This is the most rewarding quick release design in sim racing. It must be said that this ball bearing quick release is not Simagic’s own design, but they were the first in sim racing to provide power to steering wheels via the quick release, eliminating the need for a usb cable for compatible steering wheels.
+
+This ball bearing quick release, originally designed by NRG is rock solid. I have had several variations from super cheap all the way up to this genuine NRG carbon fibre version. We have seen this design used originally in sim racing in the accuforce v3, but more recently we see Moza, cammus and even the forgotten and forlorn IMMSource wheelbase. I love this QR so much that I did a dedicated video on it a few years ago. Since that video, Simagic now uses mainly the 50mm Quick Release and no longer offers 74mm connectivity on their 70mm quick release.
+
+8. Steering wheel options
+Firstly, the original wheel, the 330mm GT1 comes in at €449. Although it's decent, it's showing its age now and needs a refresh to update the weak rotary encoders and limited number of buttons. This should really cost closer to €300 and it would make the barrier to ownership a lot lower for those looking to get into the ecosystem.
+
+Sticking with round rims, the newly launched 300mm GTS is amazing. The weight and functionality is almost perfect but you cannot swap out the rim on it. It is however available in leather or alcantara. It has all the functionality you need and is the best wheel to buy for all types of driving if you can only afford one rim. It comes in at €449.
+
+For those who want a custom rim, the GT Pro Wheel Hub comes in at €479 on its own or €449 with the C shaped wheel. This thing is excellent. Buying this hub and a cheap ebay wheel is a better investment than the GT1 rim, but sometimes you can get the GT1 really cheap in a bundle, so keep an eye out.
+
+The GT4 is still one of my favourites as it has two 7 way hats and the same glorious buttons as the GT1. The GT4 is compact and functional, an excellent choice for VR although it does lack some thumb rotaries. It's €529 and 300mm. It's light and practical.
+
+If thumb rotaries are your thing, the €579 FX is probably more up your street, although you only get one 7 way hat and its position on the center of the steering wheel is not very nice to use. I'd prefer if it was within reach of my thumb like it is on some of the other wheels. This is a personal preference and may not be a concern for you.
+
+If you want to go all out, the FX PRO is surprisingly great. It's basically just an FX with a screen on it and some extra rotaries, but it's very very nice. The dash layouts are very inline with what simhub has to offer although sim title compatibility is not as good as simhub and you can't customise or copy any of the dashes. However, I can't stress how good the Simagic dash offerings are. They blow the MOZA dash layouts out of the water.
+
+ It's worth noting that all Simagic wheels other than the GT1 have custom RGB backlighting but you are limited to a small selection of colours. The GT1 and GTS do not allow for clutch paddles which is a shame. I do prefer the button style of the GT1 and GT4 but the sticker quality of the later generation of steering wheels is excellent and very easy to apply.
+
+There's a lot of detail to go into with these steering wheels and I'm lucky enough to have used them all extensively throughout this review. I am working on a comparison video for the future but hopefully this section of this video gives you a brief overview of each.
+
+9. How it feels
+It's incredible. It feels really really good, I honestly wouldn't be able to tell it apart from the Simucube SC2 PRO in a blind test. It has everything you could want and more as far as I'm concerned, and I have a lot of Direct Drive experience. The wheel speed, or slew rate, is so good that I usually actually turn it down. I feel everything I need to feel and get a great force feedback experience with this wheelbase.
+
+A good ffb experience is nothing new for Simagic. I have also done long term reviews for the Alpha and Alpha mini. Each one has excellent detail and power, often feeling far more powerful than the advertised torque figures. Simagic has improved their firmware since early reviews came out and things like road feel and response times have improved drastically. The Alpha U is just on another level again. The speed and power just makes you want to stay in your rig that little bit longer. Be warned that it's tempting to turn the forces way up but I don't run this at more than 60% of its capability.
+
+ This is one of the best force feedback experiences I have ever had. However it must be said that at the higher end of direct drive, its difficult to find the minute differences between wheelbases once you go over 17Nm of available torque.
+
+10. Final Thought
+This is my favourite wheelbase on the market right now. That includes the Asetek and Simucube offerings. It's not because of the force feedback which is very comparable though. It's also not because of the price, which is super competitive. It's mainly because of simple quality of life features like mounting options, the quick release, the range of steering wheels and ability to power the steering wheel through the shaft. It has a lovely small form factor too. The sliders in the software are relatively simple and it's difficult to set it up badly. That being said, the software is very frustrating. I know some Simagic owners who don't even run the software unless they need to configure something. The auto game profile switching is grating and annoying. Sure, you can set a profile per sim, but this is not reliable and as a result, I simply don't trust the software. I always double check the profile that’s loaded and it’s usually wrong. This needs to be addressed asap because it is the Achilles heel of an almost perfect product.
+
+The wheel rim selection is exceptional and the NRG style quick release is the best in the business. With 7 wheel options available as well as a highly functional button plate which allows you to install any wheel you wish, this is amongst the best wheel rim and wheelbase eco-systems in sim racing, losing out only to Fanatec and Thrustmaster. The pricing is also very competitive and despite being a company owned and run out of China, they have invested heavily in worldwide reseller networks who not only ensure that you get quick resolutions to your problems within your same timezone from your local distributor, but it also ensures that you can pay in your currency and all of your consumer rights in the company of resale are still in place. This is the best of all worlds. Competitive pricing and local service. There's a list of authorised resellers on their website but beware that there are many unauthorised resellers out there too. I know, it seems odd that those unauthorised resellers can get stock, but they do. I still don't understand it either.
+
+The emergency stop is compact and pretty but it felt a little redundant on my rig so I stopped using it. The coil whine issue that I discussed in the hardware section is very annoying. I expect more at this price point. I had massive wireless connection issues with the GT1 and GT4 rims which were running on older firmware and just didn't play ball with the SimPro software. It must be noted that I originally got these rims 3 years ago and the old firmware was the main issue. These issues were eventually resolved but did affect my experience. If you buy a GT1 or GT4 rim new, you will not have these issues, but beware if buying second hand.
+
+As I say, this is my favourite wheelbase in sim racing right now although it is under pressure from Asetek's Invicta. However, the Simagic eco-system is more mature and diverse.
+
+Should you decide to buy this product, I have included links in the description which when used earn some money for this channel. There's no obligation to do so but your support is appreciated immensely. Details about other companies with similar benefits are also listed. I stream every Tuesday and Thursday at 9pm UK/Irish time. Thanks again to simwear.eu and Simagic for making this review possible and to you for taking the time to watch, hit the thumbs up or comment with your experiences or opinions. I'm Laurence, and I'll chat to ye later
+
+
+
+
+- [ ] 70mm only QR
+- [ ]
+
+
+Footage
+- [ ] Swinging the base by the QR
+
+All
+- [ ] spinning on pedestal 3 angles
+- [ ] panning 3 locations - 5 clips per location
+- [ ] mounting points
+- [ ] use on rig 3 angles
+- [ ] USB connection point
+
+Wheelbase
+- [ ] connectivity closeup
+- [ ] power supply
+
+Steering wheel
+- [ ] buttons
+- [ ] rotaries
+- [ ] shifters
+- [ ] quick release
+- [ ] leds
+- [ ] screen

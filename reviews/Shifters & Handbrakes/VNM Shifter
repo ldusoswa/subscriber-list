@@ -1,0 +1,95 @@
+While many rely on flappy paddles to shift their gears, those who have the means and the passion will not consider their rig complete without a good H pattern or Sequential shifter.
+
+In this video, we're going to have a look at the brand new VNM Shifter from a small company in Vietnam. At $200 USD, this looks like a very tempting and welcome alternative to the Fanatec Shifter. I've been using this shifter for the past 4 months and today, I'm going to share my experience with you. I'm Laurence, welcome to the channel
+
+(intro)
+
+1. Introduction
+On the left you’ll see all the sections in this video. I’ve put timestamped links to each section in the description below. While you’re down there please hit the thumbs up button to help YouTube to suggest this video to others like you. 85% of the people who watch my videos are not subscribed. Please consider subscribing and hit the notification bell if you want to be notified about upcoming reviews.
+
+Seeing new products coming to market is always very exciting. One of the areas which has a lot of demand, but very little innovation, is the H-shifter space. The main reason being that H-Shifters are complicated, and you can make do without them. The market isn't that lucrative unless you have a killer product. The main player in this market is the Fanatec H-shifter and it does an exceptionally good job at its price point.
+
+Needless to say, when the team at VNM contacted me with video footage of early prototypes, I got excited and committed to buying one of the first shifters in order to review it. In fact, mine is the very first VNM shifter produced for the mass market. What also excited me was the ambition from VNM to be better than the Fanatec offering, and still be cheaper.
+
+2. First impressions
+This thing doesn't look like a first attempt at making a product. It's packaged and machined beautifully. Even I, with my untrained eye can see the attention to detail and the precise engineering incorporated into this product. It's beautifully finished.
+
+The unit came fitted with the sequential plate as standard, suggesting that its main purpose is sequential shifting. I think that they ship it this way as the sequential plate takes up quite a lot of space. We'll cover that in a later section. I got all 3 variations of the h pattern gate, allowing for 5, 6 or 7 gears plus reverse. You can of course just run the 7+R top plate but it's nice to block off gears that you're unlikely to use, to reduce potential misshifts.
+
+The mounting bracket is probably the most beautiful clamp I've ever seen on any sim racing product. Very minimalist and super functional. There are loads of mounting holes on the back of the shifter housing so finding a way to mount it on your rig is not going to be a major challenge. Some people may want to be able to side mount it, but I think that it was a wise decision to keep the mounting options towards the rear as it preserves the sleek look of the unit.
+
+There's a clear effort made for those who enjoy Truck simulation, with peripheral ports for trucking accessories on the rear housing. Exactly which peripherals it will work with, I'm not sure. I wouldn't be surprised if they make an accessory themselves at some stage. There's a switch for changing between h pattern and sequential, which means that the unit doesn't get third and fourth gear confused with your down and up shifts when changing between configurations.
+
+The front of the unit sports an RGB logo which is pretty funky, and customisable to an extent. It comes with 2 beautifully machined shift knobs. One taller one which is ideal for sequential shifting and a smaller, ball shaped knob which fits in the hand perfectly for H Pattern shifting.
+
+The Allen keys that come with it are great and they found a permanent place in a drawer within close reach of my rig.
+
+3. Price
+At $200 USD, this is a very attractive price point. The table clamp shown was an extra $20. Its main competitors are the Fanatec Sequential shifter, which is $250, or $270 if you want to plug it into USB. If you want a table clamp with it, that's a further $40. Before you know it, you're paying $310 for a Fanatec shifter with the same features. I'll do some performance comparisons in later sections. For now, I'm focusing solely on the price. European prices are even higher for the Fanatec Sequential shifter, with the aforementioned $310 becoming €320, making the VNM shifter a very attractive prospect. However, shipping from Vietnam costs $60, and I was lucky enough not to be faced with customs or import duties. These are all very important factors to take into account when buying this shifter.
+
+Its other main competitor is the SHH shifter, which comes in at around €100 with feature parity. I think that the VNM does sit in a relative sweet spot which will appeal to those in the market for a new shifter.
+
+4. Build quality
+This thing is machined to within an inch of its life. There are no rough edges, everything is smooth and looks like it should be there. It really is a beautiful feat of engineering with no plastic or inferior quality parts on show. I've been putting it through its paces over the past few months and I must say, I'm very happy with the build quality. There are many things about this product which are surprisingly good.
+
+It's a lot smaller than the Fanatec shifter. Its footprint is a 110mm square and it is 240mm tall. I was expecting to have some things come loose or need improvement in future iterations but everything has been done with intent and great precision.
+
+The only negative when it comes to build quality is the USB port which seems a little loose and flimsy. It doesn't hold the usb cable as tightly as I would expect, although as this isn't a moving part, it never came loose or fell out. I also experienced an issue with internal screws coming loose which meant that the entire mechanism began to rattle within the casing. I raised my concerns with the engineers and I was informed that the first 20 shifters that were produced were assembled and tightened by hand, and that this should no longer be an issue.
+
+The table clamp is beautiful, as mentioned, although the corners are surprisingly sharp, especially on the inner top side. I think that the threaded bars are slightly longer than they need to be. This means that when they are mounted on my 80/20 rig, they are quite close to my leg. Again, this may not be a concern for most people, but I need to point it out.
+
+5. Installation
+I didn't need to check any manual for the basic installation. At first I base mounted the unit to my universal shifter mount using the mounting holes underneath. It was rock solid and exactly what I would want and expect from a h-shifter. It highlighted the amount of flex in the shifter mount on my simetik k2, which is a really good thing.
+
+After about a week of use, I switched over to the desk clamp which is also incredibly sturdy. If anything, the clamp showed less flex in my shifter mount due to its lower mounting position. Having the clamp mounted also allowed me to make adjustments a lot more easily as there was nothing in the way.
+
+Mounting to a profile rig is not that intuitive though as you need to offset the mounting clamp to ensure that the USB port is still accessible. I’d love to see some extra threaded holes underneath to accommodate a nice clean installation on a profile rig. As it stands, I find this mounting solution on my sim-lab p1-x a little bit clunky.
+
+6. Software
+From a software point of view, this device is largely plug and play.  It just works. There is however a software suite which allows you to get an insight into the products that are on the horizon for the VNM brand. You can calibrate the shifter in here, but shouldn't need to as the device will come calibrated. You can calibrate the sensitivity and zones that the gears activate in quite easily. You shouldn't need to to this, but if you were to create your own shifter gate with a different throw range, it's nice to have access to the sensor's configuration. The software is relatively straight forward, although needing to download a zip from github isn't the ideal user experience.
+
+The only thing that you can really change on the shifter itself is the RGB LED on the front. You can change the colours, but you can't change it to be a solid colour. It seems to only have one mode, which is pulsing from bright to dark continuously, even when the PC is turned off, which I found a tiny bit annoying. I'd love to see the ability to make it a solid colour, and for it to just shut off when the PC turns off.
+
+7. Adjustment
+Adjustment is easy, there's a hole on the side of the casing which allows you to increase the tension required to move the gear stick. I was able to adjust this so tight that they shifter wouldn't actually move anymore. Once you find your sweet spot, the tension remains constant, which is impressive especially over time. Due to the ease of this adjustment, I kind of expected it to loosen over time, but it didn't. At least, not noticeably.
+
+With increased tension comes increased noise, but the noise is no worse than any other h shifter which can be considered somewhat realistic. In fact, I use this all the time while my kids are sound asleep just upstairs.
+
+You can raise and lower the knob, within a certain range which will really allow most people to customise exactly how high or how low they want the gear knob. Since I received this product, VNM have actually released a new knob style which no longer requires allen keys to be completely removed. This is a very welcome innovation and appears to be well received by those who are fortunate enough to have this feature.
+
+You can buy the shifter with specific shifter plates. The shifter plates shown are not all included in this package, but were supplied to for the purposes of this review. The different gates will suit different driving styles. Personally, I find the 6+1 the best all rounder. You can only install the shifter plates in one orientation as all the corners are unique, which is a nicely thought out touch.
+
+8. H-Pattern
+This is what most of you came here for so I'll cut to the chase. This is an excellent H shifter. Its sporty shifter gate looks and feels better than the Fanatec, and although I had expectations that this shifter would not perform as well, I must say that I'm pleasantly surprised. The weight, once adjusted, is incredibly realistic. It is every bit as good as the Fanatec shifter from a H shifter point of view, and dare I say it, it’s actually better in my opinion. Where the Fanatec gear stick seems to revolve around a relatively high part of the shifter, causing the angle of the gear stick to be quite unnatural, the VNM has a more intuitive gate with better throw angles. In fact, it's not really something that bothered me about the Fanatec until I started using the VNM shifter. The sound of the gears engaging is also a lot deeper and more mechanical sounding than the Fanatec. Again, I'm very impressed. It's remarkably enjoyable to use, and it puts up with even the most heavy handed of users.
+
+Shifting through all the gears is fluid and rapid. There's a nice pseudo mechanical feel to the shifts as you go through the neutral position and it makes it feel like you're actually moving some mechanical forks in a gearbox. This is very pleasant and rewarding. I would love if the lateral movement from the neutral position was heavier though. It takes quite a lot of force to get it in and out of gear when throwing the lever forwards and backwards, but the left and right force required to shift is not constant which is not disruptive, but does take away slightly from the potential of this shifter. I'm knit picking here. This is a great h shifter which I'd happily run on my rig if I raced H pattern exclusively.
+
+9. Sequential
+Here's where the plot thickens unfortunately. Sequential is very much an afterthought on this device. Firstly, Unlike the Fanatec and SHH offerings, switching to sequential can take several minutes due to the need to remove the gear knob, the gear knob thread, and the entire top plate. In my opinion, the average sim racer expects easy transitions between sequential and h pattern without the need for tools. And unfortunately, that wasn’t the end of my initial worries when it came to sequential mode on this device.
+
+Building the sequential mechanism into the top plate makes the top plate very complex and the v1 sequential plate did not impress me at all. In the v1 top plate There are ball bearings which are spring loaded and adjustable so that you can change the weight of your sequential shifts. In its default configuaration, the 'click' that you get comes from retro fitted switches within the top plate which are not actually connected to the shifters circuitry at all. The result is that your shift happens at a different time to the audible 'click' which is very confusing. You can synchronise it but you need to adjust this in the software calibration but I would prefer not to have to do this at all.
+
+After using the top plate for extended periods, I also noticed some grease seeping out of the top plate which wasn’t ideal. All in all, the v1 top plate sequential mode on this shifter reminds me of cheap mods one might do to a logitech shifter. I found it functional, but lacking enjoyment or fulfilment. For example the SHH shifter which is just over half the price, gave a far more rewarding sequential experience. I communicated my concerns with VNM and they promptly responded and within weeks had already developed a new shifter plate AND sent one out to me.
+
+I honestly wasn’t expecting much, but this is where the plot really thickens. What they’ve developed with the V2 top plate is absolutely exceptional. It’s actually one of the most rewarding sequential shifting experiences I’ve had, and considerably better than the fanatec offering. I even prefer it to the heusinkveld sequential shifter mainly due to its size and nice progressive feel.
+
+So, why do they still offer the v1 as an option? Well they cite that the v1 is a lot quieter than the v2. But the V2 isn’t too loud for me to use while my kids sleep directly above my sim room. If it was my choice, I’d bin the v1 top plate. It was a first attempt and the V2 will make everyone far happier. It makes for a thoroughly enjoyable sequential experience and really throws the cat amongst the pigeons when it comes to deciding on a shifter for your setup.
+
+10. Final Thought
+After 4 months of ownership and consistent use of this product, I highly recommend the H shifter experience, and I highly recommend the sequential V2 experience. However, the need for tooling to switch between the two makes this product an impractical solution for someone who wants both a h pattern and a sequential, with no real ease of switching between them. I’ve done it many times now and it still takes a few minutes each time. Having said that, the respective h pattern and sequential modes both out-perform the Fanatec shifter, which was the very bold ambition that they set out to achieve several months ago. If they solve the top plate switching dilemma, they will capture a huge market share. However, right now I can only really recommend them to you as a stand-alone h pattern or sequential product. If you are going to be switching between shifting modes, you need to make the sacrifice of time and effort each time you do so.
+
+If you have the money and the space, you could buy one of each to get the best of both worlds. However, that might not be practical for most users and it would double the price. This shifter is good enough to be considered a viable and affordable training tool for someone who is looking to improve their real life racing and I can see it doing well in the entry level professional market.
+
+The innovative new gear knob mechanism removes the need to use allen keys for the gear knob removal. If they had a quicker release for the top plates then they could allow for a tool-less swap between h shifter and sequential mode. It's still not as quick as the competition, but as said, it does beat out the competition in both of those respective modes so it's a real contender, in my books.
+
+There's no console support, which is a pity, but as with similar products from smaller companies, the licensing costs associated with consoles are astronomical.
+
+The quality of machining and finishing is something that even large companies can aspire to. The research and development that has gone into this product in a relatively short period of time is commendable. VNM's public communication is exceptional, and their involvement with consumers has created a community who are all a part of the momentum.
+
+What's more exciting is that this shifter is only their initial offering. They are developing an entire eco-system of products which all seem to be getting similar amounts of love. If you're interested in their progress, I've posted a link to their discord channel in the description as they often post videos and gather user feedback in there. They are a company who cares, who listens, and who will go extremely far in this industry if they keep putting in the work that they've shown in the past year.
+
+Now although it is in my opinion a better h pattern shifter and a better sequential shifter than the Fanatec, the Fanatec will be going back on my rig after this review goes live. That may sound like it contradicts how great I think this shifter is, but during the past few months I have really missed the quick swap between manual and sequential modes, and also the ability to mount my fanatec handbrake on the wheel side of the shifter, without the need for additional brackets.
+
+If you want to follow VNM's progress, you need to either join a discord or a Facebook group. I have linked to both in the description below. They're worth joining and their team is extremely transparent about what they're working on. If you want to order, check out their website vnmsimulation.com for full details and latest pricing.
+
+Let me know what you think in the comments! I hope to see this company succeed as there is plenty of space for them. I think that I don't speak out of turn by saying that sim racers welcome products like this with open arms. Thank you all for your time. Make sure that you've hit the thumbs up so that others like you get to see this video. I'm Laurence and I'll chat to ye later.

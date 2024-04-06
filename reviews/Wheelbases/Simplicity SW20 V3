@@ -1,0 +1,91 @@
+For the past few weeks, I’ve been lucky enough to be using the Simplicity SW20 V3, a 20nm wheelbase from a low key company called Simplicity. There aren’t many reviews of this wheel out there, and at €800 without a wheel rim, this may be a great option for someone who is looking to get into direct drive on a budget.
+
+€800 is a great price for a 20nm wheelbase and today, I try to figure out why it isn’t more popular. I’m Laurence, welcome to the channel...
+
+(intro)
+
+1. Introduction
+On the left you’ll see all the sections in this video. I’ve put timestamped links to each section in the description below. While you’re down there please hit the thumbs up button to help YouTube to suggest this video to others like you. 85% of the people who watch my videos are not subscribed. Please consider subscribing and hit the notification bell if you want to be notified about upcoming reviews.
+
+A few months ago I got a message from a subscriber called Brian, or 'MrKeeno' in my discord, saying that he was buying a Simplicity SW20 V3 and wanted to know if it was ok to have it shipped to me, so that I could review it. Of course I took him up on this generous offer.
+
+Not many of you will have heard about this wheelbase. Even fewer of you will know about the various models of MiGe motors out there, but if you've ever heard of the VRS DD wheelbase, it's pretty much the same motor. This is an industrial spec motor which has far more applications than just sim racing. This is a wheel for the type of person who isn't wrapped up in the polished marketing of bigger companies and is trying to get great value for money.
+
+2. First Impressions
+At first glance, there are a lot of parts, and long cables. I'm used to seeing a wheelbase being provided with just a power plug. Granted, I never invested time or money in early Direct Drive systems which required quite a lot of knowledge to set up and configure. this is my first time having a small MiGe wheelbase on my rig. This wheelbase kind of sits somewhere in the middle between DIY and polished consumer grade product. The kit is shipped as two separate packages, so the motor arrived first. A few days later, and after back and forth with emails and courier companies, the second box showed up... Thankfully!
+
+As I mentioned, this was sent to me by a subscriber. Simplicity were aware that this review was happening, but unfortunately the communication from simplicity was pretty poor. Brian soon learned that the steering wheel rim that was supposed to be shipped with the package, wasn't actually shipped and they didn't have any more in stock. This meant that I could only review the wheelbase on its own, which was disappointing and a massive opportunity to give a small company some free exposure. The wheel rim was half price when bought with the base. Photos of the wheel are not really impressive, but apparently it's nicer in the flesh and quite functional, albeit mediocre build quality.
+
+The emergency stop is functional, but a little bit cheap. It's a very light, plasticky construction but it performs its function well.
+
+It seems unusual in 2021 that a company who makes a relatively cool and in demand type of product, during this 'sim racing' boom, has no social media presence whatsoever. The only way to contact them is via email, and even at that, emails may or may not be responded to.
+
+3. What's Included
+In the box, you get quite a lot of stuff. Even though we think of the wheelbase as the 'product', it's actually just an industrial motor often found in large machines or production lines. The thing that actually makes this a sim racing product is the control box and software.
+
+The motor is a MiGE 130ST-M10010, and its form factor is often referred to as 'small MiGe'. As stated, this is (almost) the same motor used for the VRS DirectForce Pro. It also comes with a 8M cpr absolute encoder, steering wheel hub adapter to connect a steering wheel to the shaft, adjustable motor mount and an emergency stop.
+
+It comes with loads of cables which are all more than long enough for most sim setups. There was also a little metal rod included which I didn't fully understand at first, but apparently it slots into the shaft and is required for certain applications of this motor. Don't throw it away until you're certain that you don't need it.
+
+4. Pricing
+This is the main 'selling point' of this product. If you pardon the pun. Unlike the VRS Pro, you do get a hub adapter, mounting bracket AND an emergency stop button with this wheelbase, and it comes in at around €800. At least, that was the pre-brexit price. Unless you're in the UK, expect to pay customs on that which could see the price jump up to close to €1,000 which is straying into more mainstream product pricing, which definitely makes this product less attractive to anyone living outside of the UK, where simplicity is based.
+
+If you already have a USB steering wheel rim, It may still be an attractive option at €1,000. At that price point, the force feedback is still good value.
+
+5. Installation - Hardware
+Hardware installation is relatively simple. I didn't need to read any manuals but it's not exactly a compact or neat product. There are two giant connections with solid metal 90 degree piping, which connect to the wheelbase to give it power and comms. These grey cables are a little bit ugly and dated looking, and they plug into this rather large control box. Most modern DD systems have the controllers built into the footprint of the wheelbase, to make for a more elegant and compact product. I already have way too many cables on my sim rig, and adding more cables and even a control box which is similar in size to the motor itself, adds a considerable amount of baggage to your rig.
+
+I was very happy to see that this setup came with a small MiGe mounting bracket. This was super easy to install and they provided all the bolts. Well, almost all the bolts. I still had to use my own nuts and bolts to actually mount it to my universal wheel deck on my rig. I can imagine if someone comes in after a long day at work on a Friday and wants nothing more than to use their new expensive toy, that they would be bitterly disappointed if they needed to make a trip to the hardware store for some nuts and bolts if they didn't have them lying around. That said, the bracket was flawless once installed and gave me lots of adjustability and rigidity.
+
+Installing a wheel rim was relatively simple, but the wheel hub is a bit clunky, to say the least. Little bolts on it cling on to the round shaft for dear life. Ensure that you tighten these extremely well. I actually thought I had an encoder failure during a live stream, which caused me to crash and have a lousy event. It turned out that I hadn't tightened these little bolts enough and the wheel hub had play in it. This involved needing to take my steering wheel off the hub completely, and tightening it all up. It's not something you can do mid race, so make sure you do it right first time.
+
+The only thing which is potentially confusing is the port that the Emergency stop needs to plug into. If you get this wrong, it could potentially be dangerous. It's a little odd that this port is not explicitly marked as being for the Emergency stop.
+
+The steering wheel I chose to install was the Cube Controls GT-X which is a very good all rounder. It comes with a flange which has the correct 70mm pattern to match this steering wheel hub. This is the standard Sparco, Momo and OMP pcd. If I was to use the simplicity SW20 v3 for the long term, I'd look into getting a good quick release system as I like to use different steering wheel rims.
+
+6. Installation - Software
+Software installation was relatively straight forward. I needed to install a 'Base Driver Package' and a 'Wheel Firmware & Configuration Tool'. Simplicity sent a helpful email with installation instructions and even a basic profile to get me started. I know that this is not exactly plug and play, but most wheelbases aren't. I was expecting this process to be more complex but the only issue I encountered was needing to do a restart before the wheel would connect properly. Once the initial connection was reliable, I simply left the control box switched on at all times. If you do switch off the control box, you may have to recenter every time you boot the wheelbase, as I encountered a couple of times.
+
+There is an owner's group on facebook which is not moderated in any way. The helpful community members share setups and help to troubleshoot issues which is great to see. However, you'll see that there are plenty of concerns on that group about customer service.
+
+7. Supported Sims
+Every sim I tried, worked quite well. I tried Assetto Corsa, Assetto Corsa Competizione, iRacing and Dirt2.0. One sim which performed exceptionally well was Dirt2.0 which I traditionally had written off as having fairly washy force feedback. It encouraged me to go back to the drawing board with my own Simagic Alpha to find better settings and I'm glad I did.
+
+In general, a relatively neutral profile as shown will perform well in any sim racing title. I recommend setting the SW20 software to the full 20nm and allowing your sim titles to control the overall gain and other force feedback properties.
+
+8. Force Feedback
+This is the one most people care most about. The short answer: force feedback is really good. It would be great to have a more sophisticated software package with more filters, similar to what we see with the Simicube TrueDrive software, but for most users, the software is more than enough. Personally, I was more than happy with the force feedback of this wheelbase.
+
+I think that my words so far don't really do justice to the power of this motor and the detail you feel through the wheel. It really is a great experience and I would struggle to tell it apart from the Simucube SC2 Pro in a blind test. Again, this is subjective, but as far as force feedback goes, I think that 20nm is more or less the sweet spot. When using this wheel, my concerns about the control box and the clunky old school wiring almost disappeared. It was reliable and satisfying to use during my competitive league races and I would be happy if it was my long term wheel.
+
+When loading into sims or booting this device, you need to be cautious and aware of potentially violent rotations once the motor receives power or initial sim input. This is not uncommon with other DD wheelbases but I found the rotations and jolts to be particularly violent and the rotations were sometimes as much as 180 degrees. You just don't want to be reaching down to tie your race boots when the wheelbase launches your wheel rim at your head, so be aware.
+
+9. Final Thought
+This is a relatively affordable, albeit somewhat 'clunky' force feedback solution. Once installed, it performs well however and I have no concerns about it other than the massive elephant in the room, the customer service. Before I address that elephant, I will say that anyone who buys this product will be very happy with it even at the highest price points mentioned in this video. Happy, provided the packages arrive on time, if at all. The steering wheel rim, which I didn't review, is reported to have some build quality concerns like phantom button pressed and loose shifter paddles.
+
+With no social media presence and an industrial looking website, it's not uncommon to see people on social media asking if simplicity is a 'legitimate' company. This would worry me if my business's livelihood depended on selling these wheelbases. It does seem to me though that this is just a 'side hussle' of another business as there's no way it's sustainable or profitable in its own right. Nobody knows about them, and they don't really seem to care. Customers receive hot and cold communications, usually cold when things get complex or packages haven't arrived yet.
+
+This is a good product, but the business model doesn't make sense to me really. They ship out the motor separately to the encoder box and accessories. Separately as in sometimes they ship them on different days. I think that they do this to distance themselves from the potential damage that a 20nm wheelbase can do when used for sim racing. Maybe they simply provide the products but the customer ultimately decides to use them together on their rig. Again, I'm just speculating as I don't know this first hand. I may be completely wrong. I often wonder what type of liability steering wheel companies have when it comes to injury.
+
+From a PR point of view, I do feel that even a college student with no interest in marketing could help them greatly to promote their product and present it in a better light. Sometimes when I receive products for review, I get insanely good customer service as they want everything to go smoothly. My experience with customer service is never a good gauge of how good it actually is for consumers. But in this case, Brian, who loaned me this wheel, got pretty terrible customer service and was even temporarily 'ghosted' when he expressed worries and concerns about his shipment not arriving on time, and his steering wheel rim never even being shipped in the first place.
+
+Long story short, If you like this product, buy the VRS Directforce Pro. Although I've not used the VRS, It's the same small MiGe motor, the control box has a more compact form factor, the cables have a nicer colour and the product is supplied by people who genuinely care about sim racing. All for a similar price.
+
+Thank you all for watching this video, please share your thoughts and experiences in the comments below and of course don't forget to subscribe if you like this type of content. If you’re interested in supporting this channel, consider using my affiliate links below to by the products you love. I stream live league races on Tuesdays and Thursdays and would love to see you there. I'm Laurence, thank you for watching.
+
+
+
+
+
+Clunky
+
+Having to recenter when you switch it on
+
+Violent rotation on load of some sim titles
+
+900 degrees with a wired wheel. Not suitable for drifting
+
+no wireless support
+
+as long as you don't need customer service, buyers will be very happy
+
