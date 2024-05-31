@@ -64,7 +64,7 @@ def performTextReplacements(original):
 with open(twitchSubsFile, 'r') as csv_file:
     next(csv_file)
     reader = csv.reader(csv_file)
-    sortedlist = sorted(reader, key=lambda row: row[1], reverse=False)
+    sortedlist = sorted(reader, key=lambda row:float(row[3]), reverse=True)
     if sortedlist[0][0] == 'ldusoswa':
         sortedlist.pop(0) # remove ldusoswa
 
@@ -89,16 +89,17 @@ with open(patroenSubsFile, 'r') as csv_file:
     next(csv_file)
     reader = csv.reader(csv_file)
     sortedlist = sorted(reader, key=lambda row:float(row[8]), reverse=True)
+    # print(sortedlist)
 
     for row in sortedlist:
-#             print(row[11] + ' - ' + row[0])
-            if row[11] == "Crew Chief":
+            # print(row[10] + ' - ' + row[0])
+            if row[10] == "Crew Chief":
                 crewChiefCombined.append(performTextReplacements(row[0]))
                 crewChiefPatreon.append(performTextReplacements(row[0]))
-            elif row[11] == "Team Boss":
+            elif row[10] == "Team Boss":
                 teamBossCombined.append(performTextReplacements(row[0]))
                 teamBossPatreon.append(performTextReplacements(row[0]))
-            elif row[11] == "Pit Crew" or row[11] == "":
+            elif row[10] == "Pit Crew" or row[10] == "":
                 pitCrewCombined.append(performTextReplacements(row[0]))
                 pitCrewPatreon.append(performTextReplacements(row[0]))
 
@@ -154,10 +155,10 @@ def formatForPhotoshopText(membersArray, padding):
 data = [
     ['teamBoss', 'crewChief', 'pitCrew', 'twitchSubs'],
     [
-        formatForPhotoshopText(teamBossCombined, 38),
-        formatForPhotoshopText(crewChiefCombined, 35),
-        formatForPhotoshopText(pitCrewCombined, 39),
-        formatForPhotoshopText(twitchSubs, 30)
+        formatForPhotoshopText(teamBossCombined, 28),
+        formatForPhotoshopText(crewChiefCombined, 25),
+        formatForPhotoshopText(pitCrewCombined, 28),
+        formatForPhotoshopText(twitchSubs, 20)
     ]
 ]
 psdName = 'levels.csv'

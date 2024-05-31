@@ -1,0 +1,102 @@
+Steering wheels are my kryptonite. I love them. And through this channel I've been exposed to some incredible hardware. So much so that it can feel like you hit a ceiling every now and then. And then the next great wheel comes along and pushes the limits just that little bit further. This is the SOELPEC Spectra XR, and I've got it in the exact colour combination I'd order it in. I've been using it for the past few months and it may just be my favourite steering wheel yet. I'm Laurence, welcome to the channel
+
+
+<intro>
+
+
+1. Introduction
+On the left you’ll see all the sections in this video. I’ve put timestamped links to each section in the description below. While you’re down there please hit the thumbs up button to help YouTube to suggest this video to others like you. 70% of the people who watch my videos are not subscribed. Please consider subscribing and hit the notification bell if you want to be notified about upcoming reviews.
+
+
+SOELPEC is a small company. You probably have never heard of them, and neither had I. I love steering wheels and I love seeing what new small businesses bring to the table. Nine out of ten Sim hardware manufacturers started creating hardware because they thought that they could do better than the competition. And that’s exactly what SOELPEC have done. They’ve created a steering wheel that is not only beautiful but also incredibly functional. This is exactly the type of product I would consider as my statement piece for my rig.
+
+
+All of the products in this review were sent to me free of charge for the purposes of this review and nobody other than me has had any say in the content of this video. The links to this product and its competitors in the description are affiliate links and if used will earn this channel some money at no extra cost to you.
+
+
+2. First Impressions
+This 302mm wheel is stunning. The vibrant colours, sleek edges, huge 5" screen and carbon fiber goodness jumps out at you the moment you take it out of the box. It has 17 buttons, 2x 7 way hats, 3 large encoders with push down, 2 thumb encoders with 8 inputs, which I'll explain later and all of the LEDs are fully customisable. It weighs 1350g without a quick release which is not bad for a wheel with a screen in it. The silicone grips are tidy and the shifters are really high quality carbon fiber. The only possible negative that I can see out of the box is that it requires a USB connection. Luckily I had the opportunity to spend some time with this wheel and the Asetek wheelbase offerings, which did allow for a more native experience via their integrated usb connection in the quick release. However, there were some limitations there and I hit some connectivity issues which have nothing to do with SOELPEC, but I recommend running the dedicated USB cable from this steering wheel to a dedicated USB hub which sits on its own USB Controller. This thing is power and data hungry, which is understandable.Those USB issues are the reason that I didn't do a first impressions video of this device. I must also note that the USB cable was long enough for my needs, but SOELPEC have informed me that they now ship a longer cable.
+
+
+The stickers were pre-installed on mine and I haven't even looked at changing them as they're so nicely applied, I don't want to mess them up because they look so good.
+
+
+3. Price
+The SOELPEC Spectra XR is not cheap. But let's be honest, it's not supposed to be. Much like a nice Patek Phillippe time piece, it's not really about the price when you get to this level of craftmanship. Although, this steering wheel does a LOT more than just tell the time, so maybe it's actually a bargain at €1499.
+
+
+Ok ok it's never going to be a bargain. And for any of you considering buying one, you want this to be your one and only top end steering wheel. So if you're too impatient for the rest of the video, the answer is yes... 100% yes, this thing is worth every cent of that. It's glorious.
+
+
+4. Installation - Hardware
+Although the USB installation is really straight forward, the quick release requires a little work as it depends what wheelbase you're mating this wheel to. I've use it on both the Asetek range and the Moza range over the past few months. 3 Bolts are plenty to keep any sim racing steering wheel in place. There's a flange on the back which makes quick release installation pretty straight forward and it's natively compatible with Simagic, Moza, Cammus and Asetek quick releases to name a few. I do wish that the flange did not have every hole threaded. I like the way Cube Controls threads every second hole, which just gives more options when it comes to the type of bolts and quick releases you can attach to this wheel. However, they do give these nice half threaded M5 bolts with the wheel and they work well.
+
+
+5. Installation - Software
+As this wheel has a screen, I expected there to be software installation involved. What I hadn't anticipated was how clever this thing actually is. I knew in advance that it was simhub compatible, but I didn't know that they had developed a simhub plugin that's so clever that you don't actually need any additional or proprietary software. That's a massive bonus. I downloaded their Simhub Dash and their Simhub plugin and hey presto. It all just worked. They even have a pretty active discord server which is great for support and updates.
+
+
+You can match this dash to the colour combination of your Spectra XR. And their simhub dash isn't just pretty. My god the information that I get from it is so rich. It's up there with the likes of the lovely dashboard which people swear by. It goes a few steps further though. You see, you can actually save and load multiple wheel configurations to this wheel. Meaning that you can simply load specific dash layouts and clutch bite points for different cars or conditions. That's mad! Although I will give a word of warning: read the manual to know what's possible as you can easily get the wheel in a state where you've pressed the wrong button and all of a sudden your throttle is stuck, or you're in calibration mode. I'll cover that in more detail in a later section.
+
+
+Anythin that simhub can do with a normal dash, this dash can do too. I spent a lot of time with Lovely Dashboard too and the touch screen works flawlessly with it.
+
+
+6. Buttons
+The buttons have a crisp click down. Not plasticky though like some of the competitors. It's a very nice click down. Some buttons are larger than others which makes for for an intuitive experience as buttons are very easy to differentiate. They're grouped in pockets of 3 buttons. That's really nice and familiar after a while.
+
+
+While the wheel is rich in functionality, some of the inputs are reserved for configuration and on the fly adjustments by default. Button 4 for example lets you cycle your delta between session best, last lap or all time best. You can do clever things like have a latching radio button. It's like push to talk, but you only need to click the button once, and it will pretend to be pressed until you press the button again. This is clever and useful stuff. It is only available on button 01, but very useful and very easy to get used to.
+
+
+And there's so much more. From brake magic to throttle hold, instant neutral and the ability to name your presets. It's all there. It's all clever. It's all useful. It's nothing short of genius and it is the most useful and feature rich steering wheel I have ever used. And I've used a lot of steering wheels. However, knowing what I know, I'd love if they did a screenless version of this wheel which works well with their standalone XR-5 dash. That would be a killer combo. Although a wheel with a screen in it is aesthetically unmatched, I find a separated wheel and screen the ultimate in functionality and immersion.
+
+
+There are buttons on the rear of the wheel, and again they are all initially reserved for native steering wheel functionality. I normally like to use those buttons for things like pit limiter, flashing lights, and other things that I want to have instant access to without adjusting my grip. I've not really needed brake magic and throttle hold in the past, so didn't actually find myself using these features a lot. The buttons have a decent resistance and I didn't press them by accident at all.
+
+
+7. Rotaries and 7 way hats
+I find it hard to imagine that better components exist than these rotaries and 7 way hats. Let's start with the 7 way hats.
+Their location is pretty perfect. I usually use my rotaries for navigating menus and changing my pit stop preferences on the fly. The directional inputs are very easy to achieve and distinguish from one another. There's a satisfying little 'click' each time and you just know that it's reliable and rewarding. The face of the 7 way had is concaved, allowing your finger to slot in slightly and not slip off. It's small details like this that I would never have thought of, but I found that during driving, I didn't put my finger below the 7 way hat to click it up, or above it to click it down. My finger went into that slot and I could do everything from there. Well, almost everything. You can rotate the 7 way hat too which is great for switching blackboxes or dashes. This is a very intentional and clear movement too.
+
+
+Then there's the front facing rotaries. There's not much you can say about rotaries after a while, but these just feel at home. they carry the same indented design from the 7 way hats, so as well as being outstanding rotaries, you can also click them down. That in itself is not that impressive or unique, but the party piece for these rotaries is that when clicked down, rotation counts as separate inputs meaning that each of these rotaries actually allows up to 5 inputs. I've not seen this before. I wouldn't say it's a game changer, but for things that you may only touch occasionally like fuel maps, it allows you to not waste real estate on your wheel. Finally with these rotary encoders, there's a nice little slot which reveals LED lighting from the steering wheel itself. This is a lovely experience and it feels like the LEDs are a part of the rotary. It's a luxurious touch that costs a lot more money to implement, but little touches like this really help to justify the cost of such a beautiful piece of equipment. To top it off, when using the secondary function of pushing and turning these rotaries, the backlighting colour changes.
+
+
+And Finally, the thumb rotaries. I think you know where this is going. Yes, they can behave like normal boring old thumb rotaries. OR, you can use them like dual action thumb rotaries. So one moment a thumb rotary could be for your brake bias, then you click it down, and all of a sudden you can adjust your in game volume. Then click it again and you're back to brake bias or whatever you like. Honestly this is such clever stuff. I can imagine it being intimidating though and most of you will never use the full range of functionality. But knowing that it is engineered to this level of detail is just so impressive and softens the blow of that price tag. I couldn't get the left thumb encoder to work the same way as the right one. There's no difference between the two highlighted in the manual, but I just couldn't figure it out.
+
+
+8. LEDs & screen
+This thing is so rich in LED goodness. Those of you who have been around for a while will know that that means to me and my sim experience. They've not just backlit the buttons, they've put 2 LEDs per button and up to 5 of them around the rotary encoders. The LEDs are beautifully diffused so you can't tell if there are any bright or dark spots. They're bright enough to be seen in daylight and dim enough to not be distracting at night. They're fully customisable so if you want them to flash different colours for different cars, you can. Although you need some simhub expertise for that which I will not cover in this video.
+
+
+The telemetry LEDs can show fuel levels, on track flags, car left/right indication and much more. I took SOELPEC's default profile and honestly didn't change much at all. It's perfectly in sync with any sim I tried. There are so many beautiful strobing and running light patterns in the default profiles that enrich the whole experience. I've not seen a more beautiful LED implementation in a steering wheel. It's just so well thought out and so well executed.
+
+
+The screen is a 60fps 5" 800x480 resolution screen. It's bright, it's sharp and it's fast. It's a touch screen vocore which allows you to interact with it via touch. So with the SOELPEC or lovely dash simhub dashes you can switch between relatives, track map, pit info and many others. I found myself using this quite a bit, although as I mentioned before, for the ultimate GT experience, I would love to be using their XR-5 display as it sits closer to my monitors. The fact is that this wheel is best suited to a formula seating position, and most of us sit in a GT configuration. There's so much functionality available though that it's an incredible experience to turn off all of your normal monitor heads up displays and just use the wheel and screen. It's amazingly immersive.
+
+
+9. Grips, Shifters & Clutch paddles
+The grips are nice, they have a great shape. They're a good balance between hard and soft for me. They're a good size and I have absolutely no complaints. They attract dirt quite a bit but that's very normal for silicone materials. Despite being an open style wheel rim, there’s no noticeable flex and the construction is rock solid.
+
+
+The shifters are nice and precise, with a little slot in them which helps with confident shifts even while wearing gloves. There's no adjustment on them, although I didn't actually miss the adjustment. Some people might want to bring them closer or move the paddles outwards like with some competitors. I found them to be in a perfect position for me. They're carbon fiber and they're just lovely. They're not too loud, they're not too quiet.
+
+
+The clutch paddles follow a similar design to the shifters. They're a little bit smaller and sit in a little closer to the hub. They're also carbon fiber paddles with aluminium arms, just like the shifters. There's a good amount of resistance on them and the on the fly adjustment and ability to store clutch bite points in profiles is just amazing. I've never seen that before and I will miss it when I move on to review other steering wheels.
+
+
+10. Final Thought
+What a wheel. Every now and then I use a wheel that just raises the bar and this is it. We have seen incredible steering wheels from manufacturers like Moza and Simagic over the past few years which brought the mid range of steering wheels much closer to the high end. I'm sorry to have to inform them that the high end criteria has been redefined. SOELPEC has taken all the things that I love about formula style steering wheels, combined them and then gone out of their way to see how they can make it better, without impacting my experience negatively if I don't like the new features. What I mean by that, is that I can turn off brake magic or throttle hold or dual function thumb rotaries if I want to. They have empowered me to have incredible functionality at my fingertips without forcing me to do things a different way. Ok, it does take some time to disable these features if you don't want them, but their manual is clear and concise. In fact, it's one of the nicest sim racing manuals I've ever seen.
+
+
+This thing is light and very thin for what it is. It looks amazing when lit up but also when powered off. I'm in love with this ARCTIC colour combo and matching dash. The work that has gone into this is mind blowing. It is power hungry though, so it needs to be hooked up to a powered USB hub or directly into your PC. Take some time to read the manual, it's worth it. I think that the SOELPEC dash is better than lovely dash, especially when combined with the tricks that this wheel can do.
+
+
+Did this wheel make me faster? NO. Did it make me feel good every time I crossed the line, enabled my pit limiter or moved a rotary encoder? Yes, yes it did. They say you can't buy happiness, but you can buy a SOELPEC Spectra XR and that's pretty much the same thing. I stream every Tuesday and Thursday at 9pm UK/Irish time. Thanks again to SOELPEC for making this review possible and to you for taking the time to watch, hit the thumbs up or comment with your experiences or opinions. I'm Laurence, and I'll chat to ye later
+
+
+
+
+
+

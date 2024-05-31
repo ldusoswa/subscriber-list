@@ -1,0 +1,574 @@
+USER GUIDE
+YOU MUST HAVE A REALLY GOOD TASTE!
+WELCOME TO OUR WORLD, LET’S START!
+OH HELLO!
+CONTENTS.
+INTRODUCTION
+PRODUCT FEATURES
+HARDWARE CONNECTION
+SOFTWARE INSTALLATION
+SIMHUB SETTINGS
+WHEEL CONTROL FUNCTIONS
+PLUGIN SETTINGS
+ADDITIONAL FEATURES
+STICKER CUSTOMIZATION
+MAINTENANCE
+WARRANTY & SUPPORT
+0 4
+05
+07
+09
+1 1
+14
+2 7
+3 4
+3 8
+4 0
+4 1
+SPECTRA XR
+INTRODUCTION
+0 4
+SOELPEC Spectra XR offers a fresh approach to classical racing wheel design with a
+5-inch screen, custom developed backlit buttons, unique design elements and software
+features. Months of development went into combining the best-feeling and performing
+components to create the perfect sim racing steering wheel.
+Crafted from premium materials, the wheel boasts a solid structure with open-bottom
+style handles and overmolded silicone grips. We strive to create cutting-edge sim racing
+equipment that brings racers closer to reality. Each product we built is designed to offer
+an unparalleled racing experience.
+In this comprehensive user guide, you will find instructions to set up, configure, and
+optimize your Spectra XR steering wheel. Whether you're an accomplished racer or new to
+sim racing, this guide will be your trusted companion for exploring the wheel's features.
+Thank you for considering SOELPEC for your sim racing needs. We're confident that you'll
+love our products, and we look forward to helping you take your virtual racing experience
+to the next level.
+From SOELPEC with love
+SPECTRA XR
+PRODUCT FEATURES
+0 5
+01
+02
+03
+04
+05
+06
+07
+08
+01 5-Inch Touchscreen Display
+05 3x Center Encoders With Push
+02 2x Dual-Action Thumb Encoders
+06 Overmolded Silicone Grips
+03 2x 7-way Switches
+07 2x Display Buttons
+04 12x RGB Push Buttons
+08 23x Telemetry LEDs
+SPECTRA XR
+PRODUCT FEATURES
+0 6
+04
+06 03
+01
+02
+05
+07
+08
+01 42mm Rear Hub
+05 4-Pin USB Connection Socket
+02 Internal USB Port Cap
+06 Master Clutch Paddle
+03 Slave Clutch Paddle
+07 2x Shifter Paddles
+04 Wheel Settings Button
+08 2x Rear Facing Buttons
+SPECTRA XR
+HARDWARE CONNECTION
+0 7
+The Spectra XR comes with a hub
+that accommodates the common
+70mm 6-hole mounting pattern.
+To attach the wheel to your preferred
+wheelbase or quick release, use the
+provided M5x12mm captive screws and
+the 4mm allen key that can be found
+in the box.
+Depending on your preferred hardware,
+you can install the captive screws from
+both ways to the rear hub’s threaded
+M5 screw holes.
+MOUNTING THE WHEEL
+SPECTRA XR
+HARDWARE CONNECTION
+0 8
+After securely attaching the Spectra XR to your
+wheelbase, plug in the 4-pin spiral USB cable into
+the socket on the rear side of the wheel. Then plug
+the other end of the cable into an available USB
+port on your PC or USB Hub. Be careful to align the
+locating pin of the connector to the 4-pin socket.
+CAUTION: We recommend using a powered
+USB hub to ensure a healthy and stable
+connection between the wheel and your PC.
+Using the wheel with high brightness
+settings without a powered USB hub may
+result in a loss of connection during use.
+CONNECTING TO YOUR PC
+SPECTRA XR
+SOFTWARE INSTALLATION
+0 9
+SIMHUB INSTALLATION
+SOELPEC DASHBOARD INSTALLATION
+To fully utilize the functions of the Spectra XR, you need to have the latest version of
+SimHub installed on your PC. You can download the latest version HERE and proceed
+with the installation. During the installation process, remember to select the option
+"Download and Install USB Display Drivers" to include the required drivers for the
+5-inch Vocore display.
+To fully unlock all the capabilities of the Spectra XR, you must install a dedicated
+SOELPEC Dashboard file into SimHub. This installation enables seamless interaction with
+wheel functions and settings directly on the 5-inch display, while also eliminating the
+need for a proprietary software.
+Access the latest version of the SOELPEC Dashboard by clicking HERE. Double-click on the
+downloaded dashboard file and click the "Import Into SimHub Library" button to install
+the SOELPEC Dashboard file. Don’t forget to download & install required fonts to your PC.
+SPECTRA XR
+SOFTWARE INSTALLATION
+1 0
+To establish communication between Spectra XR and SimHub, you need to install
+SOELPEC's dedicated SimHub plugin. Download the plugin from HERE.
+Once the download is complete, close SimHub, copy and paste the "SOELPEC Plugin.dll"
+file into your default SimHub folder, usually located at "C:\Program Files (x86)\SimHub" .
+After completing this step and launching SimHub, a pop-up window will appear, requesting
+permission to install the plugin. Click on both checkmarks to install the SOELPEC Plugin,
+which will then appear on the left side of your SimHub window. You can access this
+plugin tab to get an overview of the wheel's status and function states.
+SOELPEC SIMHUB PLUGIN INSTALLATION
+SPECTRA XR
+SIMHUB SETTINGS
+1 1
+While SimHub software is running, go to the "Devices" section on the left side of
+the window to add your Spectra XR. Which is listed under the name "SOELPEC"
+By adding your device to SimHub, you gain access to various settings related to the wheel.
+CONFIGURING SPECTRA XR
+Select SOELPEC Spectra XR
+SPECTRA XR
+SIMHUB SETTINGS
+1 2
+In this section, you can adjust all Vocore display and touch input related settings.
+Choose the “SOELPEC Dashboard” file from the dropdown menu, and make sure the
+"Advanced Touch Mode" is selected in the touchscreen settings.
+DISPLAY CONFIGURATION & SETTINGS
+Select Advanced Touch Mode
+Select SOELPEC Dashboard
+SPECTRA XR
+SIMHUB SETTINGS
+1 3
+In the LED profile settings, you can independently control the Telemetry and Button
+Lighting sections and adjust their brightness levels. For a more comprehensive configuration
+within the LED profiles, click on the "Edit Profile" to access the LED configuration windows.
+LED PROFILE & BRIGHTNESS ADJUSTMENTS
+SPECTRA XR
+WHEEL CONTROL FUNCTIONS
+1 4
+1
+7
+16 17
+8
+9
+10
+11
+12
+2 3 4 5 6
+LEFT THUMB ENCODER RIGHT THUMB ENCODER
+MODE BUTTON CLUTCH CALIBRATION BUTTON
+LEFT, MIDDLE & RIGHT
+ENCODERS
+INPUT LAYOUT - FRONT
+SPECTRA XR
+WHEEL CONTROL FUNCTIONS
+1 5
+INPUT LAYOUT - REAR
+SET
+14 13
+WHEEL SETTINGS BUTTON
+13 Optional Brake Magic Button 14 Optional Throttle Hold Button
+SPECTRA XR
+WHEEL CONTROL FUNCTIONS
+1 6
+COLOR MODE CHANGE
+Spectra XR comes equipped with 8 different pre-configured illumination themes.
+To change the buttons, encoders, and dashboard colors of the wheel, push and hold the
+"MODE BUTTON " while turning the “MIDDLE ENCODER” to cycle through these pre-saved
+profiles, without deep diving into complicated LED settings.
+LAVA ARCTIC COPPER NEON
+BASALT THEME 6 THEME 7 THEME 8
+16
+SPECTRA XR
+WHEEL CONTROL FUNCTIONS
+1 7
+The SOELPEC dashboard features multiple pages with different data screens. You can easily
+scroll through these pages using “BUTTON ” and “BUTTON ” customizing your display
+while you are racing.
+Delta display section can be easily toggled between Session Best, Last Lap, and
+All-Time Best Lap delta timings. The default keybind for this function is “BUTTON ” .
+NAVIGATING SOELPEC DASHBOARD
+16
+04
+17
+SPECTRA XR
+WHEEL CONTROL FUNCTIONS
+1 8
+CLUTCH & PADDLE MODES
+The Spectra XR features a dedicated settings button on the rear side of the wheel.
+Press the "WHEEL SETTINGS BUTTON " to access different settings, which will also be
+displayed on the screen.
+SET
+SPECTRA XR
+WHEEL CONTROL FUNCTIONS
+1 9
+Once the settings menu is enabled, you can use all three
+center encoders to make changes to the Bite Point value.
+Each encoder has a different adjustment percentage for
+every step of a turn, as described below:
+ “LEFT ENCODER” makes 10% adjustments for each turn
+ “MIDDLE ENCODER” makes 1% adjustments for each turn
+ “RIGHT ENCODER” makes 0.1% adjustments for each turn
+Up to 10 different Bite Point settings can be stored in the
+wheel with the preset function. Scroll through all these
+saved presets with the “RIGHT THUMB ENCODER” and the
+selected preset will be displayed on the right side
+of the dashboard.
+CLUTCH & PADDLE MODES
+SPECTRA XR
+WHEEL CONTROL FUNCTIONS
+2 0
+In the clutch settings, you can access 4 different modes with the “LEFT THUMB ENCODER”
+STATIC: The slave paddle only reaches to the bite point, while the master paddle reaches
+100% clutch level.
+DYNAMIC LOW: Either paddle by itself only reaches the bite point. Press both paddles
+together to reach 100% clutch level.
+DYNAMIC HIGH: Either paddle by itself reaches 100% clutch. Press both paddles and
+release one to return to the bite point level.
+THROTTLE & BRAKE: In this mode, paddles can be used as brake and throttle inputs. Other
+active wheel functions can also be observed on the right side of the display.
+Press the "WHEEL SETTINGS BUTTON " again to close the settings menu.
+CLUTCH & PADDLE MODES
+SET
+SPECTRA XR
+WHEEL CONTROL FUNCTIONS
+2 1
+CALIBRATING THE CLUTCH
+All of our wheels come pre-calibrated by default; however, re-calibration might be required
+under certain conditions. To activate the clutch calibration process, press and hold the
+“CLUTCH CALIBRATION BUTTON ” for 4 seconds.
+Once the “CLUTCH CALIBRATION ACTIVE” prompt appears, fully press both clutch paddles
+and release them. Afterward, press the same “CLUTCH CALIBRATION BUTTON ”button
+once more to conclude the calibration process. The new calibration settings will be
+internally stored within the wheel.
+17
+17
+SPECTRA XR
+WHEEL CONTROL FUNCTIONS
+2 2
+DUAL ACTION THUMB ENCODERS
+The Spectra XR offers dual input modes with its thumb encoders, allowing two sets of
+options to be controlled with just one thumb encoder. To switch between modes, simply
+press the thumb encoder button, and the selected mode will be visible on the dashboard.
+To disable the Dual Action Thumb Encoders, press and hold both the “MODE BUTTON ”
+and the preferred “THUMB ENCODER BUTTON“ for 4 seconds. Once disabled, each thumb
+encoder will only create a single set of inputs while the push button itself can also be used
+as a separate button input.
+16
+SPECTRA XR
+WHEEL CONTROL FUNCTIONS
+2 3
+CENTER ENCODERS WITH PUSH & TURN FUNCTIONS
+All three center encoders of the Spectra XR can create dual inputs; one with normal
+rotational inputs and one with the Push & Turn function. This provides two sets of functions
+to be controlled with a single center encoder while retaining the push button function
+as well. To enable, simply push the selected encoder button and turn either way while
+keeping it pushed. When the Push & Turn function is being used, the backlit illumination
+of the selected encoder changes color to indicate its status.
+LATCHING RADIO BUTTON
+The Spectra XR has a unique function for utilizing the radio button on the wheel.
+Normally, “BUTTON ” serves as a momentary push button, meaning the input is only
+active when the button is pressed. However, it can be turned into a latching button to
+keep it enabled while using the in-game radio communication or voice chat. To enable
+the Latching Radio Button, press and hold the “MODE BUTTON ” and “BUTTON ” for
+4 seconds. Once enabled, a change in the radio button's LED color can be seen during use.
+16
+01
+01
+SPECTRA XR
+WHEEL CONTROL FUNCTIONS
+2 4
+BRAKE MAGIC FUNCTION
+The Spectra XR offers a special Brake Magic function. To enable it, press and hold the
+“MODE BUTTON ” and “BUTTON ” for 4 seconds. Once enabled, adjust the amount of
+brake level by holding the “MODE BUTTON ” and turning the “LEFT THUMB ENCODER”
+This function allows you to enable automatic brake inputs up to 30%, helping to keep the
+brakes and tires warmed up during specific conditions. To use this function, calibrate a
+secondary brake input in the game settings by pressing and holding the “BUTTON ”
+for 4 seconds in the game calibration menu.
+13
+13
+16
+16
+SPECTRA XR
+WHEEL CONTROL FUNCTIONS
+2 5
+THROTTLE HOLD FUNCTION
+Throttle Hold is another unique function of the Spectra XR. To enable it, press and hold the
+“MODE BUTTON ” and “BUTTON ” for 4 seconds. Once enabled, adjust the amount of
+throttle input by holding “MODE BUTTON ” and turning the “RIGHT THUMB ENCODER”
+This function allows you to enable automatic throttle inputs up to 100%, helping to
+keep the throttle fully pressed during specific conditions. To use this function, calibrate
+a secondary throttle input in the game settings by pressing and holding the “BUTTON ”
+for 4 seconds in the game calibration menu.
+14
+14
+16
+16
+SPECTRA XR
+WHEEL CONTROL FUNCTIONS
+2 6
+NEUTRAL MODE
+The Spectra XR offers a special Neutral Mode function designed to quickly switch the car’s
+transmission into the neutral state by elevating the clutch axis to 100%.
+To make the function available, press and hold the “MODE BUTTON ” , and “BUTTON ”
+for 4 seconds. Once the function is available, the Neutral Mode can be toggled on and off
+by pressing “BUTTON ” again. The status will be displayed on the dashboard.
+16 11
+11
+SPECTRA XR
+PLUGIN SETTINGS
+2 7
+PLUGIN OVERVIEW
+The SOELPEC SimHub Plugin serves as a vital communication tool between your wheel and
+your PC. It provides essential features such as monitoring wheel function status. Additionally,
+within the plugin you can customize wheel presets, dashboard and illumination functions.
+You can also access the Spectra XR tab within the plugin to explore more advanced
+customization options.
+SPECTRA XR
+PLUGIN SETTINGS
+2 8
+DASHBOARD CUSTOMIZATION
+In this section, you can fully customize the bottom adjustments part of the SOELPEC
+Dashboard to your liking. In each of the five sections, choose from various options available
+in the dropdown menu. These selections will be stored within your current wheel profile.
+SPECTRA XR
+PLUGIN SETTINGS
+2 9
+ADVANCED CUSTOMIZATION
+In this section, you can make additional customizations related to the dashboard and
+the appearance of your wheel.
+BLACKOUT DASHBOARD MODE: Enabling this option allows you to switch to a more
+traditional-looking dashboard theme with a more subtle appearance.
+GEAR INDICATOR REDLIGHT WARNING: Choose to enable or disable the red blinking effect
+on the gear indicator when the car reaches the rev limiter.
+DISABLE SPEED INDICATOR: Choose to enable or disable the speed indicator under the
+current gear display. This option provides room for a bigger gear indicator.
+SPECTRA XR
+PLUGIN SETTINGS
+3 0
+ADVANCED CUSTOMIZATION
+NIGHT MODE: This option offers a way to dim the brightness of the wheel and changing
+colors to more generic Red, Blue, Yellow, and Green styles, more suitable for night driving.
+This mode also adjusts the colors of the wheel to the matching theme. To switch between
+different colors, push & hold the "MODE BUTTON " while turning the “MIDDLE ENCODER”
+to cycle through these pre-saved color profiles. To enable or disable Night Mode, use the
+toggle or add a keybinding to this function for a push button press, either on the wheel
+itself or in a different controller device, such as button boxes
+DASHBOARD IDLE SCREEN: By default, SOELPEC Dashboard utilizes an idle screen with
+a video animation, which shows up when you are not in the game. You can disable this
+screen to display in-game data screens even when you are not racing.
+DRIVER TAG: This option allows you to customize the idle screen by adding the driver's
+name and number over the splash screen, syncing with the selected color profile.
+LAP SUMMARY SCREEN: Choose to enable or disable the lap summary screen, which appears
+briefly after each lap, providing information about the last lap stats.
+16
+SPECTRA XR
+PLUGIN SETTINGS
+3 1
+NAMING THE PRESETS
+In this section, you have the ability to rename each preset, allowing you to categorize and
+store various settings for different cars and games. When a preset is selected, its defined
+name will be displayed on the dashboard, ensuring you're always aware of your chosen
+configuration.
+SPECTRA XR
+PLUGIN SETTINGS
+3 2
+Dedicated “Spectra XR” tab within the Soelpec plugin, you can access more information
+about the current status of your Spectra XR steering wheel. Additionally, various specific
+illumination options can be customized under this tab.
+ADVANCED CUSTOMIZATION
+BLENDED COLOR PROFILES: Enabling this
+mode applies blended illumination effects
+to all 8 default color profile options.
+To switch between different colors, push and
+hold the "MODE BUTTON " while turning
+the “MIDDLE ENCODER” to cycle through
+these pre-saved color profiles.
+BREATHING IDLE ANIMATIONS: Enabling
+this mode applies breathing illumination
+effects when the wheel is in the idle mode.
+16
+SPECTRA XR
+PLUGIN SETTINGS
+3 3
+Spectra XR features a rev light strip on top of the dashboard, including 15 individual LEDs.
+In this customization section, you can choose one of the pre-defined rev light styles from
+the dropdown menu. The menu also includes a car-specific rev light option to simulate the
+real car animations for the rev lights. “Car Spesific” option is only available for the iRacing
+currently.
+REV LIGHTS CUSTOMIZATION
+SPECTRA XR
+ADDITIONAL FEATURES
+3 4
+A detailed LED placement map can be found here for programming more advanced
+LED functions for “Ungrouped LEDs Control” of SimHub.
+ADVANCED LED SETTINGS
+TELEMETRY LEDS BUTTON LEDS
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+16
+17
+18
+19
+20
+21
+27
+26
+25
+24
+23
+22
+28 29 32 33
+30 31
+34 35
+46 47
+50 51
+52
+56 55
+54
+61
+57 60
+58 59 53
+62
+66 65
+64
+63
+38 39
+36 37
+48 49
+40 41
+44 45
+42 43
+SPECTRA XR
+ADDITIONAL FEATURES
+3 5
+In addition to the primary spiral cable socket,
+Spectra XR features an integrated internal
+USB connection port.
+This port is specifically engineered to provide
+a cable-free integrated USB connection solution.
+This functionality is particularly useful if your
+wheelbase supports this type of USB connection.
+By utilizing this port, the wheel can seamlessly
+manage both power and data transfers internally.
+This ensures true quick-release operation without
+the necessity of frequent plugging and
+unplugging of the spiral cable.
+INTERNAL USB PORT CONNECTION
+SPECTRA XR
+ADDITIONAL FEATURES
+3 6
+To utilize this port, please follow these steps:
+Unscrew the 3x M5 bolts located on the rear hub and carefully remove the rear hub
+to access the internal 4-pin USB socket.
+Connect the "Internal USB Connection Cable" to the socket on the PCB. This specific cable
+can be found in the box.
+Detach the carbon fiber cap from the top side of the rear hub by unscrewing 3x M3 bolts.
+Attach the other end of the cable, which features a standard USB Type-A plug, to your
+QR (Quick Release) USB socket.
+Re-attach the rear hub back to the wheel and fasten all three M5 screws.
+CAUTION: It's important to note that when utilizing the internal USB connection
+port, DO NOT attempt to use the external spiral cable connection socket. Doing this
+can result in loss of connection and potential damage to the wheel.
+INTERNAL USB PORT CONNECTION
+SPECTRA XR
+ADDITIONAL FEATURES
+3 7
+SOELPEC Knob Kits provide you with the option to
+customize your wheel's aesthetics by purchasing
+aluminum anodized knobs with different colors.
+Each kit contains seven pieces of anodized
+aluminum knobs, available in various color variants
+named Arctic, Lava, Copper, Neon and Basalt.
+The kit includes three center encoder knobs,
+two thumb encoder knobs, and two 7–way switch
+knobs. To perform the customization, all that's
+required is the 1.3mm allen key provided within
+the Spectra XR box.
+When installing the new knobs, it's important to
+add some spacing to accommodate the movement
+of the encoder push buttons.
+CUSTOMIZABLE ALUMINIUM KNOBS
+SPECTRA XR
+STICKER CUSTOMIZATION
+3 8
+CHANGING BUTTON & ENCODER STICKER
+The Spectra XR comes with a default
+layout of button cap & encoder stickers.
+Additionally, all of these stickers can be
+customized with the included PVC sticker
+sheet that comes in the box.
+The sticker sheet has a variety of different
+labels and icons designed for application
+on buttons and encoder surroundings. The
+semi-transparent form of the stickers allow
+buttons to illuminate through from behind.
+SPECTRA XR
+STICKER CUSTOMIZATION
+3 9
+CHANGING BUTTON & ENCODER STICKER
+To replace button cap & encoder stickers, please follow these steps:
+Use the provided tweezers to smoothly remove the existing stickers.
+After removal, gently clean the surface using a soft cloth and isopropyl alcohol.
+Apply the new preferred sticker to the cleaned surface.
+For replacing encoder stickers, an additional step is necessary. Use the 1.3mm Allen key
+provided in the box to unscrew the aluminum encoder knobs.
+Once the knob is removed, repeat the same steps for the sticker replacement process.
+Afterward, re-attach the knobs and securely fasten them by tightening the set screw.
+NOTE: It's important to mention that, Spectra XR's button caps feature a specially
+designed slots for accommodating the stickers. While this can make the process
+slightly more challenging, it ensures that the stickers remain fixed during use.
+SPECTRA XR
+MAINTENANCE
+4 0
+MAINTENANCE
+The Spectra XR is designed for minimum maintenance, ensuring a hassle-free experience.
+Follow these guidelines to ensure the longevity and optimal performance of your product:
+Ensure that the spiral USB cable is detached to prevent any potential damage before
+doing any maintenance.
+In order to keep the grips in pristine condition, gently wipe them with a microfiber cloth
+and isopropyl alcohol.
+Be cautious not use to isopropyl alcohol on the display, and do not apply excessive
+pressure on the display part while cleaning the surface.
+The Spectra XR is intended for indoor use only. It should be shielded from extreme heat
+and humidity to prevent any potential damage to its components.
+If you plan to store the wheel for an extended period of time, it's advised to remove the
+spiral USB cable from both the PC and the wheel.
+SPECTRA XR
+WARRANTY & SUPPORT
+4 1
+WARRANTY
+SUPPORT
+By following all these steps in these user guide, you can connect, configure, and fully
+utilize the features of your Spectra XR steering wheel.
+If you encounter any issues or require further assistance, head out to our SUPPORT PAGE,
+or join our DISCORD SERVER to create a ticket for help.
+To initiate a warranty claim, please contact customer support team at info@soelpec.com
+with the required information on our website. Our team will review your claim and guide
+you through the necessary steps to resolve the issue promptly.
+For more detailed information regarding warranty coverage, please visit the warranty
+conditions on our website HERE.
+SOELPEC.COM
+V/1.2.0
