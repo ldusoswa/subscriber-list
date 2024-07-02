@@ -24,14 +24,14 @@ totalNet = float(0)
 subListsDir = 'C:\\Users\\dusosl\\Downloads\\'
 
 def find_recent_file(dir, prefix):
-  # Get the list of all files in the directory
-  file_list = glob.glob(dir + "/" + prefix + "*")
+    # Get the list of all files in the directory
+    file_list = glob.glob(dir + "/" + prefix + "*")
 
-  # Sort the list of files by modification time
-  file_list.sort(key=os.path.getmtime)
+    # Sort the list of files by modification time
+    file_list.sort(key=os.path.getmtime)
 
-  # Return the most recent file
-  return file_list[-1]
+    # Return the most recent file
+    return file_list[-1]
 
 youtubeSubsFile = find_recent_file(subListsDir, 'Your members ')
 twitchSubsFile = find_recent_file(subListsDir, 'subscriber-list')
@@ -50,14 +50,24 @@ def performTextReplacements(original):
         'Phelan Pritchard Gaming': 'Phelan Pritchard',
         'astrophotography': 'Geezer3d.com',
         'damien mcmullen': 'Damo McMullen',
-        'Stephen Oâ€™Keeffe': 'Stephen O\'Keeffe',
         ' ðŸ‡µðŸ‡¸': '',
-        'PaweÅ‚ Surdyk': 'Pawel Surdyk'
+        'Å‚': 'l',
+        'Ã§': 'ç',
+        'â€™': '\'',
+        'Ã«': 'ë',
+        '＇': '\'',
+        '’': '\'',
+        'é': 'é',
+        'Ã©': 'é',
+        'Ã§': 'ç',
     }
+
+    print(f'Original: {original}')
 
     for key, value in mapping.items():
         original = original.replace(key, value)
 
+    print(f'Replaced: {original}')
     return original
 
 # TWITCH
@@ -104,7 +114,7 @@ with open(patroenSubsFile, 'r') as csv_file:
                 pitCrewPatreon.append(performTextReplacements(row[0]))
 
 # YouTube
-with open(youtubeSubsFile, 'r') as csv_file:
+with open(youtubeSubsFile, 'r', encoding='utf-8') as csv_file:
     next(csv_file)
     reader = csv.reader(csv_file)
     sortedlist = sorted(reader, key=lambda row:float(row[4]), reverse=True)
@@ -155,15 +165,15 @@ def formatForPhotoshopText(membersArray, padding):
 data = [
     ['teamBoss', 'crewChief', 'pitCrew', 'twitchSubs'],
     [
-        formatForPhotoshopText(teamBossCombined, 28),
+        formatForPhotoshopText(teamBossCombined, 38),
         formatForPhotoshopText(crewChiefCombined, 25),
-        formatForPhotoshopText(pitCrewCombined, 28),
-        formatForPhotoshopText(twitchSubs, 20)
+        formatForPhotoshopText(pitCrewCombined, 23),
+        formatForPhotoshopText(twitchSubs, 15)
     ]
 ]
 psdName = 'levels.csv'
 
-with open(psdName, 'w', newline='') as csv_file:
+with open(psdName, 'w', newline='', encoding='utf-8-sig') as csv_file:
     writer = csv.writer(csv_file)
     for row in data:
         writer.writerow(row)
@@ -212,7 +222,7 @@ calculateAndOutputTotals('Patreon', 'Crew Chief', crewChiefPatreon, 9.99)
 calculateAndOutputTotals('Patreon', 'Pit Crew', pitCrewPatreon, 4.99)
 
 print('===========================================================================================')
-print(f'TOTAL\t\t\t{totalMemberCount}\t\t€{"{:.2f}".format(totalGross)}\t\t€{"{:.2f}".format(totalPlatformCosts)}\t\t€{"{:.2f}".format(totalNet)}')
+print(f'TOTAL\t\t\t{totalMemberCount}\t€{"{:.2f}".format(totalGross)}\t€{"{:.2f}".format(totalPlatformCosts)}\t\t€{"{:.2f}".format(totalNet)}')
 print(f'###########################################################################################')
 
 print(f'\n\n############################# TWITCH PRIME EXPIRING SOON #####################################')
