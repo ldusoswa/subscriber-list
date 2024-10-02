@@ -165,9 +165,9 @@ def formatForPhotoshopText(membersArray, padding):
 data = [
     ['teamBoss', 'crewChief', 'pitCrew', 'twitchSubs'],
     [
-        formatForPhotoshopText(teamBossCombined, 38),
+        formatForPhotoshopText(teamBossCombined, 45),
         formatForPhotoshopText(crewChiefCombined, 25),
-        formatForPhotoshopText(pitCrewCombined, 23),
+        formatForPhotoshopText(pitCrewCombined, 15),
         formatForPhotoshopText(twitchSubs, 15)
     ]
 ]
