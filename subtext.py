@@ -62,12 +62,12 @@ def performTextReplacements(original):
         'Ã§': 'ç',
     }
 
-    print(f'Original: {original}')
+#     print(f'Original: {original}')
 
     for key, value in mapping.items():
         original = original.replace(key, value)
 
-    print(f'Replaced: {original}')
+#     print(f'Replaced: {original}')
     return original
 
 # TWITCH
@@ -131,20 +131,20 @@ with open(youtubeSubsFile, 'r', encoding='utf-8') as csv_file:
             teamBossYouTube.append(performTextReplacements(row[0]))
 
 # output the complete list of names
-print(f'\n#### All Members ####')
-for member in teamBossCombined:
-    print(member)
-
-for member in crewChiefCombined:
-    print(member)
-
-print('\n')
-
-for member in pitCrewCombined:
-    print(member)
-
-for member in twitchSubs:
-    print(member)
+# print(f'\n#### All Members ####')
+# for member in teamBossCombined:
+#     print(member)
+#
+# for member in crewChiefCombined:
+#     print(member)
+#
+# print('\n')
+#
+# for member in pitCrewCombined:
+#     print(member)
+#
+# for member in twitchSubs:
+#     print(member)
 
 totalMemberCount = len(pitCrewCombined) + len(crewChiefCombined) + len(teamBossCombined) + len(twitchSubs)
 
@@ -225,10 +225,10 @@ print('=========================================================================
 print(f'TOTAL\t\t\t{totalMemberCount}\t€{"{:.2f}".format(totalGross)}\t€{"{:.2f}".format(totalPlatformCosts)}\t\t€{"{:.2f}".format(totalNet)}')
 print(f'###########################################################################################')
 
-print(f'\n\n############################# TWITCH PRIME EXPIRING SOON #####################################')
-print(f'member\t\t\tsub type\tdays left\t\texpiry date')
-print(f'_____________________\t__________\t__________\t___________________________')
-for blurb in twitchPrimeExpiryBlurb:
-    print(blurb)
-print(f'\nTwitch prime subs do not auto-renew. If you\'d like to renew your prime sub, the easiest way \nto remember to renew it is by setting a monthly reminder for the expiry date beside your name')
-print('##############################################################################################')
+# print(f'\n\n############################# TWITCH PRIME EXPIRING SOON #####################################')
+# print(f'member\t\t\tsub type\tdays left\t\texpiry date')
+# print(f'_____________________\t__________\t__________\t___________________________')
+# for blurb in twitchPrimeExpiryBlurb:
+#     print(blurb)
+# print(f'\nTwitch prime subs do not auto-renew. If you\'d like to renew your prime sub, the easiest way \nto remember to renew it is by setting a monthly reminder for the expiry date beside your name')
+# print('##############################################################################################')
