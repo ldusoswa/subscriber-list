@@ -60,6 +60,8 @@ def performTextReplacements(original):
         'é': 'é',
         'Ã©': 'é',
         'Ã§': 'ç',
+        '“': '"',
+        '”': '"',
     }
 
 #     print(f'Original: {original}')
@@ -137,11 +139,11 @@ with open(youtubeSubsFile, 'r', encoding='utf-8') as csv_file:
 #
 # for member in crewChiefCombined:
 #     print(member)
-#
-# print('\n')
-#
-# for member in pitCrewCombined:
-#     print(member)
+# #
+print('\n')
+
+for member in pitCrewCombined:
+    print(member)
 #
 # for member in twitchSubs:
 #     print(member)
@@ -166,9 +168,9 @@ data = [
     ['teamBoss', 'crewChief', 'pitCrew', 'twitchSubs'],
     [
         formatForPhotoshopText(teamBossCombined, 45),
-        formatForPhotoshopText(crewChiefCombined, 25),
-        formatForPhotoshopText(pitCrewCombined, 15),
-        formatForPhotoshopText(twitchSubs, 15)
+        formatForPhotoshopText(crewChiefCombined, 30),
+        formatForPhotoshopText(pitCrewCombined, 24),
+        formatForPhotoshopText(twitchSubs, 30)
     ]
 ]
 psdName = 'levels.csv'
