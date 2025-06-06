@@ -26,15 +26,24 @@ def find_recent_file(dir_path, prefix):
 
 def perform_text_replacements(original):
     mapping = {
-        'ï¼‡': '\'', 'Ã¼': 'ü', 'Dan Persons': 'Dogoncouch',
-        'coooyahh': 'FeckCancer', 'kuyar21': 'FeckCancer',
+        'ï¼‡': '\'',
+        'Ã¼': 'ü',
+        'Dan Persons': 'Dogoncouch',
         'adam_coolmunky': 'acreekracing_photography',
         'Phelan Pritchard Gaming': 'Phelan Pritchard',
         'astrophotography': 'Geezer3d.com',
         'damien mcmullen': 'Damo McMullen',
-        ' ðŸ‡µðŸ‡¸': '', 'Å‚': 'l', 'Ã§': 'ç', 'â€™': '\'',
-        'Ã«': 'ë', '＇': '\'', '’': '\'', 'é': 'é',
-        'Ã©': 'é', '“': '"', '”': '"'
+        ' ðŸ‡µðŸ‡¸': '',
+        'Å‚': 'l',
+        'Ã§': 'ç',
+        'â€™': '\'',
+        'Ã«': 'ë',
+        '＇': '\'',
+        '’': '\'',
+        'é': 'é',
+        'Ã©': 'é',
+        '“': '"',
+        '”': '"'
     }
     for key, value in mapping.items():
         original = original.replace(key, value)
