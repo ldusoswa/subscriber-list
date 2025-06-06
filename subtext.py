@@ -1,237 +1,200 @@
 import csv
 import os
 import glob
-
 from datetime import datetime, timedelta
 
-pitCrewCombined = []
-crewChiefCombined = []
-teamBossCombined = []
-twitchCombined = []
-pitCrewYouTube = []
-pitCrewYouTubeGifted = []
-crewChiefYouTube = []
-teamBossYouTube = []
-pitCrewPatreon = []
-crewChiefPatreon = []
-teamBossPatreon = []
-pitCrewTwitchTier1 = []
-pitCrewTwitchTier1Gifted = []
-newGiftedCombined = []
-twitchPrimeExpiryBlurb = []
+# --- Constants ---
+SUB_LISTS_DIR = 'C:\\Users\\dusosl\\Downloads\\'
+
+# --- Globals ---
+pitCrewCombined, crewChiefCombined, teamBossCombined = [], [], []
+twitchCombined, pitCrewYouTube, pitCrewYouTubeGifted = [], [], []
+crewChiefYouTube, teamBossYouTube = [], []
+pitCrewPatreon, crewChiefPatreon, teamBossPatreon = [], [], []
+pitCrewTwitchTier1, pitCrewTwitchTier1Gifted = [], []
+newGiftedCombined, twitchPrimeExpiryBlurb = [], []
 totalMemberCount = 0
+totalGross, totalPlatformCosts, totalNet = 0.0, 0.0, 0.0
 
-totalGross = float(0)
-totalPlatformCosts = float(0)
-totalNet = float(0)
 
-subListsDir = 'C:\\Users\\dusosl\\Downloads\\'
-
-def find_recent_file(dir, prefix):
-    # Get the list of all files in the directory
-    file_list = glob.glob(dir + "/" + prefix + "*")
-
-    # Sort the list of files by modification time
+# --- Helpers ---
+def find_recent_file(dir_path, prefix):
+    file_list = glob.glob(f"{dir_path}/{prefix}*")
     file_list.sort(key=os.path.getmtime)
-
-    # Return the most recent file
     return file_list[-1]
 
-youtubeSubsFile = find_recent_file(subListsDir, 'Your members ')
-twitchSubsFile = find_recent_file(subListsDir, 'subscriber-list')
-patroenSubsFile = find_recent_file(subListsDir, 'Members_')
 
-# quick and dirty replace of poor imports or name change requests
-def performTextReplacements(original):
-    # Create a mapping of characters to replace
+def perform_text_replacements(original):
     mapping = {
-        'ï¼‡': '\'',
-        'Ã¼': 'ü',
-        'Dan Persons': 'Dogoncouch',
-        'coooyahh': 'FeckCancer',
-        'kuyar21': 'FeckCancer',
+        'ï¼‡': '\'', 'Ã¼': 'ü', 'Dan Persons': 'Dogoncouch',
+        'coooyahh': 'FeckCancer', 'kuyar21': 'FeckCancer',
         'adam_coolmunky': 'acreekracing_photography',
         'Phelan Pritchard Gaming': 'Phelan Pritchard',
         'astrophotography': 'Geezer3d.com',
         'damien mcmullen': 'Damo McMullen',
-        ' ðŸ‡µðŸ‡¸': '',
-        'Å‚': 'l',
-        'Ã§': 'ç',
-        'â€™': '\'',
-        'Ã«': 'ë',
-        '＇': '\'',
-        '’': '\'',
-        'é': 'é',
-        'Ã©': 'é',
-        'Ã§': 'ç',
-        '“': '"',
-        '”': '"',
+        ' ðŸ‡µðŸ‡¸': '', 'Å‚': 'l', 'Ã§': 'ç', 'â€™': '\'',
+        'Ã«': 'ë', '＇': '\'', '’': '\'', 'é': 'é',
+        'Ã©': 'é', '“': '"', '”': '"'
     }
-
-#     print(f'Original: {original}')
-
     for key, value in mapping.items():
         original = original.replace(key, value)
-
-#     print(f'Replaced: {original}')
     return original
 
-# TWITCH
+
+def format_for_photoshop_text(members, padding):
+    if not members:
+        return 'None at this time'
+    return ' '.join(member.ljust(padding) for member in members)
+
+
+def calculate_and_output_totals(platform, tier_name, members, price_per_month):
+    global totalGross, totalPlatformCosts, totalNet
+
+    monthly_gross = len(members) * price_per_month
+
+    if platform == 'YouTube':
+        fees = monthly_gross * 0.30
+    elif platform == 'Twitch':
+        fees = monthly_gross * 0.50
+    elif platform == 'Patreon':
+        fees = (monthly_gross * 0.05 + len(members) * 0.10) if price_per_month < 3 else (monthly_gross * 0.029 + len(members) * 0.30)
+    else:
+        fees = 0
+
+    monthly_net = monthly_gross - fees
+    totalGross += monthly_gross
+    totalPlatformCosts += fees
+    totalNet += monthly_net
+
+    if members:
+        print(f'{platform} - {tier_name}\t{len(members)}\t€{price_per_month}\t€{monthly_gross:.2f}\t\t€{fees:.2f}\t\t€{monthly_net:.2f}')
+
+
+# --- Load Files ---
+youtubeSubsFile = find_recent_file(SUB_LISTS_DIR, 'Your members ')
+twitchSubsFile = find_recent_file(SUB_LISTS_DIR, 'subscriber-list')
+patreonSubsFile = find_recent_file(SUB_LISTS_DIR, 'Members_')
+
+# --- Twitch ---
 with open(twitchSubsFile, 'r') as csv_file:
     next(csv_file)
     reader = csv.reader(csv_file)
-    sortedlist = sorted(reader, key=lambda row:float(row[3]), reverse=True)
+    sortedlist = sorted(reader, key=lambda row: float(row[3]), reverse=True)
+
     if sortedlist[0][0] == 'ldusoswa':
-        sortedlist.pop(0) # remove ldusoswa
+        sortedlist.pop(0)
 
     for row in sortedlist:
-        if row[5] == 'gift':
-            pitCrewTwitchTier1Gifted.append(performTextReplacements(row[0]))
+        username = perform_text_replacements(row[0])
+        sub_type = row[5]
+
+        if sub_type == 'gift':
+            pitCrewTwitchTier1Gifted.append(username)
         else:
-            pitCrewTwitchTier1.append(performTextReplacements(row[0]))
+            pitCrewTwitchTier1.append(username)
 
-        if row[5] == 'prime' or row[5] == 'gift':
-            date_format = "%Y-%m-%dT%H:%M:%SZ"
-            currentDate = datetime.utcnow().strftime(date_format)
-            subDate = row[1]
-
-            daysLeft = 31 + (datetime.strptime(subDate, '%Y-%m-%dT%H:%M:%SZ') - datetime.strptime(currentDate, '%Y-%m-%dT%H:%M:%SZ')).days
-            parsed_subscription_date = datetime.strptime(subDate, date_format)
-            expiry_date = parsed_subscription_date + timedelta(days=31)
-            formatted_expiry_date = expiry_date.strftime("%B %d, %Y at %I:%M %p")
-
-            blurb = f'{performTextReplacements(row[0]).ljust(20)}\t{row[5]}\t\t{daysLeft}\t\t{formatted_expiry_date}'
+        if sub_type in ['prime', 'gift']:
+            sub_date = datetime.strptime(row[1], "%Y-%m-%dT%H:%M:%SZ")
+            expiry_date = sub_date + timedelta(days=31)
+            current_date = datetime.utcnow()
+            days_left = 31 + (sub_date - current_date).days
+            expiry_str = expiry_date.strftime("%B %d, %Y at %I:%M %p")
+            blurb = f'{username.ljust(20)}\t{sub_type}\t\t{days_left}\t\t{expiry_str}'
             twitchPrimeExpiryBlurb.append(blurb)
 
-# Patreon
-with open(patroenSubsFile, 'r') as csv_file:
+# --- Patreon ---
+with open(patreonSubsFile, 'r') as csv_file:
     next(csv_file)
     reader = csv.reader(csv_file)
-    sortedlist = sorted(reader, key=lambda row:float(row[8]), reverse=True)
-    # print(sortedlist)
+    sortedlist = sorted(reader, key=lambda row: float(row[8]), reverse=True)
 
     for row in sortedlist:
-            # print(row[10] + ' - ' + row[0])
-            if row[10] == "Crew Chief":
-                crewChiefPatreon.append(performTextReplacements(row[0]))
-            elif row[10] == "Team Boss":
-                teamBossPatreon.append(performTextReplacements(row[0]))
-            elif row[10] == "Pit Crew" or row[10] == "":
-                pitCrewPatreon.append(performTextReplacements(row[0]))
+        name = perform_text_replacements(row[0])
+        tier = row[10]
+        if tier == "Crew Chief":
+            crewChiefPatreon.append(name)
+        elif tier == "Team Boss":
+            teamBossPatreon.append(name)
+        else:
+            pitCrewPatreon.append(name)
 
-# YouTube
+# --- YouTube ---
 with open(youtubeSubsFile, 'r', encoding='utf-8') as csv_file:
     next(csv_file)
     reader = csv.reader(csv_file)
-    sortedlist = sorted(reader, key=lambda row:float(row[4]), reverse=True)
+    sortedlist = sorted(reader, key=lambda row: float(row[4]), reverse=True)
 
     for row in sortedlist:
-        if row[2] == "Pit Crew":
-            if float(row[4]) > 3:
-                pitCrewYouTube.append(performTextReplacements(row[0]))
-            else:
-                pitCrewYouTubeGifted.append(performTextReplacements(row[0]))
-        elif row[2] == "Crew Chief":
-            crewChiefYouTube.append(performTextReplacements(row[0]))
-        elif row[2] == "Team Boss":
-            teamBossYouTube.append(performTextReplacements(row[0]))
+        name = perform_text_replacements(row[0])
+        tier = row[2]
+        amount = float(row[4])
 
+        if tier == "Pit Crew":
+            (pitCrewYouTube if amount > 3 else pitCrewYouTubeGifted).append(name)
+        elif tier == "Crew Chief":
+            crewChiefYouTube.append(name)
+        elif tier == "Team Boss":
+            teamBossYouTube.append(name)
 
+# --- Combine Lists ---
 teamBossCombined = teamBossPatreon + teamBossYouTube
 crewChiefCombined = crewChiefPatreon + crewChiefYouTube
 pitCrewCombined = pitCrewPatreon + pitCrewYouTube
 twitchCombined = pitCrewTwitchTier1
 newGiftedCombined = pitCrewYouTubeGifted + pitCrewTwitchTier1Gifted
-totalMemberCount = len(teamBossCombined) + len(crewChiefCombined) + len(pitCrewCombined) + len(twitchCombined) + len(newGiftedCombined)
+totalMemberCount = len(teamBossCombined + crewChiefCombined + pitCrewCombined + twitchCombined + newGiftedCombined)
 
-# TODO print out youtube description blurb
+# --- Output Lists ---
 print(f'\nTeam Boss\t{", ".join(teamBossCombined)}')
 print(f'Crew Chief\t{", ".join(crewChiefCombined)}')
 print(f'Pit Crew\t{", ".join(pitCrewCombined)}')
 print(f'TWITCH\t\t{", ".join(twitchCombined)}')
 
-# Create the csv for photoshop to import
-def formatForPhotoshopText(membersArray, padding):
-    photoshopText = ''
-    for index, member in enumerate(membersArray):
-            photoshopText = f'{photoshopText} {member.ljust(padding)}'
-
-    if photoshopText == '':
-        photoshopText = 'None at this time'
-    return photoshopText
-
+# --- Write CSV for Photoshop ---
 data = [
     ['teamBoss', 'crewChief', 'pitCrew', 'twitchSubs', 'newGifted'],
     [
-        formatForPhotoshopText(teamBossCombined, 45),
-        formatForPhotoshopText(crewChiefCombined, 30),
-        formatForPhotoshopText(pitCrewCombined, 30),
-        formatForPhotoshopText(pitCrewTwitchTier1, 30),
-        formatForPhotoshopText(pitCrewYouTubeGifted + pitCrewTwitchTier1Gifted, 24)
+        format_for_photoshop_text(teamBossCombined, 45),
+        format_for_photoshop_text(crewChiefCombined, 30),
+        format_for_photoshop_text(pitCrewCombined, 30),
+        format_for_photoshop_text(pitCrewTwitchTier1, 30),
+        format_for_photoshop_text(newGiftedCombined, 24)
     ]
 ]
-psdName = 'levels.csv'
 
-with open(psdName, 'w', newline='', encoding='utf-8-sig') as csv_file:
-    writer = csv.writer(csv_file)
-    for row in data:
-        writer.writerow(row)
+psd_file = 'levels.csv'
+with open(psd_file, 'w', newline='', encoding='utf-8-sig') as f:
+    writer = csv.writer(f)
+    writer.writerows(data)
 
-    print(f'\nCSV file created successfully for Photoshop import: {psdName}')
+print(f'\nCSV file created successfully for Photoshop import: {psd_file}')
 
-def calculateAndOutputTotals(platform, tierName, members, pricePerMonth):
-    # Calculate totals for this tier
-    monthlyGross = len(members)*pricePerMonth
-    # calculate the platform costs
-    if platform == 'YouTube':
-        monthlyPlatformFees = monthlyGross*30/100
-    elif platform == 'Twitch':
-        monthlyPlatformFees = monthlyGross*50/100
-    elif platform == 'Patreon':
-        if pricePerMonth < 3:
-            monthlyPlatformFees = monthlyGross*5/100 + len(members)*0.10
-        else:
-            monthlyPlatformFees = monthlyGross*2.9/100 + len(members)*0.30
-    else:
-        monthlyPlatformFees = 0
-    monthlyNet = monthlyGross - monthlyPlatformFees
-
-    # Update running totals
-    global totalGross
-    global totalPlatformCosts
-    global totalNet
-    totalGross += monthlyGross
-    totalPlatformCosts += monthlyPlatformFees
-    totalNet += monthlyNet
-
-    # spit out the data
-    if len(members) > 0:
-        print(f'{platform} - {tierName}\t{len(members)}\t€{pricePerMonth}\t€{"{:.2f}".format(monthlyGross)}\t\t€{"{:.2f}".format(monthlyPlatformFees)}\t\t€{"{:.2f}".format(monthlyNet)}')
-
-# Do earnings projections
+# --- Output Earnings ---
 print(f'\n############################# MONTHLY EARNINGS REPORT #####################################')
 print(f'level\t\t\tmembers\trate\tgross income\tplatform costs\ttotal (before tax)')
 print(f'_____________________\t______\t______\t______________\t______________\t__________________')
-calculateAndOutputTotals('YouTube', 'Team Boss', teamBossYouTube, 19.99)
-calculateAndOutputTotals('YouTube', 'Crew Chief', crewChiefYouTube, 9.99)
-calculateAndOutputTotals('YouTube', 'Pit Crew', pitCrewYouTube, 4.99)
-calculateAndOutputTotals('YouTube', 'Gifted', pitCrewYouTubeGifted, 4.99)
-calculateAndOutputTotals('Twitch', 'Tier 1 member', pitCrewTwitchTier1, 4.99)
-calculateAndOutputTotals('Twitch', 'Gifted sub', pitCrewTwitchTier1Gifted, 4.99)
-calculateAndOutputTotals('Patreon', 'Team Boss', teamBossPatreon, 19.99)
-calculateAndOutputTotals('Patreon', 'Crew Chief', crewChiefPatreon, 9.99)
-calculateAndOutputTotals('Patreon', 'Pit Crew', pitCrewPatreon, 4.99)
+
+calculate_and_output_totals('YouTube', 'Team Boss', teamBossYouTube, 19.99)
+calculate_and_output_totals('YouTube', 'Crew Chief', crewChiefYouTube, 9.99)
+calculate_and_output_totals('YouTube', 'Pit Crew', pitCrewYouTube, 4.99)
+calculate_and_output_totals('YouTube', 'Gifted', pitCrewYouTubeGifted, 4.99)
+calculate_and_output_totals('Twitch', 'Tier 1 member', pitCrewTwitchTier1, 4.99)
+calculate_and_output_totals('Twitch', 'Gifted sub', pitCrewTwitchTier1Gifted, 4.99)
+calculate_and_output_totals('Patreon', 'Team Boss', teamBossPatreon, 19.99)
+calculate_and_output_totals('Patreon', 'Crew Chief', crewChiefPatreon, 9.99)
+calculate_and_output_totals('Patreon', 'Pit Crew', pitCrewPatreon, 4.99)
 
 print('===========================================================================================')
-print(f'TOTAL\t\t\t{totalMemberCount}\t\t€{"{:.2f}".format(totalGross)}\t\t€{"{:.2f}".format(totalPlatformCosts)}\t\t€{"{:.2f}".format(totalNet)}')
+print(f'TOTAL\t\t\t{totalMemberCount}\t\t€{totalGross:.2f}\t\t€{totalPlatformCosts:.2f}\t\t€{totalNet:.2f}')
 print(f'###########################################################################################')
 
+# Uncomment below to show Twitch Prime expiry data
 # print(f'\n\n############################# TWITCH PRIME EXPIRING SOON #####################################')
 # print(f'member\t\t\tsub type\tdays left\t\texpiry date')
 # print(f'_____________________\t__________\t__________\t___________________________')
 # for blurb in twitchPrimeExpiryBlurb:
 #     print(blurb)
-# print(f'\nTwitch prime subs do not auto-renew. If you\'d like to renew your prime sub, the easiest way \nto remember to renew it is by setting a monthly reminder for the expiry date beside your name')
+# print(f'\nTwitch prime subs do not auto-renew. If you\'d like to renew your prime sub, set a reminder for the expiry date beside your name.')
 # print('##############################################################################################')
 
 print(f'newGifted: {newGiftedCombined}')
