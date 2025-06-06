@@ -7,6 +7,7 @@ from datetime import datetime, timedelta
 pitCrewCombined = []
 crewChiefCombined = []
 teamBossCombined = []
+twitchCombined = []
 pitCrewYouTube = []
 pitCrewYouTubeGifted = []
 crewChiefYouTube = []
@@ -14,7 +15,9 @@ teamBossYouTube = []
 pitCrewPatreon = []
 crewChiefPatreon = []
 teamBossPatreon = []
-twitchSubs = []
+pitCrewTwitchTier1 = []
+pitCrewTwitchTier1Gifted = []
+newGiftedCombined = []
 twitchPrimeExpiryBlurb = []
 totalMemberCount = 0
 
@@ -82,7 +85,10 @@ with open(twitchSubsFile, 'r') as csv_file:
         sortedlist.pop(0) # remove ldusoswa
 
     for row in sortedlist:
-        twitchSubs.append(performTextReplacements(row[0]))
+        if row[5] == 'gift':
+            pitCrewTwitchTier1Gifted.append(performTextReplacements(row[0]))
+        else:
+            pitCrewTwitchTier1.append(performTextReplacements(row[0]))
 
         if row[5] == 'prime' or row[5] == 'gift':
             date_format = "%Y-%m-%dT%H:%M:%SZ"
@@ -107,13 +113,10 @@ with open(patroenSubsFile, 'r') as csv_file:
     for row in sortedlist:
             # print(row[10] + ' - ' + row[0])
             if row[10] == "Crew Chief":
-                crewChiefCombined.append(performTextReplacements(row[0]))
                 crewChiefPatreon.append(performTextReplacements(row[0]))
             elif row[10] == "Team Boss":
-                teamBossCombined.append(performTextReplacements(row[0]))
                 teamBossPatreon.append(performTextReplacements(row[0]))
             elif row[10] == "Pit Crew" or row[10] == "":
-                pitCrewCombined.append(performTextReplacements(row[0]))
                 pitCrewPatreon.append(performTextReplacements(row[0]))
 
 # YouTube
@@ -125,40 +128,27 @@ with open(youtubeSubsFile, 'r', encoding='utf-8') as csv_file:
     for row in sortedlist:
         if row[2] == "Pit Crew":
             if float(row[4]) > 3:
-                pitCrewCombined.append(performTextReplacements(row[0]))
                 pitCrewYouTube.append(performTextReplacements(row[0]))
             else:
                 pitCrewYouTubeGifted.append(performTextReplacements(row[0]))
         elif row[2] == "Crew Chief":
-            crewChiefCombined.append(performTextReplacements(row[0]))
             crewChiefYouTube.append(performTextReplacements(row[0]))
         elif row[2] == "Team Boss":
-            teamBossCombined.append(performTextReplacements(row[0]))
             teamBossYouTube.append(performTextReplacements(row[0]))
 
-# output the complete list of names
-# print(f'\n#### All Members ####')
-# for member in teamBossCombined:
-#     print(member)
-#
-# for member in crewChiefCombined:
-#     print(member)
-# #
-print('\n')
 
-for member in pitCrewCombined:
-    print(member)
-#
-# for member in twitchSubs:
-#     print(member)
-
-totalMemberCount = len(pitCrewCombined) + len(pitCrewYouTubeGifted) + len(crewChiefCombined) + len(teamBossCombined) + len(twitchSubs)
+teamBossCombined = teamBossPatreon + teamBossYouTube
+crewChiefCombined = crewChiefPatreon + crewChiefYouTube
+pitCrewCombined = pitCrewPatreon + pitCrewYouTube
+twitchCombined = pitCrewTwitchTier1
+newGiftedCombined = pitCrewYouTubeGifted + pitCrewTwitchTier1Gifted
+totalMemberCount = len(teamBossCombined) + len(crewChiefCombined) + len(pitCrewCombined) + len(twitchCombined) + len(newGiftedCombined)
 
 # TODO print out youtube description blurb
-print(f'\nTeam Boss (€19.99/mo)\t\t{", ".join(teamBossCombined)}')
-print(f'Crew Chief (€9.99/mo)\t\t{", ".join(crewChiefCombined)}')
-print(f'Pit Crew (€4.99/mo)\t\t{", ".join(pitCrewCombined)}')
-print(f'TWITCH (€4.99/mo)\t\t{", ".join(twitchSubs)}')
+print(f'\nTeam Boss\t{", ".join(teamBossCombined)}')
+print(f'Crew Chief\t{", ".join(crewChiefCombined)}')
+print(f'Pit Crew\t{", ".join(pitCrewCombined)}')
+print(f'TWITCH\t\t{", ".join(twitchCombined)}')
 
 # Create the csv for photoshop to import
 def formatForPhotoshopText(membersArray, padding):
@@ -166,16 +156,18 @@ def formatForPhotoshopText(membersArray, padding):
     for index, member in enumerate(membersArray):
             photoshopText = f'{photoshopText} {member.ljust(padding)}'
 
+    if photoshopText == '':
+        photoshopText = 'None at this time'
     return photoshopText
 
 data = [
-    ['teamBoss', 'crewChief', 'pitCrew', 'pitCrewYouTubeGifted', 'twitchSubs'],
+    ['teamBoss', 'crewChief', 'pitCrew', 'twitchSubs', 'newGifted'],
     [
         formatForPhotoshopText(teamBossCombined, 45),
         formatForPhotoshopText(crewChiefCombined, 30),
         formatForPhotoshopText(pitCrewCombined, 30),
-        formatForPhotoshopText(pitCrewYouTubeGifted, 24),
-        formatForPhotoshopText(twitchSubs, 30)
+        formatForPhotoshopText(pitCrewTwitchTier1, 30),
+        formatForPhotoshopText(pitCrewYouTubeGifted + pitCrewTwitchTier1Gifted, 24)
     ]
 ]
 psdName = 'levels.csv'
@@ -223,8 +215,9 @@ print(f'_____________________\t______\t______\t______________\t______________\t_
 calculateAndOutputTotals('YouTube', 'Team Boss', teamBossYouTube, 19.99)
 calculateAndOutputTotals('YouTube', 'Crew Chief', crewChiefYouTube, 9.99)
 calculateAndOutputTotals('YouTube', 'Pit Crew', pitCrewYouTube, 4.99)
-calculateAndOutputTotals('YouTube', 'Gifted/New', pitCrewYouTubeGifted, 4.99)
-calculateAndOutputTotals('Twitch', 'Subscriptions', twitchSubs, 4.99)
+calculateAndOutputTotals('YouTube', 'Gifted', pitCrewYouTubeGifted, 4.99)
+calculateAndOutputTotals('Twitch', 'Tier 1 member', pitCrewTwitchTier1, 4.99)
+calculateAndOutputTotals('Twitch', 'Gifted sub', pitCrewTwitchTier1Gifted, 4.99)
 calculateAndOutputTotals('Patreon', 'Team Boss', teamBossPatreon, 19.99)
 calculateAndOutputTotals('Patreon', 'Crew Chief', crewChiefPatreon, 9.99)
 calculateAndOutputTotals('Patreon', 'Pit Crew', pitCrewPatreon, 4.99)
@@ -240,3 +233,5 @@ print(f'########################################################################
 #     print(blurb)
 # print(f'\nTwitch prime subs do not auto-renew. If you\'d like to renew your prime sub, the easiest way \nto remember to renew it is by setting a monthly reminder for the expiry date beside your name')
 # print('##############################################################################################')
+
+print(f'newGifted: {newGiftedCombined}')
