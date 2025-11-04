@@ -51,35 +51,44 @@ class MembershipData:
     pit_crew_twitch_tier1: List[str] = field(default_factory=list)
     pit_crew_twitch_tier1_gifted: List[str] = field(default_factory=list)
     twitch_prime_expiry_info: List[str] = field(default_factory=list)
+    tenure_map: Dict[str, int] = field(default_factory=dict)  # Maps member name to months
+    
+    def _sort_by_tenure(self, members: List[str]) -> List[str]:
+        """Sort members by tenure (longest first), then alphabetically"""
+        return sorted(members, key=lambda m: (-self.tenure_map.get(m, 0), m.lower()))
     
     @property
     def team_boss_combined(self) -> List[str]:
-        return self.team_boss_patreon + self.team_boss_youtube
+        combined = self.team_boss_patreon + self.team_boss_youtube
+        return self._sort_by_tenure(combined)
     
     @property
     def crew_chief_combined(self) -> List[str]:
-        return self.crew_chief_patreon + self.crew_chief_youtube
+        combined = self.crew_chief_patreon + self.crew_chief_youtube
+        return self._sort_by_tenure(combined)
     
     @property
     def pit_crew_combined(self) -> List[str]:
-        return self.pit_crew_patreon + self.pit_crew_youtube
+        combined = self.pit_crew_patreon + self.pit_crew_youtube
+        return self._sort_by_tenure(combined)
     
     @property
     def twitch_combined(self) -> List[str]:
-        return self.pit_crew_twitch_tier1
+        return self._sort_by_tenure(self.pit_crew_twitch_tier1)
     
     @property
     def gifted_combined(self) -> List[str]:
-        return self.pit_crew_youtube_gifted + self.pit_crew_twitch_tier1_gifted
+        combined = self.pit_crew_youtube_gifted + self.pit_crew_twitch_tier1_gifted
+        return self._sort_by_tenure(combined)
     
     @property
     def total_member_count(self) -> int:
         return len(
-            self.team_boss_combined +
-            self.crew_chief_combined +
-            self.pit_crew_combined +
-            self.twitch_combined +
-            self.gifted_combined
+            self.team_boss_patreon + self.team_boss_youtube +
+            self.crew_chief_patreon + self.crew_chief_youtube +
+            self.pit_crew_patreon + self.pit_crew_youtube +
+            self.pit_crew_twitch_tier1 +
+            self.pit_crew_youtube_gifted + self.pit_crew_twitch_tier1_gifted
         )
 
 
@@ -364,9 +373,29 @@ class SubscriberListManager:
         self.data = MembershipData()
         self.calculator = EarningsCalculator(config)
     
+    def load_tenure_data(self, tenure_file: str = 'all_members_months.csv') -> None:
+        """Load member tenure data from CSV file"""
+        try:
+            with open(tenure_file, 'r', encoding='utf-8') as f:
+                next(f)  # Skip header
+                reader = csv.reader(f)
+                for row in reader:
+                    if len(row) >= 3:
+                        name = TextProcessor.clean_text(row[0])
+                        try:
+                            months = int(row[2])
+                            self.data.tenure_map[name] = months
+                        except (ValueError, IndexError):
+                            pass
+        except FileNotFoundError:
+            print(f"Warning: {tenure_file} not found. Sorting by name only.")
+    
     def load_all_data(self) -> None:
         """Load data from all platforms"""
         loader = FileLoader()
+        
+        # Load tenure data first for sorting
+        self.load_tenure_data()
         
         # Find most recent files
         youtube_file = loader.find_recent_file(self.config.sub_lists_dir, 'Your members ')
