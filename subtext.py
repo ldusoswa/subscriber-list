@@ -30,6 +30,14 @@ except ImportError:
     PATREON_API_AVAILABLE = False
     print("Warning: patreon_api module not available. Will fall back to CSV files.")
 
+# Import YouTube API module
+try:
+    from youtube_api import get_youtube_members_programmatically
+    YOUTUBE_API_AVAILABLE = True
+except ImportError:
+    YOUTUBE_API_AVAILABLE = False
+    print("Warning: youtube_api module not available. Will fall back to CSV files.")
+
 
 # --- Configuration ---
 @dataclass
@@ -310,28 +318,65 @@ class YouTubeProcessor:
     """Processes YouTube membership data"""
     
     @staticmethod
+    def fetch_from_api(data: MembershipData, config: Config) -> bool:
+        """Fetch YouTube members directly from API"""
+        if not YOUTUBE_API_AVAILABLE:
+            return False
+        
+        # Get credentials from environment variables
+        client_id = os.getenv('YOUTUBE_CLIENT_ID')
+        client_secret = os.getenv('YOUTUBE_CLIENT_SECRET')
+        redirect_uri = os.getenv('YOUTUBE_REDIRECT_URI')
+        
+        if not all([client_id, client_secret, redirect_uri]):
+            print("Warning: YouTube API credentials not found in environment variables.")
+            print("Required: YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET, YOUTUBE_REDIRECT_URI")
+            return False
+        
+        try:
+            print("Fetching YouTube members from API...")
+            rows = get_youtube_members_programmatically(
+                client_id, client_secret, redirect_uri
+            )
+            
+            # Process the rows using the same logic as process_file
+            YouTubeProcessor._process_rows(rows, data, config)
+            return True
+            
+        except Exception as e:
+            print(f"Error fetching from YouTube API: {e}")
+            return False
+    
+    @staticmethod
     def process_file(file_path: str, data: MembershipData, config: Config) -> None:
-        """Load and process YouTube member data"""
+        """Load and process YouTube member data from CSV file"""
         with open(file_path, 'r', encoding='utf-8') as csv_file:
             next(csv_file)  # Skip header
             reader = csv.reader(csv_file)
-            sorted_list = sorted(reader, key=lambda row: float(row[4]), reverse=True)
+            rows = list(reader)
+        
+        YouTubeProcessor._process_rows(rows, data, config)
+    
+    @staticmethod
+    def _process_rows(rows: List[List[str]], data: MembershipData, config: Config) -> None:
+        """Process YouTube member rows (from API or CSV)"""
+        sorted_list = sorted(rows, key=lambda row: float(row[4]) if row[4] else 0, reverse=True)
+        
+        for row in sorted_list:
+            name = TextProcessor.clean_text(row[0])
+            tier = row[2] if len(row) > 2 else ''
+            amount = float(row[4]) if len(row) > 4 and row[4] else 0
             
-            for row in sorted_list:
-                name = TextProcessor.clean_text(row[0])
-                tier = row[2]
-                amount = float(row[4])
-                
-                if tier == config.TIER_PIT_CREW:
-                    # Distinguish between paid and gifted based on amount
-                    if amount > 3:
-                        data.pit_crew_youtube.append(name)
-                    else:
-                        data.pit_crew_youtube_gifted.append(name)
-                elif tier == config.TIER_CREW_CHIEF:
-                    data.crew_chief_youtube.append(name)
-                elif tier == config.TIER_TEAM_BOSS:
-                    data.team_boss_youtube.append(name)
+            if tier == config.TIER_PIT_CREW:
+                # Distinguish between paid and gifted based on amount
+                if amount > 3:
+                    data.pit_crew_youtube.append(name)
+                else:
+                    data.pit_crew_youtube_gifted.append(name)
+            elif tier == config.TIER_CREW_CHIEF:
+                data.crew_chief_youtube.append(name)
+            elif tier == config.TIER_TEAM_BOSS:
+                data.team_boss_youtube.append(name)
 
 
 class EarningsCalculator:
@@ -515,11 +560,17 @@ class SubscriberListManager:
             except FileNotFoundError:
                 print("Warning: No Patreon data available (neither API nor CSV file)")
         
-        # Find most recent YouTube file
-        youtube_file = loader.find_recent_file(self.config.sub_lists_dir, 'Your members ')
+        # Try to fetch YouTube data from API first
+        youtube_from_api = YouTubeProcessor.fetch_from_api(self.data, self.config)
         
-        # Process YouTube
-        YouTubeProcessor.process_file(youtube_file, self.data, self.config)
+        if not youtube_from_api:
+            # Fall back to CSV file
+            print("Falling back to YouTube CSV file...")
+            try:
+                youtube_file = loader.find_recent_file(self.config.sub_lists_dir, 'Your members ')
+                YouTubeProcessor.process_file(youtube_file, self.data, self.config)
+            except FileNotFoundError:
+                print("Warning: No YouTube data available (neither API nor CSV file)")
     
     def generate_reports(self) -> None:
         """Generate all output reports"""

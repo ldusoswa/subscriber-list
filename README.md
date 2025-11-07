@@ -37,14 +37,24 @@ To automatically fetch Patreon members without manual CSV downloads:
    PATREON_REDIRECT_URI=https://www.yourwebsite.com
    ```
 
+#### YouTube API
+
+To automatically fetch YouTube members without manual CSV downloads:
+
+1. Create a Google Cloud project and enable YouTube Data API v3 at https://console.cloud.google.com/
+2. Create OAuth 2.0 credentials (Desktop app type)
+3. Add your YouTube credentials to `.env`:
+   ```
+   YOUTUBE_CLIENT_ID=your_client_id_here
+   YOUTUBE_CLIENT_SECRET=your_client_secret_here
+   YOUTUBE_REDIRECT_URI=http://localhost
+   ```
+
 **First-time OAuth Setup:**
 - On first run, a browser will open for authorization
 - After authorizing, copy the code from the redirect URL
-- Access tokens are cached (`.twitch_token.json`, `.patreon_token.json`) for future runs
-
-### 3. Download YouTube CSV
-
-- YouTube: Download "Your members" CSV to Downloads folder (API integration not yet implemented)
+- Access tokens are cached (`.twitch_token.json`, `.patreon_token.json`, `.youtube_token.json`) for future runs
+- YouTube tokens include refresh tokens for long-term access
 
 ## Usage
 
@@ -55,7 +65,7 @@ python subtext.py
 The script will:
 1. **Automatically fetch** Twitch subscribers via API (no manual download needed!)
 2. **Automatically fetch** Patreon members via API (no manual download needed!)
-3. Load YouTube data from most recent CSV file
+3. **Automatically fetch** YouTube members via API (no manual download needed!)
 4. Generate reports and `levels.csv` for Photoshop import
 
 ## Fallback Mode
