@@ -117,7 +117,7 @@ class YouTubeAPI:
             'client_id': self.client_id,
             'redirect_uri': self.redirect_uri,
             'response_type': 'code',
-            'scope': 'https://www.googleapis.com/auth/youtube.readonly',
+            'scope': 'https://www.googleapis.com/auth/youtube.force-ssl',
             'access_type': 'offline',  # Request refresh token
             'prompt': 'consent'  # Force consent screen to get refresh token
         }
