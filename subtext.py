@@ -22,6 +22,14 @@ except ImportError:
     TWITCH_API_AVAILABLE = False
     print("Warning: twitch_api module not available. Will fall back to CSV files.")
 
+# Import Patreon API module
+try:
+    from patreon_api import get_patreon_members_programmatically
+    PATREON_API_AVAILABLE = True
+except ImportError:
+    PATREON_API_AVAILABLE = False
+    print("Warning: patreon_api module not available. Will fall back to CSV files.")
+
 
 # --- Configuration ---
 @dataclass
@@ -242,23 +250,60 @@ class PatreonProcessor:
     """Processes Patreon membership data"""
     
     @staticmethod
+    def fetch_from_api(data: MembershipData, config: Config) -> bool:
+        """Fetch Patreon members directly from API"""
+        if not PATREON_API_AVAILABLE:
+            return False
+        
+        # Get credentials from environment variables
+        client_id = os.getenv('PATREON_CLIENT_ID')
+        client_secret = os.getenv('PATREON_CLIENT_SECRET')
+        redirect_uri = os.getenv('PATREON_REDIRECT_URI')
+        
+        if not all([client_id, client_secret, redirect_uri]):
+            print("Warning: Patreon API credentials not found in environment variables.")
+            print("Required: PATREON_CLIENT_ID, PATREON_CLIENT_SECRET, PATREON_REDIRECT_URI")
+            return False
+        
+        try:
+            print("Fetching Patreon members from API...")
+            rows = get_patreon_members_programmatically(
+                client_id, client_secret, redirect_uri
+            )
+            
+            # Process the rows using the same logic as process_file
+            PatreonProcessor._process_rows(rows, data, config)
+            return True
+            
+        except Exception as e:
+            print(f"Error fetching from Patreon API: {e}")
+            return False
+    
+    @staticmethod
     def process_file(file_path: str, data: MembershipData, config: Config) -> None:
-        """Load and process Patreon member data"""
+        """Load and process Patreon member data from CSV file"""
         with open(file_path, 'r') as csv_file:
             next(csv_file)  # Skip header
             reader = csv.reader(csv_file)
-            sorted_list = sorted(reader, key=lambda row: float(row[8]), reverse=True)
+            rows = list(reader)
+        
+        PatreonProcessor._process_rows(rows, data, config)
+    
+    @staticmethod
+    def _process_rows(rows: List[List[str]], data: MembershipData, config: Config) -> None:
+        """Process Patreon member rows (from API or CSV)"""
+        sorted_list = sorted(rows, key=lambda row: float(row[8]) if row[8] else 0, reverse=True)
+        
+        for row in sorted_list:
+            name = TextProcessor.clean_text(row[0])
+            tier = row[10] if len(row) > 10 else ''
             
-            for row in sorted_list:
-                name = TextProcessor.clean_text(row[0])
-                tier = row[10]
-                
-                if tier == config.TIER_CREW_CHIEF:
-                    data.crew_chief_patreon.append(name)
-                elif tier == config.TIER_TEAM_BOSS:
-                    data.team_boss_patreon.append(name)
-                else:
-                    data.pit_crew_patreon.append(name)
+            if tier == config.TIER_CREW_CHIEF:
+                data.crew_chief_patreon.append(name)
+            elif tier == config.TIER_TEAM_BOSS:
+                data.team_boss_patreon.append(name)
+            else:
+                data.pit_crew_patreon.append(name)
 
 
 class YouTubeProcessor:
@@ -458,12 +503,22 @@ class SubscriberListManager:
             except FileNotFoundError:
                 print("Warning: No Twitch data available (neither API nor CSV file)")
         
-        # Find most recent files for other platforms
-        youtube_file = loader.find_recent_file(self.config.sub_lists_dir, 'Your members ')
-        patreon_file = loader.find_recent_file(self.config.sub_lists_dir, 'Members_')
+        # Try to fetch Patreon data from API first
+        patreon_from_api = PatreonProcessor.fetch_from_api(self.data, self.config)
         
-        # Process other platforms
-        PatreonProcessor.process_file(patreon_file, self.data, self.config)
+        if not patreon_from_api:
+            # Fall back to CSV file
+            print("Falling back to Patreon CSV file...")
+            try:
+                patreon_file = loader.find_recent_file(self.config.sub_lists_dir, 'Members_')
+                PatreonProcessor.process_file(patreon_file, self.data, self.config)
+            except FileNotFoundError:
+                print("Warning: No Patreon data available (neither API nor CSV file)")
+        
+        # Find most recent YouTube file
+        youtube_file = loader.find_recent_file(self.config.sub_lists_dir, 'Your members ')
+        
+        # Process YouTube
         YouTubeProcessor.process_file(youtube_file, self.data, self.config)
     
     def generate_reports(self) -> None:

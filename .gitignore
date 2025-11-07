@@ -2,4 +2,5 @@ levels.csv
 *~
 .env
 .twitch_token.json
+.patreon_token.json
 
