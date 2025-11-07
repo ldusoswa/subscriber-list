@@ -272,6 +272,10 @@ class TwitchAPI:
             username = sub.get('user_name', '')
             user_login = sub.get('user_login', '')
             
+            # Filter out self-subscription (ldusoswa)
+            if user_login.lower() == 'ldusoswa' or username.lower() == 'ldusoswa':
+                continue
+            
             # Determine subscription type
             is_gift = sub.get('is_gift', False)
             tier = sub.get('tier', '1000')  # Default to tier 1
