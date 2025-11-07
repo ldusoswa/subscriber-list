@@ -17,6 +17,7 @@ class Config:
     """Application configuration"""
     sub_lists_dir: Path = Path(r'C:\Users\dusosl\Downloads')
     output_csv: str = 'levels.csv'
+    auto_fetch_youtube: bool = False  # Set to True to auto-fetch YouTube members via API
     
     # Tier names
     TIER_TEAM_BOSS: str = "Team Boss"
@@ -390,12 +391,29 @@ class SubscriberListManager:
         except FileNotFoundError:
             print(f"Warning: {tenure_file} not found. Sorting by name only.")
     
-    def load_all_data(self) -> None:
+    def fetch_youtube_members(self) -> bool:
+        """Attempt to fetch YouTube members via API"""
+        try:
+            from youtube_api import fetch_youtube_members
+            print("\nAttempting to fetch YouTube members via API...")
+            result = fetch_youtube_members(str(self.config.sub_lists_dir))
+            return result is not None
+        except ImportError:
+            return False
+        except Exception as e:
+            print(f"Error fetching YouTube members: {e}")
+            return False
+    
+    def load_all_data(self, auto_fetch_youtube: bool = False) -> None:
         """Load data from all platforms"""
         loader = FileLoader()
         
         # Load tenure data first for sorting
         self.load_tenure_data()
+        
+        # Optionally fetch YouTube members via API
+        if auto_fetch_youtube:
+            self.fetch_youtube_members()
         
         # Find most recent files
         youtube_file = loader.find_recent_file(self.config.sub_lists_dir, 'Your members ')
@@ -418,7 +436,7 @@ class SubscriberListManager:
     
     def run(self) -> None:
         """Execute the full workflow"""
-        self.load_all_data()
+        self.load_all_data(auto_fetch_youtube=self.config.auto_fetch_youtube)
         self.generate_reports()
 
 

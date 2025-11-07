@@ -2,3 +2,8 @@ levels.csv
 *~
 .env
 
+# YouTube API credentials (sensitive!)
+youtube_credentials.json
+youtube_token.json
+youtube_description.txt
+
