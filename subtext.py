@@ -8,7 +8,19 @@ import os
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Optional
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
+
+# Import Twitch API module
+try:
+    from twitch_api import get_twitch_subscribers_programmatically
+    TWITCH_API_AVAILABLE = True
+except ImportError:
+    TWITCH_API_AVAILABLE = False
+    print("Warning: twitch_api module not available. Will fall back to CSV files.")
 
 
 # --- Configuration ---
@@ -152,31 +164,68 @@ class TwitchProcessor:
     """Processes Twitch subscription data"""
     
     @staticmethod
+    def fetch_from_api(data: MembershipData) -> bool:
+        """Fetch Twitch subscribers directly from API"""
+        if not TWITCH_API_AVAILABLE:
+            return False
+        
+        # Get credentials from environment variables
+        client_id = os.getenv('TWITCH_CLIENT_ID')
+        client_secret = os.getenv('TWITCH_CLIENT_SECRET')
+        redirect_uri = os.getenv('TWITCH_REDIRECT_URI')
+        
+        if not all([client_id, client_secret, redirect_uri]):
+            print("Warning: Twitch API credentials not found in environment variables.")
+            print("Required: TWITCH_CLIENT_ID, TWITCH_CLIENT_SECRET, TWITCH_REDIRECT_URI")
+            return False
+        
+        try:
+            print("Fetching Twitch subscribers from API...")
+            rows = get_twitch_subscribers_programmatically(
+                client_id, client_secret, redirect_uri
+            )
+            
+            # Process the rows using the same logic as process_file
+            TwitchProcessor._process_rows(rows, data)
+            return True
+            
+        except Exception as e:
+            print(f"Error fetching from Twitch API: {e}")
+            return False
+    
+    @staticmethod
     def process_file(file_path: str, data: MembershipData) -> None:
-        """Load and process Twitch subscriber data"""
+        """Load and process Twitch subscriber data from CSV file"""
         with open(file_path, 'r') as csv_file:
             next(csv_file)  # Skip header
             reader = csv.reader(csv_file)
-            sorted_list = sorted(reader, key=lambda row: float(row[3]), reverse=True)
+            rows = list(reader)
+        
+        TwitchProcessor._process_rows(rows, data)
+    
+    @staticmethod
+    def _process_rows(rows: List[List[str]], data: MembershipData) -> None:
+        """Process Twitch subscriber rows (from API or CSV)"""
+        sorted_list = sorted(rows, key=lambda row: float(row[3]) if row[3] else 0, reverse=True)
+        
+        # Remove self-subscription if present
+        if sorted_list and sorted_list[0][0] == 'ldusoswa':
+            sorted_list.pop(0)
+        
+        for row in sorted_list:
+            username = TextProcessor.clean_text(row[0])
+            sub_type = row[5] if len(row) > 5 else 'paid'
             
-            # Remove self-subscription if present
-            if sorted_list and sorted_list[0][0] == 'ldusoswa':
-                sorted_list.pop(0)
+            # Categorize subscription
+            if sub_type == 'gift':
+                data.pit_crew_twitch_tier1_gifted.append(username)
+            else:
+                data.pit_crew_twitch_tier1.append(username)
             
-            for row in sorted_list:
-                username = TextProcessor.clean_text(row[0])
-                sub_type = row[5]
-                
-                # Categorize subscription
-                if sub_type == 'gift':
-                    data.pit_crew_twitch_tier1_gifted.append(username)
-                else:
-                    data.pit_crew_twitch_tier1.append(username)
-                
-                # Track expiry for prime and gifted subs
-                if sub_type in ['prime', 'gift']:
-                    expiry_info = TwitchProcessor._calculate_expiry(username, row[1], sub_type)
-                    data.twitch_prime_expiry_info.append(expiry_info)
+            # Track expiry for prime and gifted subs
+            if sub_type in ['prime', 'gift'] and len(row) > 1:
+                expiry_info = TwitchProcessor._calculate_expiry(username, row[1], sub_type)
+                data.twitch_prime_expiry_info.append(expiry_info)
     
     @staticmethod
     def _calculate_expiry(username: str, sub_date_str: str, sub_type: str) -> str:
@@ -397,13 +446,23 @@ class SubscriberListManager:
         # Load tenure data first for sorting
         self.load_tenure_data()
         
-        # Find most recent files
+        # Try to fetch Twitch data from API first
+        twitch_from_api = TwitchProcessor.fetch_from_api(self.data)
+        
+        if not twitch_from_api:
+            # Fall back to CSV file
+            print("Falling back to Twitch CSV file...")
+            try:
+                twitch_file = loader.find_recent_file(self.config.sub_lists_dir, 'subscriber-list')
+                TwitchProcessor.process_file(twitch_file, self.data)
+            except FileNotFoundError:
+                print("Warning: No Twitch data available (neither API nor CSV file)")
+        
+        # Find most recent files for other platforms
         youtube_file = loader.find_recent_file(self.config.sub_lists_dir, 'Your members ')
-        twitch_file = loader.find_recent_file(self.config.sub_lists_dir, 'subscriber-list')
         patreon_file = loader.find_recent_file(self.config.sub_lists_dir, 'Members_')
         
-        # Process each platform
-        TwitchProcessor.process_file(twitch_file, self.data)
+        # Process other platforms
         PatreonProcessor.process_file(patreon_file, self.data, self.config)
         YouTubeProcessor.process_file(youtube_file, self.data, self.config)
     
