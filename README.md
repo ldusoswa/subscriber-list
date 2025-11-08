@@ -71,3 +71,64 @@ The script will:
 ## Fallback Mode
 
 If API credentials are not configured, the script automatically falls back to loading from CSV files (old behavior) for each platform
+
+## Photoshop Automation
+
+Automate updating your Patreon Photoshop image with the latest subscriber data.
+
+### Setup
+
+1. **Create a Photoshop Action** (one-time setup):
+   - Open Photoshop
+   - Window > Actions
+   - Create new action named "UpdatePatreon"
+   - Record: Image > Variables > Data Sets > Import (select levels.csv)
+   - Record: File > Export > Save for Web (save as Patreon6.jpg)
+   - Stop recording
+   
+   See `ACTION_SETUP_GUIDE.md` for detailed step-by-step instructions.
+
+2. Ensure your `Patreon6.psd` file is set up with data variables linked to `levels.csv`
+
+### Usage
+
+**Option 1: Full Automation (Recommended)**
+
+Run the complete workflow that fetches data AND updates Photoshop:
+
+```bash
+python update_patreon_image.py
+```
+
+Or simply double-click: `update_patreon_image.bat`
+
+**Option 2: Update Photoshop Only**
+
+If you've already generated `levels.csv`, just update Photoshop:
+
+```bash
+python update_photoshop.py
+```
+
+### What It Does
+
+1. Fetches latest subscriber data from YouTube, Twitch, and Patreon
+2. Generates `levels.csv` with the updated data
+3. Opens `Patreon6.psd` in Photoshop
+4. Updates the data source with new CSV data
+5. Exports as `Patreon6.jpg` using Save for Web settings
+6. Closes the document
+
+### Configuration
+
+Edit `update_photoshop.py` to customize:
+- **PSD_PATH**: Location of your PSD file (default: `C:\Users\dusosl\Dropbox\Youtube\Patreon6.psd`)
+- **CSV_PATH**: Location of levels.csv (default: `c:\git\subscriber-list\levels.csv`)
+- **OUTPUT_PATH**: Where to save the JPG (default: `C:\Users\dusosl\Dropbox\Youtube\Patreon6.jpg`)
+- **JPEG_QUALITY**: Export quality 0-100 (default: 80)
+
+### Requirements
+
+- Adobe Photoshop must be installed
+- Photoshop COM automation must be enabled (enabled by default)
+- The PSD file should be set up with variables/data sets linked to CSV columns
