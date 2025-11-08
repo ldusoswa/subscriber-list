@@ -44,7 +44,7 @@ except ImportError:
 class Config:
     """Application configuration"""
     sub_lists_dir: Path = Path(r'C:\Users\dusosl\Downloads')
-    output_csv: str = 'levels.csv'
+    output_csv: str = 'data/levels.csv'
     
     # Tier names
     TIER_TEAM_BOSS: str = "Team Boss"
@@ -533,7 +533,7 @@ class SubscriberListManager:
             print(f"Warning: Could not check age of {file_path}: {e}")
             return True
     
-    def load_tenure_data(self, tenure_file: str = 'all_members_months.csv') -> None:
+    def load_tenure_data(self, tenure_file: str = 'data/all_members_months.csv') -> None:
         """Load member tenure data from CSV file"""
         try:
             with open(tenure_file, 'r', encoding='utf-8') as f:
@@ -619,6 +619,11 @@ class SubscriberListManager:
 
 def main():
     """Application entry point"""
+    # Ensure we're working from the repository root
+    script_dir = Path(__file__).parent
+    repo_root = script_dir.parent
+    os.chdir(repo_root)
+    
     config = Config()
     manager = SubscriberListManager(config)
     manager.run()
