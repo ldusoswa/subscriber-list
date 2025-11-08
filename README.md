@@ -1,6 +1,31 @@
 # Subscriber List Management System
 
-Automates processing of membership data from YouTube, Twitch, and Patreon platforms.
+Automates processing of membership data from YouTube, Twitch, and Patreon platforms, and updates Photoshop graphics with the latest data.
+
+## Features
+
+- 🔄 **Automated Data Fetching**: Pulls subscriber/member data from YouTube, Twitch, and Patreon APIs
+- 📊 **CSV Generation**: Creates formatted CSV files for analysis and Photoshop import
+- 🎨 **Photoshop Automation**: Automatically updates PSD files and exports JPG images
+- 🚀 **One-Click Workflow**: Complete automation from data fetch to image export
+
+## Repository Structure
+
+```
+subscriber-list/
+├── subtext.py                    # Main script: fetches data and generates CSV
+├── youtube_api.py                # YouTube API integration
+├── twitch_api.py                 # Twitch API integration
+├── patreon_api.py                # Patreon API integration
+├── update_patreon_image.py       # Full automation workflow
+├── update_photoshop.py           # Photoshop automation script
+├── trigger_action.jsx            # JSX script to trigger Photoshop action
+├── update_patreon_image.bat      # Windows batch launcher
+├── UpdatePatreon.vbs             # VBS wrapper for taskbar shortcut
+├── install_dependencies.bat      # Dependency installer
+├── requirements.txt              # Python dependencies
+└── .env                          # API credentials (not in repo)
+```
 
 ## Setup
 
@@ -74,61 +99,116 @@ If API credentials are not configured, the script automatically falls back to lo
 
 ## Photoshop Automation
 
-Automate updating your Patreon Photoshop image with the latest subscriber data.
+Automates updating Photoshop PSD files with the latest subscriber data and exports JPG images.
 
-### Setup
+### One-Time Setup
 
-1. **Create a Photoshop Action** (one-time setup):
-   - Open Photoshop
-   - Window > Actions
-   - Create new action named "UpdatePatreon"
-   - Record: Image > Variables > Data Sets > Import (select levels.csv)
-   - Record: File > Export > Save for Web (save as Patreon6.jpg)
-   - Stop recording
-   
-   See `ACTION_SETUP_GUIDE.md` for detailed step-by-step instructions.
+#### 1. Configure Your PSD File
 
-2. Ensure your `Patreon6.psd` file is set up with data variables linked to `levels.csv`
+Set up your `Patreon6.psd` with variables linked to CSV columns:
+- **Image > Variables > Define** to create text variables
+- Link each variable to a CSV column name
+- Save the PSD file
 
-### Usage
+#### 2. Create Photoshop Action
 
-**Option 1: Full Automation (Recommended)**
+1. Open Photoshop
+2. **Window > Actions** (or press Alt+F9)
+3. Click **New Action**:
+   - Name: `UpdatePatreon`
+   - Set: `Default Actions`
+   - Click **Record**
+4. **Image > Variables > Data Sets > Import**
+   - Select: `c:\git\subscriber-list\levels.csv`
+   - Click OK
+5. **File > Export > Save for Web (Legacy)**
+   - Format: JPEG, Quality: 80
+   - Save to: `C:\Users\dusosl\Dropbox\Youtube\Patreon6.jpg`
+6. Click **Stop Recording** (square button)
 
-Run the complete workflow that fetches data AND updates Photoshop:
+### Daily Usage
 
+#### Full Automation (Recommended)
+
+Double-click: **`update_patreon_image.bat`**
+
+Or run:
 ```bash
 python update_patreon_image.py
 ```
 
-Or simply double-click: `update_patreon_image.bat`
+This will:
+1. ✓ Fetch latest data from all platforms
+2. ✓ Generate `levels.csv`
+3. ✓ Open Photoshop with your PSD
+4. ✓ Run the action to import data and export JPG
+5. ✓ Complete in ~60 seconds
 
-**Option 2: Update Photoshop Only**
+#### Data Generation Only
 
-If you've already generated `levels.csv`, just update Photoshop:
+```bash
+python subtext.py
+```
+
+Then manually run the Photoshop action.
+
+#### Photoshop Update Only
+
+If you already have fresh `levels.csv`:
 
 ```bash
 python update_photoshop.py
 ```
 
-### What It Does
+### Taskbar Shortcut
 
-1. Fetches latest subscriber data from YouTube, Twitch, and Patreon
-2. Generates `levels.csv` with the updated data
-3. Opens `Patreon6.psd` in Photoshop
-4. Updates the data source with new CSV data
-5. Exports as `Patreon6.jpg` using Save for Web settings
-6. Closes the document
+For one-click access, pin to taskbar:
+
+1. Double-click `UpdatePatreon.vbs` (creates desktop shortcut)
+2. Right-click the desktop shortcut
+3. Select **Pin to taskbar**
 
 ### Configuration
 
-Edit `update_photoshop.py` to customize:
-- **PSD_PATH**: Location of your PSD file (default: `C:\Users\dusosl\Dropbox\Youtube\Patreon6.psd`)
-- **CSV_PATH**: Location of levels.csv (default: `c:\git\subscriber-list\levels.csv`)
-- **OUTPUT_PATH**: Where to save the JPG (default: `C:\Users\dusosl\Dropbox\Youtube\Patreon6.jpg`)
-- **JPEG_QUALITY**: Export quality 0-100 (default: 80)
+Edit paths in `update_photoshop.py` if needed:
+- `PSD_PATH`: Your PSD file location
+- `CSV_PATH`: Generated CSV location
+- `OUTPUT_PATH`: Where to save the JPG
 
-### Requirements
+Edit `trigger_action.jsx` to change:
+- `actionName`: Photoshop action name (default: "UpdatePatreon")
+- `actionSet`: Action set name (default: "Default Actions")
 
-- Adobe Photoshop must be installed
-- Photoshop COM automation must be enabled (enabled by default)
-- The PSD file should be set up with variables/data sets linked to CSV columns
+## Troubleshooting
+
+### Photoshop Action Not Found
+
+- Ensure action is named exactly: `UpdatePatreon`
+- Verify it's in the "Default Actions" set
+- Check action is not disabled (should have checkmark)
+
+### Data Not Updating in Photoshop
+
+- Verify `levels.csv` has recent timestamp
+- Check PSD has variables configured (Image > Variables > Define)
+- Ensure variable names match CSV column headers exactly (case-sensitive)
+
+### Script Can't Find Photoshop
+
+- Check Photoshop installation path in `update_photoshop.py`
+- Add your Photoshop path to `PHOTOSHOP_PATHS` list if needed
+
+### API Authentication Issues
+
+- Delete token files (`.twitch_token.json`, etc.) and re-authenticate
+- Verify API credentials in `.env` file
+- Check redirect URIs match in both `.env` and API console
+
+### Export Quality Issues
+
+- Edit the Photoshop action and adjust JPEG quality setting
+- Or manually set quality in Save for Web dialog when recording action
+
+## License
+
+This project is for personal use.
