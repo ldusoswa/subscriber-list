@@ -512,6 +512,27 @@ class SubscriberListManager:
         self.data = MembershipData()
         self.calculator = EarningsCalculator(config)
     
+    def check_csv_age(self, file_path: str, platform_name: str) -> bool:
+        """Check if CSV file is older than 24 hours and prompt user if needed.
+        Returns True if file is acceptable to use, False otherwise."""
+        try:
+            file_age = datetime.now() - datetime.fromtimestamp(os.path.getmtime(file_path))
+            if file_age > timedelta(hours=24):
+                print(f"\n⚠️  WARNING: {platform_name} CSV file is {file_age.days} days old!")
+                print(f"   File: {file_path}")
+                print(f"   Last modified: {datetime.fromtimestamp(os.path.getmtime(file_path)).strftime('%Y-%m-%d %H:%M:%S')}")
+                response = input(f"\n   Download fresh {platform_name} CSV manually? (y/n): ")
+                if response.lower() == 'y':
+                    print(f"   Please download the latest {platform_name} CSV and run this script again.")
+                    return False
+                else:
+                    print(f"   Continuing with old {platform_name} data...")
+                    return True
+            return True
+        except Exception as e:
+            print(f"Warning: Could not check age of {file_path}: {e}")
+            return True
+    
     def load_tenure_data(self, tenure_file: str = 'all_members_months.csv') -> None:
         """Load member tenure data from CSV file"""
         try:
@@ -544,7 +565,10 @@ class SubscriberListManager:
             print("Falling back to Twitch CSV file...")
             try:
                 twitch_file = loader.find_recent_file(self.config.sub_lists_dir, 'subscriber-list')
-                TwitchProcessor.process_file(twitch_file, self.data)
+                if self.check_csv_age(twitch_file, 'Twitch'):
+                    TwitchProcessor.process_file(twitch_file, self.data)
+                else:
+                    print("Skipping Twitch data due to user request.")
             except FileNotFoundError:
                 print("Warning: No Twitch data available (neither API nor CSV file)")
         
@@ -556,7 +580,10 @@ class SubscriberListManager:
             print("Falling back to Patreon CSV file...")
             try:
                 patreon_file = loader.find_recent_file(self.config.sub_lists_dir, 'Members_')
-                PatreonProcessor.process_file(patreon_file, self.data, self.config)
+                if self.check_csv_age(patreon_file, 'Patreon'):
+                    PatreonProcessor.process_file(patreon_file, self.data, self.config)
+                else:
+                    print("Skipping Patreon data due to user request.")
             except FileNotFoundError:
                 print("Warning: No Patreon data available (neither API nor CSV file)")
         
@@ -568,7 +595,10 @@ class SubscriberListManager:
             print("Falling back to YouTube CSV file...")
             try:
                 youtube_file = loader.find_recent_file(self.config.sub_lists_dir, 'Your members ')
-                YouTubeProcessor.process_file(youtube_file, self.data, self.config)
+                if self.check_csv_age(youtube_file, 'YouTube'):
+                    YouTubeProcessor.process_file(youtube_file, self.data, self.config)
+                else:
+                    print("Skipping YouTube data due to user request.")
             except FileNotFoundError:
                 print("Warning: No YouTube data available (neither API nor CSV file)")
     
