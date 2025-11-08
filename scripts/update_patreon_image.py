@@ -45,18 +45,18 @@ def main():
     print("PATREON IMAGE UPDATE - FULL WORKFLOW")
     print("=" * 60)
     
-    # Get the script directory
-    script_dir = Path(__file__).parent
-    os.chdir(script_dir)
+    # Get the repository root directory
+    repo_root = Path(__file__).parent.parent
+    os.chdir(repo_root)
     
     # Step 1: Fetch subscriber data and generate levels.csv
-    if not run_script("subtext.py", "Fetch subscriber data and generate levels.csv"):
+    if not run_script("src/subtext.py", "Fetch subscriber data and generate levels.csv"):
         print()
         print("✗ Failed to generate levels.csv. Aborting.")
         sys.exit(1)
     
     # Step 2: Update Photoshop and export
-    if not run_script("update_photoshop.py", "Update Photoshop PSD and export JPG"):
+    if not run_script("scripts/update_photoshop.py", "Update Photoshop PSD and export JPG"):
         print()
         print("✗ Failed to update Photoshop. Please check the errors above.")
         sys.exit(1)

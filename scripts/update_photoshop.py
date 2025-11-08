@@ -18,9 +18,9 @@ import time
 
 # Configuration
 PSD_PATH = r"C:\Users\dusosl\Dropbox\Youtube\Patreon6.psd"
-CSV_PATH = r"c:\git\subscriber-list\levels.csv"
+CSV_PATH = r"c:\git\subscriber-list\data\levels.csv"
 OUTPUT_PATH = r"C:\Users\dusosl\Dropbox\Youtube\Patreon6.jpg"
-JSX_SCRIPT = r"c:\git\subscriber-list\trigger_action.jsx"
+JSX_SCRIPT = r"c:\git\subscriber-list\scripts\trigger_action.jsx"
 
 # Common Photoshop installation paths
 PHOTOSHOP_PATHS = [
@@ -96,7 +96,7 @@ def main():
     print("3. Create new action named: UpdatePatreon")
     print("4. Click Record")
     print("5. Image > Variables > Data Sets > Import")
-    print("   - Select: c:\\git\\subscriber-list\\levels.csv")
+    print("   - Select: c:\\git\\subscriber-list\\data\\levels.csv")
     print("   - Click OK")
     print("6. File > Export > Save for Web (Legacy)")
     print("   - Format: JPEG, Quality: 80")

@@ -3,4 +3,4 @@
 
 Set objShell = CreateObject("WScript.Shell")
 objShell.CurrentDirectory = "c:\git\subscriber-list"
-objShell.Run "update_patreon_image.bat", 1, False
+objShell.Run "scripts\update_patreon_image.bat", 1, False

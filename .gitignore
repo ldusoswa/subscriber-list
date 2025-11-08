@@ -1,9 +1,21 @@
-levels.csv
+# Data files
+data/
+*.csv
+
+# Backup files
 *~
+
+# Environment and credentials
 .env
 .twitch_token.json
 .patreon_token.json
 .youtube_token.json
 youtube_credentials.json
+
+# Python
 __pycache__/
+*.pyc
+
+# Windows shortcuts
+*.lnk
 

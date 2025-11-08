@@ -13,18 +13,27 @@ Automates processing of membership data from YouTube, Twitch, and Patreon platfo
 
 ```
 subscriber-list/
-├── subtext.py                    # Main script: fetches data and generates CSV
-├── youtube_api.py                # YouTube API integration
-├── twitch_api.py                 # Twitch API integration
-├── patreon_api.py                # Patreon API integration
-├── update_patreon_image.py       # Full automation workflow
-├── update_photoshop.py           # Photoshop automation script
-├── trigger_action.jsx            # JSX script to trigger Photoshop action
-├── update_patreon_image.bat      # Windows batch launcher
-├── UpdatePatreon.vbs             # VBS wrapper for taskbar shortcut
-├── install_dependencies.bat      # Dependency installer
+├── src/                          # Source code
+│   ├── subtext.py                # Main script: fetches data and generates CSV
+│   ├── youtube_api.py            # YouTube API integration
+│   ├── twitch_api.py             # Twitch API integration
+│   ├── patreon_api.py            # Patreon API integration
+│   ├── length.py                 # Utility functions
+│   └── twitch.py                 # Legacy Twitch integration
+├── scripts/                      # Automation scripts
+│   ├── update_patreon_image.py   # Full automation workflow
+│   ├── update_photoshop.py       # Photoshop automation script
+│   ├── trigger_action.jsx        # JSX script to trigger Photoshop action
+│   ├── update_patreon_image.bat  # Windows batch launcher
+│   ├── UpdatePatreon.vbs         # VBS wrapper for taskbar shortcut
+│   └── install_dependencies.bat  # Dependency installer
+├── data/                         # Generated data files (gitignored)
+│   ├── levels.csv                # Formatted data for Photoshop
+│   ├── all_members.csv           # Combined member data
+│   └── *.csv                     # Other generated reports
 ├── requirements.txt              # Python dependencies
-└── .env                          # API credentials (not in repo)
+├── .env                          # API credentials (not in repo)
+└── README.md                     # This file
 ```
 
 ## Setup
@@ -84,14 +93,14 @@ To automatically fetch YouTube members without manual CSV downloads:
 ## Usage
 
 ```bash
-python subtext.py
+python src/subtext.py
 ```
 
 The script will:
 1. **Automatically fetch** Twitch subscribers via API (no manual download needed!)
 2. **Automatically fetch** Patreon members via API (no manual download needed!)
 3. **Automatically fetch** YouTube members via API (no manual download needed!)
-4. Generate reports and `levels.csv` for Photoshop import
+4. Generate reports and `data/levels.csv` for Photoshop import
 
 ## Fallback Mode
 
@@ -119,7 +128,7 @@ Set up your `Patreon6.psd` with variables linked to CSV columns:
    - Set: `Default Actions`
    - Click **Record**
 4. **Image > Variables > Data Sets > Import**
-   - Select: `c:\git\subscriber-list\levels.csv`
+   - Select: `c:\git\subscriber-list\data\levels.csv`
    - Click OK
 5. **File > Export > Save for Web (Legacy)**
    - Format: JPEG, Quality: 80
@@ -130,16 +139,16 @@ Set up your `Patreon6.psd` with variables linked to CSV columns:
 
 #### Full Automation (Recommended)
 
-Double-click: **`update_patreon_image.bat`**
+Double-click: **`scripts/update_patreon_image.bat`**
 
 Or run:
 ```bash
-python update_patreon_image.py
+python scripts/update_patreon_image.py
 ```
 
 This will:
 1. ✓ Fetch latest data from all platforms
-2. ✓ Generate `levels.csv`
+2. ✓ Generate `data/levels.csv`
 3. ✓ Open Photoshop with your PSD
 4. ✓ Run the action to import data and export JPG
 5. ✓ Complete in ~60 seconds
@@ -147,35 +156,35 @@ This will:
 #### Data Generation Only
 
 ```bash
-python subtext.py
+python src/subtext.py
 ```
 
 Then manually run the Photoshop action.
 
 #### Photoshop Update Only
 
-If you already have fresh `levels.csv`:
+If you already have fresh `data/levels.csv`:
 
 ```bash
-python update_photoshop.py
+python scripts/update_photoshop.py
 ```
 
 ### Taskbar Shortcut
 
 For one-click access, pin to taskbar:
 
-1. Double-click `UpdatePatreon.vbs` (creates desktop shortcut)
+1. Double-click `scripts/UpdatePatreon.vbs` (creates desktop shortcut)
 2. Right-click the desktop shortcut
 3. Select **Pin to taskbar**
 
 ### Configuration
 
-Edit paths in `update_photoshop.py` if needed:
+Edit paths in `scripts/update_photoshop.py` if needed:
 - `PSD_PATH`: Your PSD file location
-- `CSV_PATH`: Generated CSV location
+- `CSV_PATH`: Generated CSV location (default: `data/levels.csv`)
 - `OUTPUT_PATH`: Where to save the JPG
 
-Edit `trigger_action.jsx` to change:
+Edit `scripts/trigger_action.jsx` to change:
 - `actionName`: Photoshop action name (default: "UpdatePatreon")
 - `actionSet`: Action set name (default: "Default Actions")
 
@@ -189,13 +198,13 @@ Edit `trigger_action.jsx` to change:
 
 ### Data Not Updating in Photoshop
 
-- Verify `levels.csv` has recent timestamp
+- Verify `data/levels.csv` has recent timestamp
 - Check PSD has variables configured (Image > Variables > Define)
 - Ensure variable names match CSV column headers exactly (case-sensitive)
 
 ### Script Can't Find Photoshop
 
-- Check Photoshop installation path in `update_photoshop.py`
+- Check Photoshop installation path in `scripts/update_photoshop.py`
 - Add your Photoshop path to `PHOTOSHOP_PATHS` list if needed
 
 ### API Authentication Issues
