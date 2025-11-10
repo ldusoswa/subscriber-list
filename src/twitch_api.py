@@ -9,7 +9,46 @@ import urllib.parse
 from datetime import datetime, timedelta
 from typing import List, Dict, Optional
 from pathlib import Path
+from http.server import HTTPServer, BaseHTTPRequestHandler
+from threading import Thread
 import requests
+
+
+class OAuthCallbackHandler(BaseHTTPRequestHandler):
+    """HTTP request handler to capture OAuth callback"""
+    
+    authorization_code = None
+    
+    def do_GET(self):
+        """Handle GET request from OAuth redirect"""
+        # Parse the query parameters
+        query = urllib.parse.urlparse(self.path).query
+        params = urllib.parse.parse_qs(query)
+        
+        # Extract the authorization code
+        if 'code' in params:
+            OAuthCallbackHandler.authorization_code = params['code'][0]
+            message = "Authorization successful! You can close this window."
+            self.send_response(200)
+        else:
+            message = "Authorization failed. No code received."
+            self.send_response(400)
+        
+        self.send_header('Content-type', 'text/html')
+        self.end_headers()
+        self.wfile.write(f"""
+            <html>
+            <head><title>Twitch OAuth</title></head>
+            <body style="font-family: Arial; text-align: center; padding: 50px;">
+                <h1>{message}</h1>
+                <p>Returning to application...</p>
+            </body>
+            </html>
+        """.encode())
+    
+    def log_message(self, format, *args):
+        """Suppress server log messages"""
+        pass
 
 
 class TwitchAPI:
@@ -96,7 +135,57 @@ class TwitchAPI:
         return False
     
     def _get_authorization_code(self) -> str:
-        """Open browser for OAuth authorization and get code from user"""
+        """Open browser for OAuth authorization and automatically capture code"""
+        # Check if redirect_uri is localhost
+        if 'localhost' in self.redirect_uri or '127.0.0.1' in self.redirect_uri:
+            return self._get_code_with_local_server()
+        else:
+            return self._get_code_manual()
+    
+    def _get_code_with_local_server(self) -> str:
+        """Start local server and automatically capture OAuth code"""
+        # Parse port from redirect_uri or use default
+        parsed = urllib.parse.urlparse(self.redirect_uri)
+        port = parsed.port or 8080
+        
+        # Reset the authorization code
+        OAuthCallbackHandler.authorization_code = None
+        
+        # Start local HTTP server
+        server = HTTPServer(('localhost', port), OAuthCallbackHandler)
+        server_thread = Thread(target=server.handle_request, daemon=True)
+        server_thread.start()
+        
+        # Build authorization URL
+        params = {
+            'client_id': self.client_id,
+            'redirect_uri': self.redirect_uri,
+            'response_type': 'code',
+            'scope': 'channel:read:subscriptions'
+        }
+        
+        auth_url = f"{self.AUTH_URL}?{urllib.parse.urlencode(params)}"
+        print('\n' + '='*80)
+        print('TWITCH AUTHORIZATION REQUIRED')
+        print('='*80)
+        print('Opening browser for Twitch authorization...')
+        print(f'Waiting for authorization on http://localhost:{port}')
+        print('='*80 + '\n')
+        
+        webbrowser.open(auth_url)
+        
+        # Wait for the callback
+        server_thread.join(timeout=120)  # 2 minute timeout
+        server.server_close()
+        
+        if OAuthCallbackHandler.authorization_code:
+            print("✓ Authorization code received automatically")
+            return OAuthCallbackHandler.authorization_code
+        else:
+            raise RuntimeError("Failed to receive authorization code. Please try again.")
+    
+    def _get_code_manual(self) -> str:
+        """Fallback: manually get code from user"""
         params = {
             'client_id': self.client_id,
             'redirect_uri': self.redirect_uri,
