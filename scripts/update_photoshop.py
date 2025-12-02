@@ -8,7 +8,7 @@ This script:
 Prerequisites:
 - Create a Photoshop action named "UpdatePatreon" in "Default Actions" that:
   1. Imports data: Image > Variables > Data Sets > Import > levels.csv
-  2. Exports JPG: File > Export > Save for Web > Patreon6.jpg
+  2. Exports JPG: File > Export > Save for Web > Patreon8.jpg
 """
 
 import os
@@ -17,9 +17,9 @@ import subprocess
 import time
 
 # Configuration
-PSD_PATH = r"C:\Users\dusosl\Dropbox\Youtube\Patreon6.psd"
+PSD_PATH = r"C:\Users\dusosl\Dropbox\Youtube\Patreon8.psd"
 CSV_PATH = r"c:\git\subscriber-list\data\levels.csv"
-OUTPUT_PATH = r"C:\Users\dusosl\Dropbox\Youtube\Patreon6.jpg"
+OUTPUT_PATH = r"C:\Users\dusosl\Dropbox\Youtube\Patreon8.jpg"
 JSX_SCRIPT = r"c:\git\subscriber-list\scripts\trigger_action.jsx"
 
 # Common Photoshop installation paths
@@ -100,7 +100,7 @@ def main():
         print("✓ Photoshop launched successfully")
         print()
         print("The script will:")
-        print("1. Open Patreon6.psd")
+        print("1. Open Patreon8.psd")
         print("2. Run the 'UpdatePatreon' action")
         print("3. Show a completion dialog")
         print()

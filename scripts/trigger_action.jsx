@@ -2,7 +2,7 @@
 // This script opens the PSD and runs a specified action
 
 // Configuration
-var psdPath = "C:\\Users\\dusosl\\Dropbox\\Youtube\\Patreon6.psd";
+var psdPath = "C:\\Users\\dusosl\\Dropbox\\Youtube\\Patreon8.psd";
 var csvPath = "c:\\git\\subscriber-list\\data\\levels.csv";
 var actionName = "UpdatePatreon";  // Name of your action
 var actionSet = "Default Actions"; // Action set name (change if needed)
