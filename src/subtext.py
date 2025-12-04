@@ -523,11 +523,12 @@ class SubscriberListManager:
                 print(f"   Last modified: {datetime.fromtimestamp(os.path.getmtime(file_path)).strftime('%Y-%m-%d %H:%M:%S')}")
                 response = input(f"\n   Download fresh {platform_name} CSV manually? (y/n): ")
                 if response.lower() == 'y':
-                    print(f"   Please download the latest {platform_name} CSV and run this script again.")
-                    return False
-                else:
-                    print(f"   Continuing with old {platform_name} data...")
+                    print(f"   Please download the latest {platform_name} CSV and press Enter when ready...")
+                    input("   Press Enter to continue: ")
                     return True
+                else:
+                    print(f"   Skipping {platform_name} data...")
+                    return False
             return True
         except Exception as e:
             print(f"Warning: Could not check age of {file_path}: {e}")
